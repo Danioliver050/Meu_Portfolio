@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://meu-portfolio-eight-fawn.vercel.app/sitemap.xml
