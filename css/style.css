@@ -879,22 +879,6 @@ ul { list-style: none; margin: 0; padding: 0; }
   font-size: 1.16rem;
   color: var(--text-muted);
 }
-.article-quote {
-  font-family: var(--font-display);
-  font-size: 1.4rem !important;
-  font-style: italic;
-  font-weight: 600;
-  color: var(--accent) !important;
-  text-align: center;
-  line-height: 1.5 !important;
-  margin: 8px 0 !important;
-}
-.article-quote-answer {
-  font-style: normal;
-  font-weight: 800;
-  margin-top: 4px !important;
-  margin-bottom: 32px !important;
-}
 .article-signature {
   margin-top: 56px;
   padding-top: 32px;
