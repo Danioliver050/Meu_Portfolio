@@ -92,9 +92,12 @@
 <section class="hero">
   <div class="container hero-inner">
     <div class="hero-visual">
-      <div class="avatar-frame">
+      <button type="button" class="avatar-frame" id="avatarTrigger" aria-label="Ampliar foto de Daniel" aria-haspopup="dialog">
         <img src="assets/daniel-photo.jpg" alt="Foto de Daniel" class="avatar-photo">
-      </div>
+        <span class="avatar-zoom-hint" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6"/></svg>
+        </span>
+      </button>
     </div>
 
     <div class="hero-text">
@@ -214,6 +217,12 @@
 
     <div class="article-grid">
       <article class="article-card">
+        <span class="article-date">11 ago 2026</span>
+        <h3 data-i18n="art2.title">O Excel que eu não sabia que precisaria</h3>
+        <p data-i18n="art2.desc">Como um curso que eu não queria fazer se tornou uma ferramenta essencial na minha jornada com dados.</p>
+        <a href="o-excel-que-eu-nao-sabia-que-precisaria/" class="article-link" data-i18n="articles.read_more">Ler mais →</a>
+      </article>
+      <article class="article-card">
         <span class="article-date">4 ago 2026</span>
         <h3 data-i18n="art1.title">Desenvolvendo Softwares aos Dados</h3>
         <p data-i18n="art1.desc">A construção de uma união de dois caminhos com um mesmo destino.</p>
@@ -243,6 +252,14 @@
     <p>&copy; 2026 Daniel. <span data-i18n="footer.rights">Todos os direitos reservados.</span></p>
   </div>
 </footer>
+
+<!-- ===================== PHOTO LIGHTBOX ===================== -->
+<div class="lightbox" id="photoLightbox" role="dialog" aria-modal="true" aria-label="Foto de Daniel em tamanho ampliado" hidden>
+  <button type="button" class="lightbox-close" id="lightboxClose" aria-label="Fechar">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+  <img src="assets/daniel-photo.jpg" alt="Foto de Daniel, em tamanho ampliado" class="lightbox-img">
+</div>
 
 <script src="js/script.js"></script>
 </body>

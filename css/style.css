@@ -351,14 +351,93 @@ ul { list-style: none; margin: 0; padding: 0; }
   border-radius: 16px;
   overflow: hidden;
   border: 1px solid var(--border);
-  transition: transform 0.2s ease-out;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+  transition: transform 0.2s ease-out, border-color var(--transition);
   will-change: transform;
+}
+.avatar-frame:hover,
+.avatar-frame:focus-visible {
+  border-color: var(--accent-dim);
+}
+.avatar-frame:hover .avatar-zoom-hint,
+.avatar-frame:focus-visible .avatar-zoom-hint {
+  opacity: 1;
 }
 .avatar-photo {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
+}
+.avatar-zoom-hint {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(10, 14, 20, 0.72);
+  color: #fff;
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+@media (hover: none) {
+  .avatar-zoom-hint { opacity: 0.85; }
+}
+
+/* =========================================================
+   PHOTO LIGHTBOX
+   ========================================================= */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  background: rgba(5, 7, 10, 0.92);
+  backdrop-filter: blur(6px);
+  animation: lightbox-fade 0.2s ease;
+}
+.lightbox[hidden] { display: none; }
+@keyframes lightbox-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.lightbox-img {
+  max-width: min(500px, 90vw);
+  max-height: 80vh;
+  width: auto;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+}
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  color: var(--text);
+  cursor: pointer;
+  transition: color var(--transition), border-color var(--transition);
+}
+.lightbox-close:hover {
+  color: var(--accent);
+  border-color: var(--accent);
 }
 /* =========================================================
    SECTIONS (shared)
@@ -799,6 +878,22 @@ ul { list-style: none; margin: 0; padding: 0; }
 .article-body p:first-of-type {
   font-size: 1.16rem;
   color: var(--text-muted);
+}
+.article-quote {
+  font-family: var(--font-display);
+  font-size: 1.4rem !important;
+  font-style: italic;
+  font-weight: 600;
+  color: var(--accent) !important;
+  text-align: center;
+  line-height: 1.5 !important;
+  margin: 8px 0 !important;
+}
+.article-quote-answer {
+  font-style: normal;
+  font-weight: 800;
+  margin-top: 4px !important;
+  margin-bottom: 32px !important;
 }
 .article-signature {
   margin-top: 56px;

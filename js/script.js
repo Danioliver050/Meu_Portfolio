@@ -46,6 +46,8 @@ const translations = {
     "articles.read_more": "Ler mais →",
     "art1.title": "Desenvolvendo Softwares aos Dados",
     "art1.desc": "A construção de uma união de dois caminhos com um mesmo destino.",
+    "art2.title": "O Excel que eu não sabia que precisaria",
+    "art2.desc": "Como um curso que eu não queria fazer se tornou uma ferramenta essencial na minha jornada com dados.",
 
     "contact.eyebrow": "contato",
     "contact.desc": "Aberto a oportunidades de estágio e posições júnior em engenharia e análise de dados.",
@@ -95,6 +97,8 @@ const translations = {
     "articles.read_more": "Read more →",
     "art1.title": "From Software Development to Data",
     "art1.desc": "Building a union between two paths leading to the same destination.",
+    "art2.title": "The Excel I Didn't Know I'd Need",
+    "art2.desc": "How a course I didn't want to take became an essential tool in my journey with data.",
 
     "contact.eyebrow": "contact",
     "contact.desc": "Open to internship and junior opportunities in data engineering and analysis.",
@@ -217,6 +221,42 @@ function setupAvatarTilt() {
 
   wrap.addEventListener("mouseleave", () => {
     frame.style.transform = "rotateY(0deg) rotateX(0deg)";
+  });
+}
+
+/* =========================================================
+   LIGHTBOX DA FOTO (abrir/ver em tela cheia, inclusive no mobile)
+   ========================================================= */
+function setupPhotoLightbox() {
+  const trigger = document.getElementById("avatarTrigger");
+  const lightbox = document.getElementById("photoLightbox");
+  const closeBtn = document.getElementById("lightboxClose");
+  if (!trigger || !lightbox || !closeBtn) return;
+
+  let lastFocused = null;
+
+  function openLightbox() {
+    lastFocused = document.activeElement;
+    lightbox.hidden = false;
+    document.body.style.overflow = "hidden";
+    closeBtn.focus();
+  }
+
+  function closeLightbox() {
+    lightbox.hidden = true;
+    document.body.style.overflow = "";
+    if (lastFocused) lastFocused.focus();
+  }
+
+  trigger.addEventListener("click", openLightbox);
+  closeBtn.addEventListener("click", closeLightbox);
+
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && !lightbox.hidden) closeLightbox();
   });
 }
 
@@ -347,6 +387,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setupScrollspy();
   setupScrollProgress();
   setupAvatarTilt();
+  setupPhotoLightbox();
   setupEmailCopy();
   setupThemeToggle();
 });
