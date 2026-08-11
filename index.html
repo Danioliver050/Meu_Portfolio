@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daniel — Portfólio de Dados</title>
+<meta name="description" content="Portfólio de Daniel — em transição de desenvolvimento de software para engenharia e análise de dados, com foco no mercado financeiro brasileiro.">
+
+<!-- Open Graph / Facebook, LinkedIn, WhatsApp -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://SEU-DOMINIO-AQUI.com/">
+<meta property="og:title" content="Daniel — Portfólio de Dados">
+<meta property="og:description" content="Em transição de desenvolvimento de software para engenharia e análise de dados, com foco no mercado financeiro brasileiro.">
+<meta property="og:image" content="https://SEU-DOMINIO-AQUI.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="pt_BR">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Daniel — Portfólio de Dados">
+<meta name="twitter:description" content="Em transição de desenvolvimento de software para engenharia e análise de dados, com foco no mercado financeiro brasileiro.">
+<meta name="twitter:image" content="https://SEU-DOMINIO-AQUI.com/assets/og-image.png">
+
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- ===================== HEADER ===================== -->
+<header class="site-header" id="top">
+  <div class="container header-inner">
+    <a href="#top" class="logo">
+      Daniel M.
+    </a>
+
+    <nav class="nav" id="mainNav">
+      <a href="#top" class="nav-link" data-i18n="nav.home">Início</a>
+      <a href="#sobre" class="nav-link" data-i18n="nav.about">Sobre</a>
+      <a href="#projetos" class="nav-link" data-i18n="nav.projects">Projetos</a>
+      <a href="#certificacoes" class="nav-link" data-i18n="nav.certifications">Certificações</a>
+      <a href="#anotacoes" class="nav-link" data-i18n="nav.articles">Anotações</a>
+      <a href="#contato" class="nav-link" data-i18n="nav.contact">Contato</a>
+    </nav>
+
+    <div class="header-actions">
+      <!-- Theme switcher: dark / light -->
+      <button type="button" class="theme-toggle" id="themeToggle" aria-label="Alternar tema claro/escuro" aria-pressed="false">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-sun" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"/>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+        </svg>
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-moon" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+        </svg>
+      </button>
+
+      <!-- Language switcher: BR / UK flags -->
+      <div class="lang-switch" role="group" aria-label="Selecionar idioma / Select language">
+        <button type="button" class="lang-btn is-active" data-lang="pt" aria-pressed="true" aria-label="Português">
+          <svg viewBox="0 0 24 16" class="flag-icon" aria-hidden="true">
+            <rect width="24" height="16" fill="#0b8a3b"/>
+            <polygon points="12,2 22,8 12,14 2,8" fill="#f6c400"/>
+            <circle cx="12" cy="8" r="4.2" fill="#1b3d8f"/>
+            <path d="M 8 8.6 A 4.4 4.4 0 0 1 16 8.6" stroke="#f2f2f2" stroke-width="0.9" fill="none"/>
+          </svg>
+        </button>
+        <button type="button" class="lang-btn" data-lang="en" aria-pressed="false" aria-label="English">
+          <svg viewBox="0 0 24 16" class="flag-icon" aria-hidden="true">
+            <rect width="24" height="16" fill="#0a1f5c"/>
+            <path d="M0,0 L24,16 M24,0 L0,16" stroke="#fff" stroke-width="3"/>
+            <path d="M0,0 L24,16 M24,0 L0,16" stroke="#c8102e" stroke-width="1.2"/>
+            <path d="M12,0 L12,16 M0,8 L24,8" stroke="#fff" stroke-width="5"/>
+            <path d="M12,0 L12,16 M0,8 L24,8" stroke="#c8102e" stroke-width="2.2"/>
+          </svg>
+        </button>
+      </div>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="hero-visual">
+      <div class="avatar-frame">
+        <img src="assets/daniel-photo.jpg" alt="Foto de Daniel" class="avatar-photo">
+      </div>
+    </div>
+
+    <div class="hero-text">
+      <h1 class="hero-title">
+        <span data-i18n="hero.greeting">Olá, eu sou</span> <span class="accent-text">Daniel</span>
+      </h1>
+
+      <p class="hero-subtitle" data-i18n="hero.subtitle">
+        Transformando experiência em desenvolvimento de software em soluções orientadas a dados.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#projetos" class="btn btn-primary" data-i18n="hero.cta_projects">Ver projetos</a>
+        <a href="#contato" class="btn btn-ghost" data-i18n="hero.cta_contact">Fale comigo</a>
+        <a href="assets/cv-daniel.pdf" class="btn btn-ghost btn-icon" download>
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>
+          <span data-i18n="hero.cta_cv">Baixar CV</span>
+        </a>
+      </div>
+
+      <div class="social-row" aria-label="Redes sociais">
+        <a href="https://www.linkedin.com/in/daniel-o-machado/" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 8.98h4v12H3v-12zm7.2 0h3.84v1.64h.05c.53-.99 1.83-2.03 3.77-2.03 4.03 0 4.78 2.58 4.78 5.94v6.45h-4v-5.72c0-1.36-.02-3.11-1.9-3.11-1.9 0-2.19 1.48-2.19 3.01v5.82h-4v-12z"/></svg>
+        </a>
+        <a href="https://github.com/Danioliver050/" class="social-link" aria-label="GitHub" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-1.04-.01-1.89-2.78.62-3.37-1.22-3.37-1.22-.46-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.72 0 0 .84-.28 2.75 1.05a9.32 9.32 0 015 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.46.1 2.72.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.26 10.26 0 0022 12.25C22 6.58 17.52 2 12 2z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ABOUT ===================== -->
+<section class="section" id="sobre">
+  <div class="container about-grid">
+    <div class="about-text">
+      <p class="eyebrow" data-i18n="about.eyebrow">sobre</p>
+      <h2 class="section-title" data-i18n="about.title">Da lógica de sistemas à lógica dos dados</h2>
+      <p data-i18n="about.p1">
+        Comecei minha jornada com total certeza de que queria atuar como desenvolvedor back-end, trabalhando
+        no desenvolvimento e na manutenção de softwares. Nesse processo, tive a oportunidade de atuar em uma
+        área voltada a dados, o que despertou meu interesse pela possibilidade de ampliar minha área de atuação.
+      </p>
+      <p data-i18n="about.p2">
+        A partir desse ponto, passei a buscar, de forma simultânea, o desenvolvimento de software e o trabalho
+        com dados nas aplicações, aproveitando ao máximo minhas habilidades e buscando sempre extrair os
+        melhores resultados.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROJECTS ===================== -->
+<section class="section" id="projetos">
+  <div class="container">
+    <p class="eyebrow" data-i18n="projects.eyebrow">projetos</p>
+    <h2 class="section-title" data-i18n="projects.title">Meu portfólio</h2>
+
+    <div class="empty-state">
+      <svg viewBox="0 0 64 64" class="empty-state-icon" aria-hidden="true">
+        <rect x="10" y="16" width="44" height="34" rx="4" fill="none" stroke="var(--border)" stroke-width="2"/>
+        <path d="M10 24h44" stroke="var(--border)" stroke-width="2"/>
+        <path d="M24 34l6 6 10-12" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <h3 data-i18n="projects.empty_title">Projetos em construção</h3>
+      <p data-i18n="projects.empty_desc">Estou finalizando meus primeiros projetos de dados. Em breve eles aparecem aqui — enquanto isso, dá uma olhada no que já venho estudando no GitHub.</p>
+      <a href="https://github.com/Danioliver050/" class="btn btn-ghost" target="_blank" rel="noopener" data-i18n="projects.empty_cta">Ver GitHub</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== STACK ===================== -->
+<section class="section section-alt" id="stack">
+  <div class="container">
+    <p class="eyebrow" data-i18n="stack.eyebrow">stack</p>
+    <h2 class="section-title" data-i18n="stack.title">Ferramentas e tecnologias</h2>
+
+    <div class="skills-grid">
+      <div class="skill-group">
+        <h3 data-i18n="stack.group1">Dados & Análise</h3>
+        <ul class="tag-list tag-list-empty">
+          <li class="tag-placeholder" data-i18n="stack.placeholder">Em definição</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h3 data-i18n="stack.group2">Engenharia & Cloud</h3>
+        <ul class="tag-list tag-list-empty">
+          <li class="tag-placeholder" data-i18n="stack.placeholder">Em definição</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CERTIFICATIONS (shortcut) ===================== -->
+<section class="section" id="certificacoes">
+  <div class="container">
+    <p class="eyebrow" data-i18n="certifications.eyebrow">certificações</p>
+    <h2 class="section-title" data-i18n="certifications.title">Cursos e certificações</h2>
+
+    <div class="empty-state">
+      <svg viewBox="0 0 64 64" class="empty-state-icon" aria-hidden="true">
+        <path d="M32 10l7 14 15 2-11 11 3 15-14-7-14 7 3-15-11-11 15-2z" fill="none" stroke="var(--border)" stroke-width="2" stroke-linejoin="round"/>
+      </svg>
+      <h3 data-i18n="certifications.empty_title">Página em preparação</h3>
+      <p data-i18n="certifications.empty_desc">Ainda estou decidindo quais cursos e certificações priorizar. A página já está pronta para receber esse conteúdo assim que eu definir.</p>
+      <a href="certificacoes/" class="btn btn-ghost" data-i18n="certifications.empty_cta">Ver certificações</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ARTICLES ===================== -->
+<section class="section section-alt" id="anotacoes">
+  <div class="container">
+    <p class="eyebrow" data-i18n="articles.eyebrow">anotações</p>
+    <h2 class="section-title" data-i18n="articles.title">Anotações da transição</h2>
+
+    <div class="article-grid">
+      <article class="article-card">
+        <span class="article-date">4 ago 2026</span>
+        <h3 data-i18n="art1.title">Desenvolvendo Softwares aos Dados</h3>
+        <p data-i18n="art1.desc">A construção de uma união de dois caminhos com um mesmo destino.</p>
+        <a href="artigo-desenvolvendo-softwares-aos-dados/" class="article-link" data-i18n="articles.read_more">Ler mais →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT / FOOTER ===================== -->
+<footer class="footer" id="contato">
+  <div class="container footer-inner">
+    <div class="footer-main">
+      <p class="eyebrow" data-i18n="contact.eyebrow">contato</p>
+      <p data-i18n="contact.desc">Aberto a oportunidades de estágio e posições júnior em engenharia e análise de dados.</p>
+      <div class="email-copy-wrap">
+        <a href="mailto:danioliver050@outlook.com" class="btn btn-primary" id="emailBtn">danioliver050@outlook.com</a>
+        <span class="copy-feedback" id="copyFeedback" data-i18n="contact.copied">Copiado!</span>
+      </div>
+    </div>
+    <div class="footer-social">
+      <a href="https://www.linkedin.com/in/daniel-o-machado/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/Danioliver050/" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>&copy; 2026 Daniel. <span data-i18n="footer.rights">Todos os direitos reservados.</span></p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
