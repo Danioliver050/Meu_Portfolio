@@ -229,20 +229,50 @@ function setupAvatarTilt() {
    Qualquer elemento com [data-lightbox-target="ID"] abre o
    <div class="lightbox" id="ID">, que precisa ter um
    ".lightbox-close" dentro dele.
+   Zoom: segure Ctrl e role o mouse sobre a imagem aberta.
+   Com zoom ativo, clique e arraste para navegar pela imagem.
+   Duplo clique reseta o zoom.
    ========================================================= */
 function setupLightboxes() {
   const triggers = document.querySelectorAll("[data-lightbox-target]");
   if (!triggers.length) return;
 
+  const MIN_ZOOM = 1;
+  const MAX_ZOOM = 4;
+  const ZOOM_STEP = 0.15;
+
   triggers.forEach((trigger) => {
     const lightbox = document.getElementById(trigger.getAttribute("data-lightbox-target"));
     const closeBtn = lightbox ? lightbox.querySelector(".lightbox-close") : null;
+    const img = lightbox ? lightbox.querySelector(".lightbox-img") : null;
     if (!lightbox || !closeBtn) return;
 
     let lastFocused = null;
+    let scale = 1;
+    let posX = 0;
+    let posY = 0;
+    let isDragging = false;
+    let justDragged = false;
+    let dragStartX = 0;
+    let dragStartY = 0;
+
+    function applyTransform() {
+      if (img) img.style.transform = `translate(${posX}px, ${posY}px) scale(${scale})`;
+    }
+
+    function resetZoom() {
+      scale = 1;
+      posX = 0;
+      posY = 0;
+      if (img) {
+        img.classList.remove("is-zoomed");
+        img.style.transform = "";
+      }
+    }
 
     function openLightbox() {
       lastFocused = document.activeElement;
+      resetZoom();
       lightbox.hidden = false;
       document.body.style.overflow = "hidden";
       closeBtn.focus();
@@ -251,6 +281,7 @@ function setupLightboxes() {
     function closeLightbox() {
       lightbox.hidden = true;
       document.body.style.overflow = "";
+      resetZoom();
       if (lastFocused) lastFocused.focus();
     }
 
@@ -258,12 +289,63 @@ function setupLightboxes() {
     closeBtn.addEventListener("click", closeLightbox);
 
     lightbox.addEventListener("click", (e) => {
+      if (justDragged) {
+        justDragged = false;
+        return;
+      }
       if (e.target === lightbox) closeLightbox();
     });
 
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape" && !lightbox.hidden) closeLightbox();
     });
+
+    if (img) {
+      // Zoom: Ctrl + scroll do mouse
+      lightbox.addEventListener(
+        "wheel",
+        (e) => {
+          if (lightbox.hidden || !e.ctrlKey) return;
+          e.preventDefault();
+          const direction = e.deltaY < 0 ? 1 : -1;
+          scale = Math.min(MAX_ZOOM, Math.max(MIN_ZOOM, scale + direction * ZOOM_STEP));
+          if (scale === MIN_ZOOM) {
+            posX = 0;
+            posY = 0;
+          }
+          img.classList.toggle("is-zoomed", scale > MIN_ZOOM);
+          applyTransform();
+        },
+        { passive: false }
+      );
+
+      // Duplo clique reseta o zoom
+      img.addEventListener("dblclick", resetZoom);
+
+      // Arrastar (pan) quando ampliado
+      img.addEventListener("mousedown", (e) => {
+        if (scale <= MIN_ZOOM) return;
+        isDragging = true;
+        img.classList.add("is-dragging");
+        dragStartX = e.clientX - posX;
+        dragStartY = e.clientY - posY;
+        e.preventDefault();
+      });
+
+      window.addEventListener("mousemove", (e) => {
+        if (!isDragging) return;
+        posX = e.clientX - dragStartX;
+        posY = e.clientY - dragStartY;
+        applyTransform();
+      });
+
+      window.addEventListener("mouseup", () => {
+        if (!isDragging) return;
+        isDragging = false;
+        justDragged = true;
+        img.classList.remove("is-dragging");
+      });
+    }
   });
 }
 
