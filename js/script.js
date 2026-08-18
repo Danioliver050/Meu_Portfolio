@@ -225,38 +225,45 @@ function setupAvatarTilt() {
 }
 
 /* =========================================================
-   LIGHTBOX DA FOTO (abrir/ver em tela cheia, inclusive no mobile)
+   LIGHTBOX (abrir/ver imagens em tela cheia — foto, certificados etc.)
+   Qualquer elemento com [data-lightbox-target="ID"] abre o
+   <div class="lightbox" id="ID">, que precisa ter um
+   ".lightbox-close" dentro dele.
    ========================================================= */
-function setupPhotoLightbox() {
-  const trigger = document.getElementById("avatarTrigger");
-  const lightbox = document.getElementById("photoLightbox");
-  const closeBtn = document.getElementById("lightboxClose");
-  if (!trigger || !lightbox || !closeBtn) return;
+function setupLightboxes() {
+  const triggers = document.querySelectorAll("[data-lightbox-target]");
+  if (!triggers.length) return;
 
-  let lastFocused = null;
+  triggers.forEach((trigger) => {
+    const lightbox = document.getElementById(trigger.getAttribute("data-lightbox-target"));
+    const closeBtn = lightbox ? lightbox.querySelector(".lightbox-close") : null;
+    if (!lightbox || !closeBtn) return;
 
-  function openLightbox() {
-    lastFocused = document.activeElement;
-    lightbox.hidden = false;
-    document.body.style.overflow = "hidden";
-    closeBtn.focus();
-  }
+    let lastFocused = null;
 
-  function closeLightbox() {
-    lightbox.hidden = true;
-    document.body.style.overflow = "";
-    if (lastFocused) lastFocused.focus();
-  }
+    function openLightbox() {
+      lastFocused = document.activeElement;
+      lightbox.hidden = false;
+      document.body.style.overflow = "hidden";
+      closeBtn.focus();
+    }
 
-  trigger.addEventListener("click", openLightbox);
-  closeBtn.addEventListener("click", closeLightbox);
+    function closeLightbox() {
+      lightbox.hidden = true;
+      document.body.style.overflow = "";
+      if (lastFocused) lastFocused.focus();
+    }
 
-  lightbox.addEventListener("click", (e) => {
-    if (e.target === lightbox) closeLightbox();
-  });
+    trigger.addEventListener("click", openLightbox);
+    closeBtn.addEventListener("click", closeLightbox);
 
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && !lightbox.hidden) closeLightbox();
+    lightbox.addEventListener("click", (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && !lightbox.hidden) closeLightbox();
+    });
   });
 }
 
@@ -409,7 +416,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setupScrollspy();
   setupScrollProgress();
   setupAvatarTilt();
-  setupPhotoLightbox();
+  setupLightboxes();
   setupCertTabs();
   setupEmailCopy();
   setupThemeToggle();
