@@ -38,7 +38,7 @@ const translations = {
     "certifications.eyebrow": "certificações",
     "certifications.title": "Cursos e certificações",
     "certifications.empty_title": "Página em preparação",
-    "certifications.empty_desc": "Ainda estou decidindo quais cursos e certificações priorizar. A página já está pronta para receber esse conteúdo assim que eu definir.",
+    "certifications.empty_desc": "Reuni cursos, certificações e idiomas em um só lugar. Cursos e certificações ainda estão em definição — mas os idiomas que falo já estão lá.",
     "certifications.empty_cta": "Ver certificações",
 
     "articles.eyebrow": "anotações",
@@ -89,7 +89,7 @@ const translations = {
     "certifications.eyebrow": "certifications",
     "certifications.title": "Courses & certifications",
     "certifications.empty_title": "Page in progress",
-    "certifications.empty_desc": "I'm still deciding which courses and certifications to prioritize. This page is already set up to receive that content once I do.",
+    "certifications.empty_desc": "I've gathered courses, certifications and languages in one place. Courses and certifications are still being defined — but the languages I speak are already there.",
     "certifications.empty_cta": "View certifications",
 
     "articles.eyebrow": "notes",
@@ -261,6 +261,28 @@ function setupPhotoLightbox() {
 }
 
 /* =========================================================
+   ABAS INTERNAS (Cursos / Certificações / Idiomas)
+   ========================================================= */
+function setupCertTabs() {
+  const tabButtons = document.querySelectorAll(".cert-tabs .tab-btn");
+  const panels = document.querySelectorAll(".cert-panel");
+  if (!tabButtons.length || !panels.length) return;
+
+  tabButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const target = btn.getAttribute("data-tab");
+
+      tabButtons.forEach((b) => b.classList.remove("is-active"));
+      btn.classList.add("is-active");
+
+      panels.forEach((panel) => {
+        panel.classList.toggle("is-active", panel.getAttribute("data-panel") === target);
+      });
+    });
+  });
+}
+
+/* =========================================================
    COPIAR E-MAIL PARA A ÁREA DE TRANSFERÊNCIA
    ========================================================= */
 function setupEmailCopy() {
@@ -388,6 +410,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setupScrollProgress();
   setupAvatarTilt();
   setupPhotoLightbox();
+  setupCertTabs();
   setupEmailCopy();
   setupThemeToggle();
 });

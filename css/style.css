@@ -653,7 +653,16 @@ ul { list-style: none; margin: 0; padding: 0; }
   color: var(--text-muted);
   font-size: 1.05rem;
   max-width: 56ch;
-  margin: -8px 0 48px;
+  margin: -8px 0 32px;
+}
+.cert-tabs {
+  margin-bottom: 40px;
+}
+.cert-panel {
+  display: none;
+}
+.cert-panel.is-active {
+  display: block;
 }
 .cert-grid {
   display: grid;
@@ -693,6 +702,29 @@ ul { list-style: none; margin: 0; padding: 0; }
   color: var(--text-muted);
   line-height: 1.5;
   margin: 0;
+}
+.lang-card h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+.lang-level {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 5px 11px;
+  border-radius: 999px;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.level-advanced {
+  background: var(--accent);
+  color: #14100a;
+}
+.level-intermediate {
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
 }
 
 @media (max-width: 720px) {

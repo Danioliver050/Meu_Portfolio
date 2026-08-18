@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cursos e Certificações — Daniel M.</title>
-<meta name="description" content="Cursos e certificações de Daniel M. em análise e engenharia de dados.">
+<title>Cursos, Certificações e Idiomas — Daniel M.</title>
+<meta name="description" content="Cursos, certificações e idiomas de Daniel M. em análise e engenharia de dados.">
 
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://portfolio-danielm.vercel.app/certificacoes/">
-<meta property="og:title" content="Cursos e Certificações — Daniel M.">
-<meta property="og:description" content="Cursos e certificações de Daniel M. em análise e engenharia de dados.">
+<meta property="og:title" content="Cursos, Certificações e Idiomas — Daniel M.">
+<meta property="og:description" content="Cursos, certificações e idiomas de Daniel M. em análise e engenharia de dados.">
 <meta property="og:image" content="https://portfolio-danielm.vercel.app/assets/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://portfolio-danielm.vercel.app/certificacoes/">
@@ -50,12 +50,18 @@
     <a href="../#certificacoes" class="back-link">← Voltar ao portfólio</a>
 
     <p class="eyebrow">certificações</p>
-    <h1 class="article-title">Cursos e certificações</h1>
-    <p class="cert-page-intro">Aqui reúno os cursos e certificações que venho concluindo ou cursando durante a transição para a área de dados.</p>
+    <h1 class="article-title">Cursos, certificações e idiomas</h1>
+    <p class="cert-page-intro">Aqui reúno os cursos e certificações que venho concluindo ou cursando durante a transição para a área de dados, além dos idiomas que falo.</p>
+
+    <div class="filter-tabs cert-tabs">
+      <button type="button" class="filter-btn tab-btn is-active" data-tab="cursos">Cursos</button>
+      <button type="button" class="filter-btn tab-btn" data-tab="certificacoes">Certificações</button>
+      <button type="button" class="filter-btn tab-btn" data-tab="idiomas">Idiomas</button>
+    </div>
 
     <!--
       MODELO PARA ADICIONAR UM NOVO CURSO/CERTIFICAÇÃO:
-      Copie o bloco abaixo para dentro de <div class="cert-grid"> e preencha.
+      Copie o bloco abaixo para dentro do .cert-grid do painel correspondente e preencha.
       A descrição deve ter, no máximo, 2 linhas.
 
       <div class="cert-card">
@@ -65,13 +71,44 @@
       </div>
     -->
 
-    <div class="cert-grid" id="certGrid">
-      <div class="empty-state">
-        <svg viewBox="0 0 64 64" class="empty-state-icon" aria-hidden="true">
-          <path d="M32 10l7 14 15 2-11 11 3 15-14-7-14 7 3-15-11-11 15-2z" fill="none" stroke="var(--border)" stroke-width="2" stroke-linejoin="round"/>
-        </svg>
-        <h3>Nenhuma certificação publicada ainda</h3>
-        <p>Estou definindo quais cursos e certificações faz mais sentido priorizar agora. Assim que decidir, elas aparecem aqui.</p>
+    <div class="cert-panel is-active" data-panel="cursos">
+      <div class="cert-grid">
+        <div class="empty-state">
+          <svg viewBox="0 0 64 64" class="empty-state-icon" aria-hidden="true">
+            <path d="M32 10l7 14 15 2-11 11 3 15-14-7-14 7 3-15-11-11 15-2z" fill="none" stroke="var(--border)" stroke-width="2" stroke-linejoin="round"/>
+          </svg>
+          <h3>Nenhum curso publicado ainda</h3>
+          <p>Estou definindo quais cursos faz mais sentido priorizar agora. Assim que decidir, eles aparecem aqui.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cert-panel" data-panel="certificacoes">
+      <div class="cert-grid">
+        <div class="empty-state">
+          <svg viewBox="0 0 64 64" class="empty-state-icon" aria-hidden="true">
+            <path d="M32 10l7 14 15 2-11 11 3 15-14-7-14 7 3-15-11-11 15-2z" fill="none" stroke="var(--border)" stroke-width="2" stroke-linejoin="round"/>
+          </svg>
+          <h3>Nenhuma certificação publicada ainda</h3>
+          <p>Estou definindo quais certificações faz mais sentido priorizar agora. Assim que decidir, elas aparecem aqui.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cert-panel" data-panel="idiomas">
+      <div class="cert-grid">
+        <div class="cert-card lang-card">
+          <span class="lang-level level-advanced">C2 · Nativo</span>
+          <h3>Português</h3>
+        </div>
+        <div class="cert-card lang-card">
+          <span class="lang-level level-advanced">C2 · Fluente</span>
+          <h3>Inglês</h3>
+        </div>
+        <div class="cert-card lang-card">
+          <span class="lang-level level-intermediate">B1 · Intermediário</span>
+          <h3>Espanhol</h3>
+        </div>
       </div>
     </div>
   </div>
