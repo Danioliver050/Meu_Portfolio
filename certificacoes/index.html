@@ -28,7 +28,7 @@
     <a href="../" class="logo">Daniel M.</a>
 
     <nav class="nav" id="mainNav">
-      <a href="../#certificacoes" class="nav-link">Certificações</a>
+      <a href="../#certificacoes" class="nav-link" data-i18n="nav.certifications">Certificações</a>
     </nav>
 
     <div class="header-actions">
@@ -41,22 +41,42 @@
           <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
         </svg>
       </button>
+
+      <div class="lang-switch" role="group" aria-label="Selecionar idioma / Select language">
+        <button type="button" class="lang-btn is-active" data-lang="pt" aria-pressed="true" aria-label="Português">
+          <svg viewBox="0 0 24 16" class="flag-icon" aria-hidden="true">
+            <rect width="24" height="16" fill="#0b8a3b"/>
+            <polygon points="12,2 22,8 12,14 2,8" fill="#f6c400"/>
+            <circle cx="12" cy="8" r="4.2" fill="#1b3d8f"/>
+            <path d="M 8 8.6 A 4.4 4.4 0 0 1 16 8.6" stroke="#f2f2f2" stroke-width="0.9" fill="none"/>
+          </svg>
+        </button>
+        <button type="button" class="lang-btn" data-lang="en" aria-pressed="false" aria-label="English">
+          <svg viewBox="0 0 24 16" class="flag-icon" aria-hidden="true">
+            <rect width="24" height="16" fill="#0a1f5c"/>
+            <path d="M0,0 L24,16 M24,0 L0,16" stroke="#fff" stroke-width="3"/>
+            <path d="M0,0 L24,16 M24,0 L0,16" stroke="#c8102e" stroke-width="1.2"/>
+            <path d="M12,0 L12,16 M0,8 L24,8" stroke="#fff" stroke-width="5"/>
+            <path d="M12,0 L12,16 M0,8 L24,8" stroke="#c8102e" stroke-width="2.2"/>
+          </svg>
+        </button>
+      </div>
     </div>
   </div>
 </header>
 
 <main class="article-page-main">
   <div class="container cert-page-container">
-    <a href="../#certificacoes" class="back-link">← Voltar ao portfólio</a>
+    <a href="../#certificacoes" class="back-link" data-i18n="certpage.back">← Voltar ao portfólio</a>
 
-    <p class="eyebrow">certificações</p>
-    <h1 class="article-title">Cursos, certificações e idiomas</h1>
-    <p class="cert-page-intro">Aqui reúno os cursos e certificações que venho concluindo ou cursando durante a transição para a área de dados, além dos idiomas que falo.</p>
+    <p class="eyebrow" data-i18n="certifications.eyebrow">certificações</p>
+    <h1 class="article-title" data-i18n="certpage.title">Cursos, certificações e idiomas</h1>
+    <p class="cert-page-intro" data-i18n="certpage.intro">Aqui reúno os cursos e certificações que venho concluindo ou cursando durante a transição para a área de dados, além dos idiomas que falo.</p>
 
     <div class="filter-tabs cert-tabs">
-      <button type="button" class="filter-btn tab-btn is-active" data-tab="cursos">Cursos</button>
-      <button type="button" class="filter-btn tab-btn" data-tab="certificacoes">Certificações</button>
-      <button type="button" class="filter-btn tab-btn" data-tab="idiomas">Idiomas</button>
+      <button type="button" class="filter-btn tab-btn is-active" data-tab="cursos" data-i18n="certpage.tab_courses">Cursos</button>
+      <button type="button" class="filter-btn tab-btn" data-tab="certificacoes" data-i18n="certpage.tab_certifications">Certificações</button>
+      <button type="button" class="filter-btn tab-btn" data-tab="idiomas" data-i18n="certpage.tab_languages">Idiomas</button>
     </div>
 
     <!--
@@ -76,9 +96,9 @@
         <div class="cert-card">
           <span class="cert-platform">DIO</span>
           <h3>Universia - Fundamentos de IA Generativa</h3>
-          <p>Bootcamp de 24 horas sobre fundamentos de Inteligência Artificial Generativa, concluído em 30/09/2025.</p>
+          <p data-i18n="course1.desc">Bootcamp de 24 horas sobre fundamentos de Inteligência Artificial Generativa, concluído em 30/09/2025.</p>
           <div class="cert-view-row">
-            <span class="cert-view-label">Ver certificado</span>
+            <span class="cert-view-label" data-i18n="certpage.view_cert">Ver certificado</span>
             <button type="button" class="cert-view-btn" data-lightbox-target="courseLightbox1" aria-label="Ver certificado Universia - Fundamentos de IA Generativa em tamanho ampliado" aria-haspopup="dialog">
               <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
             </button>
@@ -93,8 +113,8 @@
           <svg viewBox="0 0 64 64" class="empty-state-icon" aria-hidden="true">
             <path d="M32 10l7 14 15 2-11 11 3 15-14-7-14 7 3-15-11-11 15-2z" fill="none" stroke="var(--border)" stroke-width="2" stroke-linejoin="round"/>
           </svg>
-          <h3>Nenhuma certificação publicada ainda</h3>
-          <p>Estou definindo quais certificações faz mais sentido priorizar agora. Assim que decidir, elas aparecem aqui.</p>
+          <h3 data-i18n="certpage.panel_empty_title">Nenhuma certificação publicada ainda</h3>
+          <p data-i18n="certpage.panel_empty_desc">Estou definindo quais certificações faz mais sentido priorizar agora. Assim que decidir, elas aparecem aqui.</p>
         </div>
       </div>
     </div>
@@ -102,12 +122,12 @@
     <div class="cert-panel" data-panel="idiomas">
       <div class="cert-grid">
         <div class="cert-card lang-card">
-          <span class="lang-level level-advanced">C2 · Nativo</span>
-          <h3>Português</h3>
+          <span class="lang-level level-advanced" data-i18n="lang.pt_level">C2 · Nativo</span>
+          <h3 data-i18n="lang.pt_name">Português</h3>
         </div>
         <div class="cert-card lang-card">
-          <span class="lang-level level-advanced">C2 · Fluente</span>
-          <h3>Inglês</h3>
+          <span class="lang-level level-advanced" data-i18n="lang.en_level">C2 · Fluente</span>
+          <h3 data-i18n="lang.en_name">Inglês</h3>
           <div class="cert-view-row">
             <span class="cert-view-label">EF SET Certificate</span>
             <button type="button" class="cert-view-btn" data-lightbox-target="certLightbox" aria-label="Ver certificado EF SET em tamanho ampliado" aria-haspopup="dialog">
@@ -116,8 +136,8 @@
           </div>
         </div>
         <div class="cert-card lang-card">
-          <span class="lang-level level-intermediate">B1 · Intermediário</span>
-          <h3>Espanhol</h3>
+          <span class="lang-level level-intermediate" data-i18n="lang.es_level">B1 · Intermediário</span>
+          <h3 data-i18n="lang.es_name">Espanhol</h3>
         </div>
       </div>
     </div>
@@ -126,7 +146,7 @@
 
 <footer class="footer">
   <div class="container footer-bottom">
-    <p>&copy; 2026 Daniel. Todos os direitos reservados.</p>
+    <p>&copy; 2026 Daniel. <span data-i18n="footer.rights">Todos os direitos reservados.</span></p>
   </div>
 </footer>
 

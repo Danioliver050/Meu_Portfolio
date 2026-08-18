@@ -28,7 +28,7 @@
     <a href="../" class="logo">Daniel M.</a>
 
     <nav class="nav" id="mainNav">
-      <a href="../#anotacoes" class="nav-link">Anotações</a>
+      <a href="../#anotacoes" class="nav-link" data-i18n="nav.articles">Anotações</a>
     </nav>
 
     <div class="header-actions">
@@ -41,61 +41,81 @@
           <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
         </svg>
       </button>
+
+      <div class="lang-switch" role="group" aria-label="Selecionar idioma / Select language">
+        <button type="button" class="lang-btn is-active" data-lang="pt" aria-pressed="true" aria-label="Português">
+          <svg viewBox="0 0 24 16" class="flag-icon" aria-hidden="true">
+            <rect width="24" height="16" fill="#0b8a3b"/>
+            <polygon points="12,2 22,8 12,14 2,8" fill="#f6c400"/>
+            <circle cx="12" cy="8" r="4.2" fill="#1b3d8f"/>
+            <path d="M 8 8.6 A 4.4 4.4 0 0 1 16 8.6" stroke="#f2f2f2" stroke-width="0.9" fill="none"/>
+          </svg>
+        </button>
+        <button type="button" class="lang-btn" data-lang="en" aria-pressed="false" aria-label="English">
+          <svg viewBox="0 0 24 16" class="flag-icon" aria-hidden="true">
+            <rect width="24" height="16" fill="#0a1f5c"/>
+            <path d="M0,0 L24,16 M24,0 L0,16" stroke="#fff" stroke-width="3"/>
+            <path d="M0,0 L24,16 M24,0 L0,16" stroke="#c8102e" stroke-width="1.2"/>
+            <path d="M12,0 L12,16 M0,8 L24,8" stroke="#fff" stroke-width="5"/>
+            <path d="M12,0 L12,16 M0,8 L24,8" stroke="#c8102e" stroke-width="2.2"/>
+          </svg>
+        </button>
+      </div>
     </div>
   </div>
 </header>
 
 <main class="article-page-main">
   <div class="container article-container">
-    <a href="../#anotacoes" class="back-link">← Voltar às anotações</a>
+    <a href="../#anotacoes" class="back-link" data-i18n="article.back">← Voltar às anotações</a>
 
-    <p class="eyebrow">anotações</p>
-    <h1 class="article-title">O Excel que eu não sabia que precisaria</h1>
+    <p class="eyebrow" data-i18n="articles.eyebrow">anotações</p>
+    <h1 class="article-title" data-i18n="art2.title">O Excel que eu não sabia que precisaria</h1>
 
     <div class="article-byline">
       <span class="byline-author">Daniel M.</span>
       <span class="byline-dot">•</span>
-      <time class="byline-date" datetime="2026-08-11T13:02:00-03:00">11 de agosto de 2026, às 13h02 (horário de Brasília — UTC−3)</time>
+      <time class="byline-date" datetime="2026-08-11T13:02:00-03:00" data-i18n="art2.date">11 de agosto de 2026, às 13h02 (horário de Brasília — UTC−3)</time>
     </div>
 
     <div class="article-body">
-      <p>Em 2019, no "auge" dos meus 16 para 17 anos, eu fazia diversos cursos em uma escola: inglês, montagem e manutenção de computadores e notebooks, turismo e hotelaria, entre outros. Minha mãe havia iniciado um curso de Excel Avançado, porém, por falta de tempo, não conseguiu dar sequência e acabou "passando" o curso para mim.</p>
+      <p data-i18n="art2.p1">Em 2019, no "auge" dos meus 16 para 17 anos, eu fazia diversos cursos em uma escola: inglês, montagem e manutenção de computadores e notebooks, turismo e hotelaria, entre outros. Minha mãe havia iniciado um curso de Excel Avançado, porém, por falta de tempo, não conseguiu dar sequência e acabou "passando" o curso para mim.</p>
 
-      <p>Confesso que, na hora, não achei a melhor ideia do mundo. Era mais uma coisa para colocar na minha já apertada carga horária, e eu olhava para aquilo de uma forma meio atravessada: "Excel? Eu sei lá quando vou usar isso."</p>
+      <p data-i18n="art2.p2">Confesso que, na hora, não achei a melhor ideia do mundo. Era mais uma coisa para colocar na minha já apertada carga horária, e eu olhava para aquilo de uma forma meio atravessada: "Excel? Eu sei lá quando vou usar isso."</p>
 
-      <p>Na época, fazia alguns exercícios práticos no estilo "isso com isso, mais isso aqui e aquilo ali, resulta nisso aqui". Até então, aquele Daniel via o Excel apenas como mais uma ferramenta do pacote Office entre tantas outras. Nunca tinha feito nada realmente relevante utilizando a ferramenta e, muito menos, a utilizado de forma profissional.</p>
+      <p data-i18n="art2.p3">Na época, fazia alguns exercícios práticos no estilo "isso com isso, mais isso aqui e aquilo ali, resulta nisso aqui". Até então, aquele Daniel via o Excel apenas como mais uma ferramenta do pacote Office entre tantas outras. Nunca tinha feito nada realmente relevante utilizando a ferramenta e, muito menos, a utilizado de forma profissional.</p>
 
-      <p>De certo ponto de vista, era até compreensível pensar daquela maneira.</p>
+      <p data-i18n="art2.p4">De certo ponto de vista, era até compreensível pensar daquela maneira.</p>
 
-      <p>Anos depois, comecei a utilizar o Excel para montar uma planilha de gastos pessoais e ter um maior controle das minhas finanças. Nada muito complexo: algumas formatações básicas, funções como SOMA, filtros e alguns gráficos para organizar melhor as informações.</p>
+      <p data-i18n="art2.p5">Anos depois, comecei a utilizar o Excel para montar uma planilha de gastos pessoais e ter um maior controle das minhas finanças. Nada muito complexo: algumas formatações básicas, funções como SOMA, filtros e alguns gráficos para organizar melhor as informações.</p>
 
-      <p>Naquele momento, com um pensamento um pouco mais amadurecido, comecei a entender melhor a importância daquela ferramenta. E, provavelmente, meu subconsciente agradeceu à minha mãe por ter me colocado naquele curso.</p>
+      <p data-i18n="art2.p6">Naquele momento, com um pensamento um pouco mais amadurecido, comecei a entender melhor a importância daquela ferramenta. E, provavelmente, meu subconsciente agradeceu à minha mãe por ter me colocado naquele curso.</p>
 
-      <p>Com o tempo, já em um ambiente de trabalho, aquela "sobrecarga" acabou se transformando em uma ferramenta utilizada profissionalmente. E foi aí que aconteceu uma grande virada de chave.</p>
+      <p data-i18n="art2.p7">Com o tempo, já em um ambiente de trabalho, aquela "sobrecarga" acabou se transformando em uma ferramenta utilizada profissionalmente. E foi aí que aconteceu uma grande virada de chave.</p>
 
-      <p>A diferença entre "deixa eu anotar esses R$ 78 gastos na fatura do cartão de crédito" e "como todo aquele trabalho envolvendo sistemas, bancos de dados, SQL e ainda Power BI pode culminar em uma 'simples' planilha capaz de apontar um norte para decisões que podem custar milhões de reais?"</p>
+      <p data-i18n="art2.p8">A diferença entre "deixa eu anotar esses R$ 78 gastos na fatura do cartão de crédito" e "como todo aquele trabalho envolvendo sistemas, bancos de dados, SQL e ainda Power BI pode culminar em uma 'simples' planilha capaz de apontar um norte para decisões que podem custar milhões de reais?"</p>
 
-      <p>Loucura, não? Talvez? Acho que sim.</p>
+      <p data-i18n="art2.p9">Loucura, não? Talvez? Acho que sim.</p>
 
-      <p>Hoje consigo perceber que, indiretamente, aquelas primeiras planilhas foram meus primeiros passos na área de dados — mas de uma forma completamente despretensiosa.</p>
+      <p data-i18n="art2.p10">Hoje consigo perceber que, indiretamente, aquelas primeiras planilhas foram meus primeiros passos na área de dados — mas de uma forma completamente despretensiosa.</p>
 
-      <p>Aos crentes no efeito borboleta ou na teoria do caos, certamente existe um universo onde eu tive contato com PowerPoint e hoje estou elaborando apresentações de "tirar o chapéu". Mas, no universo em que este texto está sendo escrito, o Daniel segue utilizando funções mais complexas, construindo dashboards com uma pitada de Power BI, aplicando Power Query em alguns projetos, conectando o Excel a arquivos e fontes externas, modelando dados e aprendendo a dar um "direcionamento" para eles.</p>
+      <p data-i18n="art2.p11">Aos crentes no efeito borboleta ou na teoria do caos, certamente existe um universo onde eu tive contato com PowerPoint e hoje estou elaborando apresentações de "tirar o chapéu". Mas, no universo em que este texto está sendo escrito, o Daniel segue utilizando funções mais complexas, construindo dashboards com uma pitada de Power BI, aplicando Power Query em alguns projetos, conectando o Excel a arquivos e fontes externas, modelando dados e aprendendo a dar um "direcionamento" para eles.</p>
 
-      <p>Cada dia utilizando a "sobrecarga" é mais um dia que compreendo que é uma poderosa e aplicável ferramenta. É curioso pensar que tudo isso começou com um curso que eu não queria fazer.</p>
+      <p data-i18n="art2.p12">Cada dia utilizando a "sobrecarga" é mais um dia que compreendo que é uma poderosa e aplicável ferramenta. É curioso pensar que tudo isso começou com um curso que eu não queria fazer.</p>
 
-      <p>Em 2019, eu me perguntava: "Excel? Eu sei lá quando vou usar isso."</p>
-      <p>Hoje eu sei.</p>
+      <p data-i18n="art2.p13">Em 2019, eu me perguntava: "Excel? Eu sei lá quando vou usar isso."</p>
+      <p data-i18n="art2.p14">Hoje eu sei.</p>
     </div>
 
     <div class="article-footer-nav">
-      <a href="../#anotacoes" class="btn btn-ghost">← Voltar às anotações</a>
+      <a href="../#anotacoes" class="btn btn-ghost" data-i18n="article.back">← Voltar às anotações</a>
     </div>
   </div>
 </main>
 
 <footer class="footer">
   <div class="container footer-bottom">
-    <p>&copy; 2026 Daniel. Todos os direitos reservados.</p>
+    <p>&copy; 2026 Daniel. <span data-i18n="footer.rights">Todos os direitos reservados.</span></p>
   </div>
 </footer>
 

@@ -42,7 +42,7 @@ const translations = {
     "certifications.empty_cta": "Ver certificações",
 
     "articles.eyebrow": "anotações",
-    "articles.title": "Anotações da transição",
+    "articles.title": "Artigos",
     "articles.read_more": "Ler mais →",
     "art1.title": "Desenvolvendo Softwares aos Dados",
     "art1.desc": "A construção de uma união de dois caminhos com um mesmo destino.",
@@ -52,7 +52,55 @@ const translations = {
     "contact.eyebrow": "contato",
     "contact.desc": "Aberto a oportunidades de estágio e posições júnior em engenharia e análise de dados.",
     "contact.copied": "Copiado!",
-    "footer.rights": "Todos os direitos reservados."
+    "footer.rights": "Todos os direitos reservados.",
+
+    "article.back": "← Voltar às anotações",
+
+    "art1.full_title": "Desenvolvendo Softwares aos Dados: a construção de uma união de dois caminhos com um mesmo destino",
+    "art1.date": "4 de agosto de 2026, às 11h59 (horário de Brasília — UTC−3)",
+    "art1.p1": "Acredito que, desde quando iniciei minha primeira faculdade, de Análise e Desenvolvimento de Sistemas, antes mesmo de ter o primeiro contato, no segundo semestre, com a tão assustadora matéria \"Programação Orientada a Objetos\", utilizando a linguagem Java — também conhecida como o \"bicho-papão de sete cabeças\" e coisas do gênero —, eu já tinha em mente que seguiria na área de tecnologia, focado no desenvolvimento de software voltado ao backend.",
+    "art1.p2": "Honestamente, nunca entendi bem o porquê, mas a linguagem Java sempre despertou em mim uma curiosidade e uma vontade de aprendê-la. Acredito que isso se deve ao fato de sempre ouvir de todos ao meu redor que era uma linguagem extremamente chata, cansativa, enlouquecedora, dentre outros \"elogios\". No entanto, ao mesmo tempo, surgiu um pensamento: \"por que não a área de dados?\".",
+    "art1.p3": "Na adolescência, durante um breve período, dediquei-me a estudar para um concurso público do Banco do Brasil, para o cargo de bancário. Infelizmente, não passei para a fase seguinte; porém, naquele momento, acredito que foi plantada no fundo do meu pensamento uma semente: a de que a área financeira é algo realmente interessante de ser estudado. Essa semente demorou alguns anos para germinar e dar seus primeiros sinais de que poderia vir a gerar frutos no futuro.",
+    "art1.p4": "Voltando ao período da faculdade, tive a oportunidade de estagiar por um ano e cinco meses na área de riscos integrados de um banco. Nesse período, não apenas tive contato com avaliação de riscos e construção de relatórios, como também com análise de dados, tomada de decisão baseada nessas informações e elaboração de modelos. Foi nesse momento que a mesma semente plantada anos antes voltou a demonstrar sinais de crescimento e fortalecimento.",
+    "art1.p5": "Após essa experiência, busquei focar, primordialmente, na finalização da minha graduação. Ainda assim, constantemente me vinha o pensamento: \"será mesmo que eu quero apenas desenvolver softwares? E a área de dados? Seria uma mudança de destino completamente radical? Ou apenas uma correção de rota?\". São perguntas para as quais, aos poucos, venho construindo respostas — e, talvez, ainda não as tenha por completo.",
+    "art1.p6": "Naturalmente, passei a me inclinar para a área de riscos, influenciado por reflexões internas, conversas com pessoas ao meu redor, experiências vividas e também observadas. Acredito que ainda estou em um processo de construção sobre como integrar tecnologia, dados, mercado financeiro, riscos, lógica de programação e engenharia de forma coesa. A ideia é que todos esses \"ingredientes\", quando combinados, formem um resultado consistente, relevante e agradável tanto na forma quanto no conteúdo.",
+    "art1.p7": "Não vejo isso como um abandono da área de desenvolvimento de software, mas sim como uma evolução da minha trajetória profissional, na qual consigo integrar diferentes habilidades em prol de um resultado final com maior valor e efetividade.",
+    "art1.p8": "Aos leitores que acompanharam esta reflexão até aqui, a criação deste portfólio tem como objetivo registrar a construção dessa trajetória: projetos que demonstram não apenas habilidades técnicas, mas também a capacidade de pensar com dados dentro de um contexto de negócios.",
+
+    "art2.date": "11 de agosto de 2026, às 13h02 (horário de Brasília — UTC−3)",
+    "art2.p1": "Em 2019, no \"auge\" dos meus 16 para 17 anos, eu fazia diversos cursos em uma escola: inglês, montagem e manutenção de computadores e notebooks, turismo e hotelaria, entre outros. Minha mãe havia iniciado um curso de Excel Avançado, porém, por falta de tempo, não conseguiu dar sequência e acabou \"passando\" o curso para mim.",
+    "art2.p2": "Confesso que, na hora, não achei a melhor ideia do mundo. Era mais uma coisa para colocar na minha já apertada carga horária, e eu olhava para aquilo de uma forma meio atravessada: \"Excel? Eu sei lá quando vou usar isso.\"",
+    "art2.p3": "Na época, fazia alguns exercícios práticos no estilo \"isso com isso, mais isso aqui e aquilo ali, resulta nisso aqui\". Até então, aquele Daniel via o Excel apenas como mais uma ferramenta do pacote Office entre tantas outras. Nunca tinha feito nada realmente relevante utilizando a ferramenta e, muito menos, a utilizado de forma profissional.",
+    "art2.p4": "De certo ponto de vista, era até compreensível pensar daquela maneira.",
+    "art2.p5": "Anos depois, comecei a utilizar o Excel para montar uma planilha de gastos pessoais e ter um maior controle das minhas finanças. Nada muito complexo: algumas formatações básicas, funções como SOMA, filtros e alguns gráficos para organizar melhor as informações.",
+    "art2.p6": "Naquele momento, com um pensamento um pouco mais amadurecido, comecei a entender melhor a importância daquela ferramenta. E, provavelmente, meu subconsciente agradeceu à minha mãe por ter me colocado naquele curso.",
+    "art2.p7": "Com o tempo, já em um ambiente de trabalho, aquela \"sobrecarga\" acabou se transformando em uma ferramenta utilizada profissionalmente. E foi aí que aconteceu uma grande virada de chave.",
+    "art2.p8": "A diferença entre \"deixa eu anotar esses R$ 78 gastos na fatura do cartão de crédito\" e \"como todo aquele trabalho envolvendo sistemas, bancos de dados, SQL e ainda Power BI pode culminar em uma 'simples' planilha capaz de apontar um norte para decisões que podem custar milhões de reais?\"",
+    "art2.p9": "Loucura, não? Talvez? Acho que sim.",
+    "art2.p10": "Hoje consigo perceber que, indiretamente, aquelas primeiras planilhas foram meus primeiros passos na área de dados — mas de uma forma completamente despretensiosa.",
+    "art2.p11": "Aos crentes no efeito borboleta ou na teoria do caos, certamente existe um universo onde eu tive contato com PowerPoint e hoje estou elaborando apresentações de \"tirar o chapéu\". Mas, no universo em que este texto está sendo escrito, o Daniel segue utilizando funções mais complexas, construindo dashboards com uma pitada de Power BI, aplicando Power Query em alguns projetos, conectando o Excel a arquivos e fontes externas, modelando dados e aprendendo a dar um \"direcionamento\" para eles.",
+    "art2.p12": "Cada dia utilizando a \"sobrecarga\" é mais um dia que compreendo que é uma poderosa e aplicável ferramenta. É curioso pensar que tudo isso começou com um curso que eu não queria fazer.",
+    "art2.p13": "Em 2019, eu me perguntava: \"Excel? Eu sei lá quando vou usar isso.\"",
+    "art2.p14": "Hoje eu sei.",
+
+    "certpage.back": "← Voltar ao portfólio",
+    "certpage.title": "Cursos, certificações e idiomas",
+    "certpage.intro": "Aqui reúno os cursos e certificações que venho concluindo ou cursando durante a transição para a área de dados, além dos idiomas que falo.",
+    "certpage.tab_courses": "Cursos",
+    "certpage.tab_certifications": "Certificações",
+    "certpage.tab_languages": "Idiomas",
+    "certpage.view_cert": "Ver certificado",
+    "certpage.panel_empty_title": "Nenhuma certificação publicada ainda",
+    "certpage.panel_empty_desc": "Estou definindo quais certificações faz mais sentido priorizar agora. Assim que decidir, elas aparecem aqui.",
+
+    "course1.desc": "Bootcamp de 24 horas sobre fundamentos de Inteligência Artificial Generativa, concluído em 30/09/2025.",
+
+    "lang.pt_name": "Português",
+    "lang.en_name": "Inglês",
+    "lang.es_name": "Espanhol",
+    "lang.pt_level": "C2 · Nativo",
+    "lang.en_level": "C2 · Fluente",
+    "lang.es_level": "B1 · Intermediário"
   },
 
   en: {
@@ -93,7 +141,7 @@ const translations = {
     "certifications.empty_cta": "View certifications",
 
     "articles.eyebrow": "notes",
-    "articles.title": "Notes from the transition",
+    "articles.title": "Articles",
     "articles.read_more": "Read more →",
     "art1.title": "From Software Development to Data",
     "art1.desc": "Building a union between two paths leading to the same destination.",
@@ -103,7 +151,55 @@ const translations = {
     "contact.eyebrow": "contact",
     "contact.desc": "Open to internship and junior opportunities in data engineering and analysis.",
     "contact.copied": "Copied!",
-    "footer.rights": "All rights reserved."
+    "footer.rights": "All rights reserved.",
+
+    "article.back": "← Back to articles",
+
+    "art1.full_title": "From Software Development to Data: building a union between two paths leading to the same destination",
+    "art1.date": "August 4, 2026, at 11:59 AM (Brasília time — UTC−3)",
+    "art1.p1": "I believe that ever since I started my first degree, in Systems Analysis and Development, even before my first encounter, in the second semester, with the intimidating subject \"Object-Oriented Programming\" using the Java language — also known as the \"seven-headed monster\" and other such nicknames —, I already had it in mind that I would pursue a career in technology, focused on backend software development.",
+    "art1.p2": "Honestly, I never quite understood why, but the Java language always sparked a curiosity in me and a desire to learn it. I believe this is because I always heard from everyone around me that it was an extremely boring, tiring, maddening language, among other \"compliments.\" At the same time, though, a thought came up: \"why not the data field?\"",
+    "art1.p3": "As a teenager, for a brief period, I dedicated myself to studying for a public exam for a bank teller position at Banco do Brasil. Unfortunately, I didn't make it to the next stage; but at that moment, I believe a seed was planted deep in my mind: that the financial field is genuinely interesting to study. That seed took a few years to germinate and show its first signs that it could eventually bear fruit.",
+    "art1.p4": "Back in my college years, I had the opportunity to intern for a year and five months in the integrated risk area of a bank. During that time, I worked not only with risk assessment and report building, but also with data analysis, decision-making based on that information, and model development. That's when the same seed planted years before showed signs of growth and strength again.",
+    "art1.p5": "After that experience, I focused primarily on finishing my degree. Still, a thought kept coming back to me: \"do I really just want to develop software? What about the data field? Would that be a completely radical change of direction, or just a course correction?\" These are questions I've been slowly building answers to — and, perhaps, I still don't have them all.",
+    "art1.p6": "Naturally, I started leaning toward the risk field, influenced by internal reflection, conversations with people around me, and experiences both lived and observed. I believe I'm still in the process of figuring out how to cohesively integrate technology, data, the financial market, risk, programming logic, and engineering. The idea is that all these \"ingredients,\" when combined, produce a result that's consistent, relevant, and enjoyable in both form and content.",
+    "art1.p7": "I don't see this as abandoning software development, but rather as an evolution of my professional path, where I'm able to integrate different skills toward a final result with greater value and effectiveness.",
+    "art1.p8": "To the readers who followed this reflection this far, this portfolio was created to document the building of that journey: projects that demonstrate not just technical skills, but also the ability to think with data within a business context.",
+
+    "art2.date": "August 11, 2026, at 1:02 PM (Brasília time — UTC−3)",
+    "art2.p1": "In 2019, at the \"peak\" of my 16 to 17 years old, I was taking several courses at a school: English, computer and laptop assembly and maintenance, tourism and hospitality, among others. My mother had started an Advanced Excel course, but due to lack of time, she couldn't continue it and ended up \"passing\" the course on to me.",
+    "art2.p2": "I confess that, at the time, I didn't think it was the best idea in the world. It was one more thing to squeeze into my already packed schedule, and I looked at it somewhat sideways: \"Excel? I have no idea when I'll ever use that.\"",
+    "art2.p3": "Back then, I did some practical exercises along the lines of \"this plus this, plus this here and that there, results in this.\" Up to that point, that version of Daniel saw Excel as just another tool in the Office package among many others. I had never done anything truly relevant with the tool, let alone used it professionally.",
+    "art2.p4": "From a certain point of view, it was even understandable to think that way.",
+    "art2.p5": "Years later, I started using Excel to build a personal expense spreadsheet and get better control over my finances. Nothing too complex: some basic formatting, functions like SUM, filters, and a few charts to organize the information better.",
+    "art2.p6": "At that point, with a somewhat more mature mindset, I started to better understand the importance of that tool. And my subconscious probably thanked my mother for enrolling me in that course.",
+    "art2.p7": "Over time, already in a work environment, that \"burden\" ended up turning into a tool I used professionally. And that's when a major turning point happened.",
+    "art2.p8": "The difference between \"let me jot down these R$78 spent on the credit card bill\" and \"how can all that work involving systems, databases, SQL, and even Power BI culminate in a 'simple' spreadsheet capable of pointing a direction for decisions that can cost millions of reais?\"",
+    "art2.p9": "Crazy, right? Maybe? I think so.",
+    "art2.p10": "Today I can see that, indirectly, those first spreadsheets were my first steps into the data field — but in a completely unpretentious way.",
+    "art2.p11": "For believers in the butterfly effect or chaos theory, there's certainly a universe out there where I ended up working with PowerPoint instead and today I'm building \"hat-tipping\" presentations. But in the universe where this text is being written, Daniel keeps using more complex functions, building dashboards with a touch of Power BI, applying Power Query in some projects, connecting Excel to external files and sources, modeling data, and learning to give it \"direction.\"",
+    "art2.p12": "Every day using that \"burden\" is one more day I realize just how powerful and applicable a tool it is. It's curious to think that all of this started with a course I didn't want to take.",
+    "art2.p13": "In 2019, I asked myself: \"Excel? I have no idea when I'll ever use that.\"",
+    "art2.p14": "Today I know.",
+
+    "certpage.back": "← Back to portfolio",
+    "certpage.title": "Courses, certifications and languages",
+    "certpage.intro": "Here I gather the courses and certifications I've been completing or taking during my transition into data, along with the languages I speak.",
+    "certpage.tab_courses": "Courses",
+    "certpage.tab_certifications": "Certifications",
+    "certpage.tab_languages": "Languages",
+    "certpage.view_cert": "View certificate",
+    "certpage.panel_empty_title": "No certifications published yet",
+    "certpage.panel_empty_desc": "I'm still deciding which certifications make the most sense to prioritize right now. Once I do, they'll show up here.",
+
+    "course1.desc": "24-hour bootcamp on the fundamentals of Generative Artificial Intelligence, completed on 09/30/2025.",
+
+    "lang.pt_name": "Portuguese",
+    "lang.en_name": "English",
+    "lang.es_name": "Spanish",
+    "lang.pt_level": "C2 · Native",
+    "lang.en_level": "C2 · Fluent",
+    "lang.es_level": "B1 · Intermediate"
   }
 };
 

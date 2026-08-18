@@ -28,7 +28,7 @@
     <a href="../" class="logo">Daniel M.</a>
 
     <nav class="nav" id="mainNav">
-      <a href="../#anotacoes" class="nav-link">Anotações</a>
+      <a href="../#anotacoes" class="nav-link" data-i18n="nav.articles">Anotações</a>
     </nav>
 
     <div class="header-actions">
@@ -41,50 +41,70 @@
           <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
         </svg>
       </button>
+
+      <div class="lang-switch" role="group" aria-label="Selecionar idioma / Select language">
+        <button type="button" class="lang-btn is-active" data-lang="pt" aria-pressed="true" aria-label="Português">
+          <svg viewBox="0 0 24 16" class="flag-icon" aria-hidden="true">
+            <rect width="24" height="16" fill="#0b8a3b"/>
+            <polygon points="12,2 22,8 12,14 2,8" fill="#f6c400"/>
+            <circle cx="12" cy="8" r="4.2" fill="#1b3d8f"/>
+            <path d="M 8 8.6 A 4.4 4.4 0 0 1 16 8.6" stroke="#f2f2f2" stroke-width="0.9" fill="none"/>
+          </svg>
+        </button>
+        <button type="button" class="lang-btn" data-lang="en" aria-pressed="false" aria-label="English">
+          <svg viewBox="0 0 24 16" class="flag-icon" aria-hidden="true">
+            <rect width="24" height="16" fill="#0a1f5c"/>
+            <path d="M0,0 L24,16 M24,0 L0,16" stroke="#fff" stroke-width="3"/>
+            <path d="M0,0 L24,16 M24,0 L0,16" stroke="#c8102e" stroke-width="1.2"/>
+            <path d="M12,0 L12,16 M0,8 L24,8" stroke="#fff" stroke-width="5"/>
+            <path d="M12,0 L12,16 M0,8 L24,8" stroke="#c8102e" stroke-width="2.2"/>
+          </svg>
+        </button>
+      </div>
     </div>
   </div>
 </header>
 
 <main class="article-page-main">
   <div class="container article-container">
-    <a href="../#anotacoes" class="back-link">← Voltar às anotações</a>
+    <a href="../#anotacoes" class="back-link" data-i18n="article.back">← Voltar às anotações</a>
 
-    <p class="eyebrow">anotações</p>
-    <h1 class="article-title">Desenvolvendo Softwares aos Dados: a construção de uma união de dois caminhos com um mesmo destino</h1>
+    <p class="eyebrow" data-i18n="articles.eyebrow">anotações</p>
+    <h1 class="article-title" data-i18n="art1.full_title">Desenvolvendo Softwares aos Dados: a construção de uma união de dois caminhos com um mesmo destino</h1>
 
     <div class="article-byline">
       <span class="byline-author">Daniel M.</span>
       <span class="byline-dot">•</span>
-      <time class="byline-date" datetime="2026-08-04T11:59:00-03:00">4 de agosto de 2026, às 11h59 (horário de Brasília — UTC−3)</time>
+      <time class="byline-date" datetime="2026-08-04T11:59:00-03:00" data-i18n="art1.date">4 de agosto de 2026, às 11h59 (horário de Brasília — UTC−3)</time>
     </div>
 
     <div class="article-body">
-      <p>Acredito que, desde quando iniciei minha primeira faculdade, de Análise e Desenvolvimento de Sistemas, antes mesmo de ter o primeiro contato, no segundo semestre, com a tão assustadora matéria "Programação Orientada a Objetos", utilizando a linguagem Java — também conhecida como o "bicho-papão de sete cabeças" e coisas do gênero —, eu já tinha em mente que seguiria na área de tecnologia, focado no desenvolvimento de software voltado ao backend.</p>
+      <p data-i18n="art1.p1">Acredito que, desde quando iniciei minha primeira faculdade, de Análise e Desenvolvimento de Sistemas, antes mesmo de ter o primeiro contato, no segundo semestre, com a tão assustadora matéria "Programação Orientada a Objetos", utilizando a linguagem Java — também conhecida como o "bicho-papão de sete cabeças" e coisas do gênero —, eu já tinha em mente que seguiria na área de tecnologia, focado no desenvolvimento de software voltado ao backend.</p>
 
-      <p>Honestamente, nunca entendi bem o porquê, mas a linguagem Java sempre despertou em mim uma curiosidade e uma vontade de aprendê-la. Acredito que isso se deve ao fato de sempre ouvir de todos ao meu redor que era uma linguagem extremamente chata, cansativa, enlouquecedora, dentre outros "elogios". No entanto, ao mesmo tempo, surgiu um pensamento: "por que não a área de dados?".</p>
+      <p data-i18n="art1.p2">Honestamente, nunca entendi bem o porquê, mas a linguagem Java sempre despertou em mim uma curiosidade e uma vontade de aprendê-la. Acredito que isso se deve ao fato de sempre ouvir de todos ao meu redor que era uma linguagem extremamente chata, cansativa, enlouquecedora, dentre outros "elogios". No entanto, ao mesmo tempo, surgiu um pensamento: "por que não a área de dados?".</p>
 
-      <p>Na adolescência, durante um breve período, dediquei-me a estudar para um concurso público do Banco do Brasil, para o cargo de bancário. Infelizmente, não passei para a fase seguinte; porém, naquele momento, acredito que foi plantada no fundo do meu pensamento uma semente: a de que a área financeira é algo realmente interessante de ser estudado. Essa semente demorou alguns anos para germinar e dar seus primeiros sinais de que poderia vir a gerar frutos no futuro.</p>
+      <p data-i18n="art1.p3">Na adolescência, durante um breve período, dediquei-me a estudar para um concurso público do Banco do Brasil, para o cargo de bancário. Infelizmente, não passei para a fase seguinte; porém, naquele momento, acredito que foi plantada no fundo do meu pensamento uma semente: a de que a área financeira é algo realmente interessante de ser estudado. Essa semente demorou alguns anos para germinar e dar seus primeiros sinais de que poderia vir a gerar frutos no futuro.</p>
 
-      <p>Voltando ao período da faculdade, tive a oportunidade de estagiar por um ano e cinco meses na área de riscos integrados de um banco. Nesse período, não apenas tive contato com avaliação de riscos e construção de relatórios, como também com análise de dados, tomada de decisão baseada nessas informações e elaboração de modelos. Foi nesse momento que a mesma semente plantada anos antes voltou a demonstrar sinais de crescimento e fortalecimento.</p>
+      <p data-i18n="art1.p4">Voltando ao período da faculdade, tive a oportunidade de estagiar por um ano e cinco meses na área de riscos integrados de um banco. Nesse período, não apenas tive contato com avaliação de riscos e construção de relatórios, como também com análise de dados, tomada de decisão baseada nessas informações e elaboração de modelos. Foi nesse momento que a mesma semente plantada anos antes voltou a demonstrar sinais de crescimento e fortalecimento.</p>
 
-      <p>Após essa experiência, busquei focar, primordialmente, na finalização da minha graduação. Ainda assim, constantemente me vinha o pensamento: "será mesmo que eu quero apenas desenvolver softwares? E a área de dados? Seria uma mudança de destino completamente radical? Ou apenas uma correção de rota?". São perguntas para as quais, aos poucos, venho construindo respostas — e, talvez, ainda não as tenha por completo.</p>
+      <p data-i18n="art1.p5">Após essa experiência, busquei focar, primordialmente, na finalização da minha graduação. Ainda assim, constantemente me vinha o pensamento: "será mesmo que eu quero apenas desenvolver softwares? E a área de dados? Seria uma mudança de destino completamente radical? Ou apenas uma correção de rota?". São perguntas para as quais, aos poucos, venho construindo respostas — e, talvez, ainda não as tenha por completo.</p>
 
-      <p>Naturalmente, passei a me inclinar para a área de riscos, influenciado por reflexões internas, conversas com pessoas ao meu redor, experiências vividas e também observadas. Acredito que ainda estou em um processo de construção sobre como integrar tecnologia, dados, mercado financeiro, riscos, lógica de programação e engenharia de forma coesa. A ideia é que todos esses "ingredientes", quando combinados, formem um resultado consistente, relevante e agradável tanto na forma quanto no conteúdo.</p>
+      <p data-i18n="art1.p6">Naturalmente, passei a me inclinar para a área de riscos, influenciado por reflexões internas, conversas com pessoas ao meu redor, experiências vividas e também observadas. Acredito que ainda estou em um processo de construção sobre como integrar tecnologia, dados, mercado financeiro, riscos, lógica de programação e engenharia de forma coesa. A ideia é que todos esses "ingredientes", quando combinados, formem um resultado consistente, relevante e agradável tanto na forma quanto no conteúdo.</p>
 
-      <p>Não vejo isso como um abandono da área de desenvolvimento de software, mas sim como uma evolução da minha trajetória profissional, na qual consigo integrar diferentes habilidades em prol de um resultado final com maior valor e efetividade.</p>
+      <p data-i18n="art1.p7">Não vejo isso como um abandono da área de desenvolvimento de software, mas sim como uma evolução da minha trajetória profissional, na qual consigo integrar diferentes habilidades em prol de um resultado final com maior valor e efetividade.</p>
 
-      <p>Aos leitores que acompanharam esta reflexão até aqui, a criação deste portfólio tem como objetivo registrar a construção dessa trajetória: projetos que demonstram não apenas habilidades técnicas, mas também a capacidade de pensar com dados dentro de um contexto de negócios.</p>
+      <p data-i18n="art1.p8">Aos leitores que acompanharam esta reflexão até aqui, a criação deste portfólio tem como objetivo registrar a construção dessa trajetória: projetos que demonstram não apenas habilidades técnicas, mas também a capacidade de pensar com dados dentro de um contexto de negócios.</p>
     </div>
 
     <div class="article-footer-nav">
-      <a href="../#anotacoes" class="btn btn-ghost">← Voltar às anotações</a>
+      <a href="../#anotacoes" class="btn btn-ghost" data-i18n="article.back">← Voltar às anotações</a>
     </div>
   </div>
 </main>
 
 <footer class="footer">
   <div class="container footer-bottom">
-    <p>&copy; 2026 Daniel. Todos os direitos reservados.</p>
+    <p>&copy; 2026 Daniel. <span data-i18n="footer.rights">Todos os direitos reservados.</span></p>
   </div>
 </footer>
 
