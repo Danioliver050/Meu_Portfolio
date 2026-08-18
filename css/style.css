@@ -761,7 +761,7 @@ ul { list-style: none; margin: 0; padding: 0; }
   border: 1px solid var(--accent);
   color: var(--accent);
 }
-.lang-cert-row {
+.cert-view-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -770,11 +770,11 @@ ul { list-style: none; margin: 0; padding: 0; }
   padding-top: 14px;
   border-top: 1px solid var(--border-soft);
 }
-.lang-cert-name {
+.cert-view-label {
   font-size: 0.82rem;
   color: var(--text-muted);
 }
-.lang-cert-view {
+.cert-view-btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -788,8 +788,8 @@ ul { list-style: none; margin: 0; padding: 0; }
   cursor: pointer;
   transition: color var(--transition), border-color var(--transition);
 }
-.lang-cert-view:hover,
-.lang-cert-view:focus-visible {
+.cert-view-btn:hover,
+.cert-view-btn:focus-visible {
   color: var(--accent);
   border-color: var(--accent);
 }

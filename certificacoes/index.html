@@ -73,12 +73,16 @@
 
     <div class="cert-panel is-active" data-panel="cursos">
       <div class="cert-grid">
-        <div class="empty-state">
-          <svg viewBox="0 0 64 64" class="empty-state-icon" aria-hidden="true">
-            <path d="M32 10l7 14 15 2-11 11 3 15-14-7-14 7 3-15-11-11 15-2z" fill="none" stroke="var(--border)" stroke-width="2" stroke-linejoin="round"/>
-          </svg>
-          <h3>Nenhum curso publicado ainda</h3>
-          <p>Estou definindo quais cursos faz mais sentido priorizar agora. Assim que decidir, eles aparecem aqui.</p>
+        <div class="cert-card">
+          <span class="cert-platform">DIO</span>
+          <h3>Universia - Fundamentos de IA Generativa</h3>
+          <p>Bootcamp de 24 horas sobre fundamentos de Inteligência Artificial Generativa, concluído em 30/09/2025.</p>
+          <div class="cert-view-row">
+            <span class="cert-view-label">Ver certificado</span>
+            <button type="button" class="cert-view-btn" data-lightbox-target="courseLightbox1" aria-label="Ver certificado Universia - Fundamentos de IA Generativa em tamanho ampliado" aria-haspopup="dialog">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -104,9 +108,9 @@
         <div class="cert-card lang-card">
           <span class="lang-level level-advanced">C2 · Fluente</span>
           <h3>Inglês</h3>
-          <div class="lang-cert-row">
-            <span class="lang-cert-name">EF SET Certificate</span>
-            <button type="button" class="lang-cert-view" data-lightbox-target="certLightbox" aria-label="Ver certificado EF SET em tamanho ampliado" aria-haspopup="dialog">
+          <div class="cert-view-row">
+            <span class="cert-view-label">EF SET Certificate</span>
+            <button type="button" class="cert-view-btn" data-lightbox-target="certLightbox" aria-label="Ver certificado EF SET em tamanho ampliado" aria-haspopup="dialog">
               <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
             </button>
           </div>
@@ -132,6 +136,14 @@
     <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
   </button>
   <img src="../assets/ef-set-certificate.jpg" alt="Certificado EF SET de proficiência em inglês de Daniel Oliveira Machado, nível C2 Proficient, pontuação 77/100" class="lightbox-img">
+  <span class="lightbox-hint">Ctrl + scroll para ampliar</span>
+</div>
+
+<div class="lightbox" id="courseLightbox1" role="dialog" aria-modal="true" aria-label="Certificado Universia - Fundamentos de IA Generativa em tamanho ampliado" hidden>
+  <button type="button" class="lightbox-close" aria-label="Fechar">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+  <img src="../assets/dio-fundamentos-ia-generativa.jpg" alt="Certificado Universia - Fundamentos de IA Generativa, emitido pela DIO para Daniel Machado, concluído em 30 de setembro de 2025, carga horária de 24 horas" class="lightbox-img">
   <span class="lightbox-hint">Ctrl + scroll para ampliar</span>
 </div>
 
