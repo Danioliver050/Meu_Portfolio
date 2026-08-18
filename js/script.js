@@ -37,7 +37,6 @@ const translations = {
 
     "certifications.eyebrow": "certificações",
     "certifications.title": "Cursos e certificações",
-    "certifications.empty_title": "Página em preparação",
     "certifications.empty_desc": "Reuni cursos, certificações e idiomas em um só lugar.",
     "certifications.empty_cta": "Ver certificações",
 
@@ -136,7 +135,6 @@ const translations = {
 
     "certifications.eyebrow": "certifications",
     "certifications.title": "Courses & certifications",
-    "certifications.empty_title": "Page in progress",
     "certifications.empty_desc": "I've gathered courses, certifications and languages in one place.",
     "certifications.empty_cta": "View certifications",
 
