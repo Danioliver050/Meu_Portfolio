@@ -24,7 +24,7 @@ const translations = {
     "about.p2": "A partir desse ponto, passei a buscar, de forma simultânea, o desenvolvimento de software e o trabalho com dados nas aplicações, aproveitando ao máximo minhas habilidades e buscando sempre extrair os melhores resultados.",
 
     "projects.eyebrow": "projetos",
-    "projects.title": "Meu portfólio",
+    "projects.title": "Meus projetos",
     "projects.empty_title": "Projetos em construção",
     "projects.empty_desc": "Estou finalizando meus primeiros projetos de dados. Em breve eles aparecem aqui — enquanto isso, dá uma olhada no que já venho estudando no GitHub.",
     "projects.empty_cta": "Ver GitHub",
@@ -32,13 +32,13 @@ const translations = {
     "stack.eyebrow": "stack",
     "stack.title": "Ferramentas e tecnologias",
     "stack.group1": "Dados & Análise",
-    "stack.group2": "Engenharia & Cloud",
+    "stack.group2": "Desenvolvimento",
     "stack.placeholder": "Em definição",
 
     "certifications.eyebrow": "certificações",
     "certifications.title": "Cursos e certificações",
     "certifications.empty_title": "Página em preparação",
-    "certifications.empty_desc": "Reuni cursos, certificações e idiomas em um só lugar. Cursos e certificações ainda estão em definição — mas os idiomas que falo já estão lá.",
+    "certifications.empty_desc": "Reuni cursos, certificações e idiomas em um só lugar.",
     "certifications.empty_cta": "Ver certificações",
 
     "articles.eyebrow": "anotações",
@@ -50,7 +50,7 @@ const translations = {
     "art2.desc": "Como um curso que eu não queria fazer se tornou uma ferramenta essencial na minha jornada com dados.",
 
     "contact.eyebrow": "contato",
-    "contact.desc": "Aberto a oportunidades de estágio e posições júnior em engenharia e análise de dados.",
+    "contact.desc": "Aberto a oportunidades de estágio e posições júnior em engenharia, desenvolvimento e análise de dados.",
     "contact.copied": "Copiado!",
     "footer.rights": "Todos os direitos reservados.",
 
@@ -123,7 +123,7 @@ const translations = {
     "about.p2": "From that point on, I began simultaneously pursuing software development and working with data within applications, making the most of my skills and always aiming to extract the best results.",
 
     "projects.eyebrow": "projects",
-    "projects.title": "My portfolio",
+    "projects.title": "My projects",
     "projects.empty_title": "Projects under construction",
     "projects.empty_desc": "I'm putting the finishing touches on my first data projects. They'll show up here soon — in the meantime, check out what I've been studying on GitHub.",
     "projects.empty_cta": "View GitHub",
@@ -131,13 +131,13 @@ const translations = {
     "stack.eyebrow": "stack",
     "stack.title": "Tools & technologies",
     "stack.group1": "Data & Analytics",
-    "stack.group2": "Engineering & Cloud",
+    "stack.group2": "Development",
     "stack.placeholder": "To be defined",
 
     "certifications.eyebrow": "certifications",
     "certifications.title": "Courses & certifications",
     "certifications.empty_title": "Page in progress",
-    "certifications.empty_desc": "I've gathered courses, certifications and languages in one place. Courses and certifications are still being defined — but the languages I speak are already there.",
+    "certifications.empty_desc": "I've gathered courses, certifications and languages in one place.",
     "certifications.empty_cta": "View certifications",
 
     "articles.eyebrow": "notes",
@@ -149,7 +149,7 @@ const translations = {
     "art2.desc": "How a course I didn't want to take became an essential tool in my journey with data.",
 
     "contact.eyebrow": "contact",
-    "contact.desc": "Open to internship and junior opportunities in data engineering and analysis.",
+    "contact.desc": "Open to internship and junior opportunities in engineering, development and data analysis.",
     "contact.copied": "Copied!",
     "footer.rights": "All rights reserved.",
 
