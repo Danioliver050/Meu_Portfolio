@@ -515,7 +515,8 @@ ul { list-style: none; margin: 0; padding: 0; }
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 340px));
+  justify-content: center;
   gap: 24px;
 }
 .project-card {
@@ -867,7 +868,6 @@ ul { list-style: none; margin: 0; padding: 0; }
    RESPONSIVE
    ========================================================= */
 @media (max-width: 900px) {
-  .project-grid { grid-template-columns: 1fr 1fr; }
   .courses-grid { grid-template-columns: 1fr 1fr; }
 }
 
@@ -886,7 +886,6 @@ ul { list-style: none; margin: 0; padding: 0; }
   .nav.is-open { transform: translateY(0); }
   .nav-link { padding: 14px 0; border-bottom: 1px solid var(--border-soft); }
   .menu-toggle { display: flex; }
-  .project-grid { grid-template-columns: 1fr; }
   .skills-grid { grid-template-columns: 1fr; }
 }
 

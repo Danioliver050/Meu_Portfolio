@@ -151,17 +151,30 @@
 <section class="section" id="projetos">
   <div class="container">
     <p class="eyebrow" data-i18n="projects.eyebrow">projetos</p>
-    <h2 class="section-title" data-i18n="projects.title">Meu portfólio</h2>
+    <h2 class="section-title" data-i18n="projects.title">Meus projetos</h2>
 
-    <div class="empty-state">
-      <svg viewBox="0 0 64 64" class="empty-state-icon" aria-hidden="true">
-        <rect x="10" y="16" width="44" height="34" rx="4" fill="none" stroke="var(--border)" stroke-width="2"/>
-        <path d="M10 24h44" stroke="var(--border)" stroke-width="2"/>
-        <path d="M24 34l6 6 10-12" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-      <h3 data-i18n="projects.empty_title">Projetos em construção</h3>
-      <p data-i18n="projects.empty_desc">Estou finalizando meus primeiros projetos de dados. Em breve eles aparecem aqui — enquanto isso, dá uma olhada no que já venho estudando no GitHub.</p>
-      <a href="https://github.com/Danioliver050/" class="btn btn-ghost" target="_blank" rel="noopener" data-i18n="projects.empty_cta">Ver GitHub</a>
+    <div class="project-grid">
+      <article class="project-card">
+        <div class="project-thumb" aria-hidden="true">
+          <svg viewBox="0 0 240 160">
+            <rect width="240" height="160" fill="var(--bg-alt)"/>
+            <rect x="24" y="30" width="70" height="100" rx="4" fill="none" stroke="var(--border)" stroke-width="2"/>
+            <text x="59" y="85" text-anchor="middle" fill="var(--text-faint)" font-size="13" font-family="monospace">CSV</text>
+            <path d="M104 80h32" stroke="var(--accent)" stroke-width="2.5"/>
+            <path d="M126 72l10 8-10 8" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="146" y="46" width="70" height="68" rx="4" fill="none" stroke="var(--accent)" stroke-width="2"/>
+            <text x="181" y="85" text-anchor="middle" fill="var(--accent)" font-size="13" font-family="monospace">.parquet</text>
+          </svg>
+        </div>
+        <div class="project-body">
+          <span class="project-tag" data-i18n="proj1.tag">Python · ETL</span>
+          <h3 data-i18n="proj1.title">Pipeline de Dados Financeiros</h3>
+          <p data-i18n="proj1.desc">Pipeline de ETL que limpa e padroniza dados bancários (CPF, datas, valores) e converte CSV para Parquet — 63% menor e consultas 9,4x mais rápidas.</p>
+          <div class="project-links">
+            <a href="https://github.com/Danioliver050/pipeline-dados-financeiros" target="_blank" rel="noopener" data-i18n="project.link_code">Código</a>
+          </div>
+        </div>
+      </article>
     </div>
   </div>
 </section>

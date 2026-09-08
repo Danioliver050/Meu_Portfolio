@@ -25,9 +25,10 @@ const translations = {
 
     "projects.eyebrow": "projetos",
     "projects.title": "Meus projetos",
-    "projects.empty_title": "Projetos em construção",
-    "projects.empty_desc": "Estou finalizando meus primeiros projetos de dados. Em breve eles aparecem aqui — enquanto isso, dá uma olhada no que já venho estudando no GitHub.",
-    "projects.empty_cta": "Ver GitHub",
+    "project.link_code": "Código",
+    "proj1.tag": "Python · ETL",
+    "proj1.title": "Pipeline de Dados Financeiros",
+    "proj1.desc": "Pipeline de ETL que limpa e padroniza dados bancários (CPF, datas, valores) e converte CSV para Parquet — 63% menor e consultas 9,4x mais rápidas.",
 
     "stack.eyebrow": "stack",
     "stack.title": "Ferramentas e tecnologias",
@@ -123,9 +124,10 @@ const translations = {
 
     "projects.eyebrow": "projects",
     "projects.title": "My projects",
-    "projects.empty_title": "Projects under construction",
-    "projects.empty_desc": "I'm putting the finishing touches on my first data projects. They'll show up here soon — in the meantime, check out what I've been studying on GitHub.",
-    "projects.empty_cta": "View GitHub",
+    "project.link_code": "Code",
+    "proj1.tag": "Python · ETL",
+    "proj1.title": "Financial Data Pipeline",
+    "proj1.desc": "ETL pipeline that cleans and standardizes banking data (CPF, dates, amounts) and converts CSV to Parquet — 63% smaller and 9.4x faster queries.",
 
     "stack.eyebrow": "stack",
     "stack.title": "Tools & technologies",
