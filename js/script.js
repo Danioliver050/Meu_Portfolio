@@ -29,12 +29,14 @@ const translations = {
     "proj1.tag": "Python · ETL",
     "proj1.title": "Pipeline de Dados Financeiros",
     "proj1.desc": "Pipeline de ETL que limpa e padroniza dados bancários (CPF, datas, valores) e converte CSV para Parquet — 63% menor e consultas 9,4x mais rápidas.",
+    "proj2.tag": "AWS · Streaming",
+    "proj2.title": "Diagrama de Arquitetura — Amazon Connect",
+    "proj2.desc": "Arquitetura de dados em tempo real que transforma eventos de um contact center bancário em KPIs operacionais, com latência abaixo de 60 segundos.",
 
     "stack.eyebrow": "stack",
     "stack.title": "Ferramentas e tecnologias",
     "stack.group1": "Dados & Análise",
     "stack.group2": "Desenvolvimento",
-    "stack.placeholder": "Em definição",
 
     "certifications.eyebrow": "certificações",
     "certifications.title": "Cursos e certificações",
@@ -128,12 +130,14 @@ const translations = {
     "proj1.tag": "Python · ETL",
     "proj1.title": "Financial Data Pipeline",
     "proj1.desc": "ETL pipeline that cleans and standardizes banking data (CPF, dates, amounts) and converts CSV to Parquet — 63% smaller and 9.4x faster queries.",
+    "proj2.tag": "AWS · Streaming",
+    "proj2.title": "Architecture Diagram — Amazon Connect",
+    "proj2.desc": "Real-time data architecture that turns banking contact center events into operational KPIs, with latency under 60 seconds.",
 
     "stack.eyebrow": "stack",
     "stack.title": "Tools & technologies",
     "stack.group1": "Data & Analytics",
     "stack.group2": "Development",
-    "stack.placeholder": "To be defined",
 
     "certifications.eyebrow": "certifications",
     "certifications.title": "Courses & certifications",
@@ -230,26 +234,6 @@ document.querySelectorAll(".lang-btn").forEach((btn) => {
   btn.addEventListener("click", () => {
     const lang = btn.getAttribute("data-lang");
     if (lang !== currentLang) applyLanguage(lang);
-  });
-});
-
-/* =========================================================
-   FILTRO DE PROJETOS
-   ========================================================= */
-const filterButtons = document.querySelectorAll(".filter-btn");
-const projectCards = document.querySelectorAll(".project-card");
-
-filterButtons.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    filterButtons.forEach((b) => b.classList.remove("is-active"));
-    btn.classList.add("is-active");
-
-    const filter = btn.getAttribute("data-filter");
-    projectCards.forEach((card) => {
-      const categories = card.getAttribute("data-category").split(" ");
-      const show = filter === "all" || categories.includes(filter);
-      card.classList.toggle("is-hidden", !show);
-    });
   });
 });
 

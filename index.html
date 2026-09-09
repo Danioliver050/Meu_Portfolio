@@ -175,6 +175,20 @@
           </div>
         </div>
       </article>
+
+      <article class="project-card">
+        <button type="button" class="project-thumb project-thumb-photo" data-lightbox-target="diagramLightbox" aria-label="Ampliar diagrama de arquitetura Amazon Connect">
+          <img src="assets/diagrama-arquitetura.jpg" alt="Diagrama de arquitetura de streaming de dados: Amazon Connect para área de negócios">
+        </button>
+        <div class="project-body">
+          <span class="project-tag" data-i18n="proj2.tag">AWS · Streaming</span>
+          <h3 data-i18n="proj2.title">Diagrama de Arquitetura — Amazon Connect</h3>
+          <p data-i18n="proj2.desc">Arquitetura de dados em tempo real que transforma eventos de um contact center bancário em KPIs operacionais, com latência abaixo de 60 segundos.</p>
+          <div class="project-links">
+            <a href="https://github.com/Danioliver050/diagrama_arquitetura" target="_blank" rel="noopener" data-i18n="project.link_code">Código</a>
+          </div>
+        </div>
+      </article>
     </div>
   </div>
 </section>
@@ -188,14 +202,18 @@
     <div class="skills-grid">
       <div class="skill-group">
         <h3 data-i18n="stack.group1">Dados & Análise</h3>
-        <ul class="tag-list tag-list-empty">
-          <li class="tag-placeholder" data-i18n="stack.placeholder">Em definição</li>
+        <ul class="tag-list">
+          <li>Python</li>
+          <li>SQL</li>
+          <li>Power BI</li>
+          <li>AWS</li>
         </ul>
       </div>
       <div class="skill-group">
-        <h3 data-i18n="stack.group2">Engenharia & Cloud</h3>
-        <ul class="tag-list tag-list-empty">
-          <li class="tag-placeholder" data-i18n="stack.placeholder">Em definição</li>
+        <h3 data-i18n="stack.group2">Desenvolvimento</h3>
+        <ul class="tag-list">
+          <li>Java</li>
+          <li>Spring Boot</li>
         </ul>
       </div>
     </div>
@@ -263,6 +281,15 @@
     <p>&copy; 2026 Daniel. <span data-i18n="footer.rights">Todos os direitos reservados.</span></p>
   </div>
 </footer>
+
+<!-- ===================== DIAGRAM LIGHTBOX ===================== -->
+<div class="lightbox" id="diagramLightbox" role="dialog" aria-modal="true" aria-label="Diagrama de arquitetura em tamanho ampliado" hidden>
+  <button type="button" class="lightbox-close" aria-label="Fechar">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+  <img src="assets/diagrama-arquitetura.jpg" alt="Diagrama de arquitetura de streaming de dados: Amazon Connect para área de negócios, em tamanho ampliado" class="lightbox-img">
+  <span class="lightbox-hint">Ctrl + scroll para ampliar</span>
+</div>
 
 <script src="js/script.js"></script>
 </body>
