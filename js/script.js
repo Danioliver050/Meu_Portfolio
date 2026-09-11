@@ -228,6 +228,14 @@ function applyLanguage(lang) {
     btn.classList.toggle("is-active", isActive);
     btn.setAttribute("aria-pressed", String(isActive));
   });
+
+  const cvBtn = document.getElementById("cvDownloadBtn");
+  if (cvBtn) {
+    const cvHref = lang === "en" ? cvBtn.getAttribute("data-cv-en") : cvBtn.getAttribute("data-cv-pt");
+    const cvFilename = lang === "en" ? cvBtn.getAttribute("data-cv-en-filename") : cvBtn.getAttribute("data-cv-pt-filename");
+    if (cvHref) cvBtn.setAttribute("href", cvHref);
+    if (cvFilename) cvBtn.setAttribute("download", cvFilename);
+  }
 }
 
 document.querySelectorAll(".lang-btn").forEach((btn) => {
