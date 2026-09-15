@@ -100,7 +100,15 @@ Em `certificacoes/index.html` há um modelo comentado no HTML (`<!-- MODELO PARA
 
 Todas as traduções do site (PT/EN) ficam centralizadas no topo de `js/script.js`, no objeto `translations`.
 
+## 📌 Status atual do conteúdo
 
+- [x] CV real
+- [x] Foto de perfil real
+- [x] Links de LinkedIn/GitHub
+- [x] Primeiro artigo publicado
+- [ ] Projetos de dados (em construção)
+- [ ] Stack de tecnologias (em definição)
+- [ ] Cursos e certificações (em definição)
 
 ## 👤 Contato
 

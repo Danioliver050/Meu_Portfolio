@@ -32,6 +32,9 @@ const translations = {
     "proj2.tag": "AWS · Streaming",
     "proj2.title": "Diagrama de Arquitetura — Amazon Connect",
     "proj2.desc": "Arquitetura de dados em tempo real que transforma eventos de um contact center bancário em KPIs operacionais, com latência abaixo de 60 segundos.",
+    "proj3.tag": "Python · Engenharia de Dados",
+    "proj3.title": "Data Lake — Arquitetura Medalhão",
+    "proj3.desc": "Pipeline que transforma uma tabela desnormalizada de propostas de crédito em um data mart analítico, passando por Bronze, Prata e Gold e terminando em um modelo estrela no DuckDB.",
 
     "stack.eyebrow": "stack",
     "stack.title": "Ferramentas e tecnologias",
@@ -133,6 +136,9 @@ const translations = {
     "proj2.tag": "AWS · Streaming",
     "proj2.title": "Architecture Diagram — Amazon Connect",
     "proj2.desc": "Real-time data architecture that turns banking contact center events into operational KPIs, with latency under 60 seconds.",
+    "proj3.tag": "Python · Data Engineering",
+    "proj3.title": "Data Lake — Medallion Architecture",
+    "proj3.desc": "Pipeline that transforms a denormalized credit-proposal table into an analytical data mart through Bronze, Silver and Gold layers, ending in a star schema in DuckDB.",
 
     "stack.eyebrow": "stack",
     "stack.title": "Tools & technologies",
