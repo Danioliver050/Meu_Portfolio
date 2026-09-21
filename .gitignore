@@ -1,0 +1,9 @@
+# Dependências instaladas localmente (nunca sobem pro Git)
+node_modules/
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
