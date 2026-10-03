@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modelo de Score de Crédito — Daniel M.</title>
+<meta name="description" content="Modelo de risco de crédito em Python sobre 307 mil propostas reais: seleção por WOE/IV, Regressão Logística e XGBoost, scorecard de pontos e monitoramento por PSI.">
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://portfolio-danielm.vercel.app/projetos/modelo-score-credito/">
+<meta property="og:title" content="Modelo de Score de Crédito — Daniel M.">
+<meta property="og:description" content="Modelo de risco de crédito com scorecard de pontos, AUC 0,74 e KS 0,37, sobre 307 mil propostas reais.">
+<meta property="og:image" content="https://portfolio-danielm.vercel.app/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://portfolio-danielm.vercel.app/projetos/modelo-score-credito/">
+
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="../../" class="logo">Daniel M.</a>
+
+    <nav class="nav" id="mainNav">
+      <a href="../../#projetos" class="nav-link" data-i18n="nav.projects">Projetos</a>
+    </nav>
+
+    <div class="header-actions">
+
+      <div class="lang-switch" role="group" aria-label="Selecionar idioma / Select language">
+        <button type="button" class="lang-btn is-active" data-lang="pt" aria-pressed="true" aria-label="Português">
+          <svg viewBox="0 0 24 16" class="flag-icon" aria-hidden="true">
+            <rect width="24" height="16" fill="#0b8a3b"/>
+            <polygon points="12,2 22,8 12,14 2,8" fill="#f6c400"/>
+            <circle cx="12" cy="8" r="4.2" fill="#1b3d8f"/>
+            <path d="M 8 8.6 A 4.4 4.4 0 0 1 16 8.6" stroke="#f2f2f2" stroke-width="0.9" fill="none"/>
+          </svg>
+        </button>
+        <button type="button" class="lang-btn" data-lang="en" aria-pressed="false" aria-label="English">
+          <svg viewBox="0 0 24 16" class="flag-icon" aria-hidden="true">
+            <rect width="24" height="16" fill="#0a1f5c"/>
+            <path d="M0,0 L24,16 M24,0 L0,16" stroke="#fff" stroke-width="3"/>
+            <path d="M0,0 L24,16 M24,0 L0,16" stroke="#c8102e" stroke-width="1.2"/>
+            <path d="M12,0 L12,16 M0,8 L24,8" stroke="#fff" stroke-width="5"/>
+            <path d="M12,0 L12,16 M0,8 L24,8" stroke="#c8102e" stroke-width="2.2"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="article-page-main">
+  <div class="container article-container">
+    <a href="../../#projetos" class="back-link" data-i18n="project.back">← Voltar aos projetos</a>
+
+    <p class="eyebrow" data-i18n="projects.eyebrow">Portfólio</p>
+
+    <h1 class="article-title" data-i18n="proj4.title">Modelo de Score de Crédito</h1>
+
+    <div class="article-byline">
+      <span class="project-tag-inline" data-i18n="proj4.tag">Python · Scikit-learn · XGBoost</span>
+      <span class="byline-dot">•</span>
+      <a href="https://github.com/Danioliver050/modelo_scoreCredito" target="_blank" rel="noopener" class="byline-link" data-i18n="project.link_code">Código no GitHub ↗</a>
+    </div>
+
+    <!-- Fluxo do modelo e métricas -->
+    <div class="project-detail-visual">
+      <svg viewBox="0 0 560 250" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect width="560" height="250" fill="var(--bg-alt)"/>
+        <g font-family="Arial, sans-serif" text-anchor="middle">
+          <rect x="20" y="30" width="150" height="86" rx="4" fill="var(--bg)" stroke="var(--border)" stroke-width="2"/>
+          <text x="95" y="60" fill="var(--text-muted)" font-size="13" font-weight="700">EDA + WOE/IV</text>
+          <text x="95" y="82" fill="var(--text-faint)" font-size="11">122 colunas</text>
+          <text x="95" y="98" fill="var(--text-faint)" font-size="11">→ 40 variáveis</text>
+
+          <path d="M170 73h30" stroke="var(--text-faint)" stroke-width="1.5"/>
+          <path d="M192 67l8 6-8 6" fill="none" stroke="var(--text-faint)" stroke-width="1.5"/>
+
+          <rect x="205" y="30" width="150" height="86" rx="4" fill="var(--bg)" stroke="var(--border)" stroke-width="2"/>
+          <text x="280" y="60" fill="var(--text-muted)" font-size="13" font-weight="700">Modelagem</text>
+          <text x="280" y="82" fill="var(--text-faint)" font-size="11">Regressão Logística</text>
+          <text x="280" y="98" fill="var(--text-faint)" font-size="11">+ XGBoost + SHAP</text>
+
+          <path d="M355 73h30" stroke="var(--text-faint)" stroke-width="1.5"/>
+          <path d="M377 67l8 6-8 6" fill="none" stroke="var(--text-faint)" stroke-width="1.5"/>
+
+          <rect x="390" y="30" width="150" height="86" rx="4" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
+          <text x="465" y="60" fill="var(--accent)" font-size="13" font-weight="700">Scorecard + PSI</text>
+          <text x="465" y="82" fill="var(--text-muted)" font-size="11">pontos via PDO</text>
+          <text x="465" y="98" fill="var(--text-muted)" font-size="11">monitoramento</text>
+
+          <g font-size="11" fill="var(--text-faint)">
+            <text x="95" y="160">AUC-ROC</text><text x="280" y="160">Gini</text><text x="465" y="160">KS</text>
+          </g>
+          <g font-size="30" font-weight="700" fill="var(--accent)">
+            <text x="95" y="198">0,743</text><text x="280" y="198">0,485</text><text x="465" y="198">0,365</text>
+          </g>
+          <text x="280" y="232" fill="var(--text-faint)" font-size="11" data-i18n="proj4.visual_note">Regressão Logística (modelo final) · 307 mil propostas reais</text>
+        </g>
+      </svg>
+    </div>
+
+    <div class="article-body">
+      <h2 data-i18n="projpage.overview">Visão geral</h2>
+      <p data-i18n="proj4.detail.p1">Pipeline completo de modelagem de risco de crédito sobre o dataset real Home Credit Default Risk (Kaggle, 307 mil propostas). O modelo estima a probabilidade de um cliente ter dificuldade de pagamento e converte essa probabilidade em um scorecard de pontos, no mesmo espírito de um score de crédito de mercado.</p>
+      <p data-i18n="proj4.detail.p2">A Regressão Logística foi escolhida como modelo final: o XGBoost foi só um pouco melhor, e em um contexto regulado a interpretabilidade do scorecard pesa mais.</p>
+
+      <h2 data-i18n="projpage.results">Resultados</h2>
+      <ul class="project-results-list">
+        <li data-i18n="proj4.detail.r1">AUC-ROC de 0,743, Gini de 0,485 e KS de 0,365 na Regressão Logística (XGBoost: AUC 0,753 e KS 0,385). KS acima de 0,30 é o patamar usual para uso em produção.</li>
+        <li data-i18n="proj4.detail.r2">Seleção de variáveis por WOE/IV: de 120 colunas brutas, 40 passaram no critério IV ≥ 0,02.</li>
+        <li data-i18n="proj4.detail.r3">Scorecard de pontos pela metodologia PDO (20 pontos para dobrar a chance, base 600), com explicação por cliente via SHAP.</li>
+        <li data-i18n="proj4.detail.r4">Monitoramento por PSI para indicar quando a população mudou e o modelo precisa ser retreinado.</li>
+        <li data-i18n="proj4.detail.r5">Achado: a renda declarada sozinha teve IV de apenas 0,011, quase sem poder de separar bons e maus pagadores.</li>
+      </ul>
+
+      <h2 data-i18n="projpage.stack">Stack utilizada</h2>
+      <ul class="project-results-list">
+        <li>Python · Pandas · NumPy · SciPy</li>
+        <li>Scikit-learn · XGBoost · SHAP</li>
+        <li data-i18n="proj4.detail.stack3">WOE/IV · Scorecard PDO · PSI</li>
+      </ul>
+
+      <div class="project-detail-cta">
+        <a href="https://github.com/Danioliver050/modelo_scoreCredito" target="_blank" rel="noopener" class="btn btn-primary" data-i18n="project.link_code">Código no GitHub ↗</a>
+      </div>
+    </div>
+
+    <div class="article-footer-nav">
+      <a href="../../#projetos" class="btn btn-ghost" data-i18n="project.back">← Voltar aos projetos</a>
+    </div>
+  </div>
+</main>
+
+<script src="../../js/script.js"></script>
+</body>
+</html>

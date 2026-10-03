@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400">
+  <rect width="640" height="400" fill="#101418"/>
+  <g font-family="Arial, sans-serif">
+    <text x="28" y="44" fill="#c9d1d9" font-size="16">Curva ROC · Regressão Logística</text>
+    <!-- eixos -->
+    <path d="M60 340V80M60 340H340" stroke="#3a424c" stroke-width="2"/>
+    <path d="M60 340L340 80" stroke="#3a424c" stroke-width="1.5" stroke-dasharray="5 5"/>
+    <!-- curva ROC (AUC ~0.74) -->
+    <path d="M60 340 C 70 250, 110 190, 160 160 S 260 105, 340 80" fill="none" stroke="#2ec4a0" stroke-width="4"/>
+    <text x="60" y="366" fill="#6b7682" font-size="12">0</text><text x="330" y="366" fill="#6b7682" font-size="12">1</text>
+    <text x="44" y="86" fill="#6b7682" font-size="12">1</text>
+    <!-- métricas -->
+    <g font-size="13" fill="#8b949e">
+      <text x="388" y="96">AUC-ROC</text><text x="388" y="168">KS</text><text x="388" y="240">Gini</text>
+    </g>
+    <g font-size="34" font-weight="700" fill="#2ec4a0">
+      <text x="388" y="134">0,743</text><text x="388" y="206">0,365</text><text x="388" y="278">0,485</text>
+    </g>
+    <rect x="388" y="306" width="224" height="58" fill="#161b21" stroke="#2a3038"/>
+    <text x="400" y="330" fill="#8b949e" font-size="12">scorecard · EXT_SOURCE_3 &gt; 0,735</text>
+    <text x="400" y="352" fill="#c9d1d9" font-size="15" font-weight="700">+36,6 pontos</text>
+  </g>
+</svg>
