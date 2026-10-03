@@ -181,6 +181,12 @@ const translations = {
     "exp1.b4": "Fui ponto de contato entre a área de riscos e as áreas clientes internas no alinhamento de informações regulatórias.",
     "certs.title": "Cursos e certificações.",
     "certs.view": "Ver certificado",
+    "course.c2017.date": "Fev 2017",
+    "course.c2019.date": "Abr 2019",
+    "course.c2023a.date": "Out 2023",
+    "course.c2023b.date": "Out 2023",
+    "course.c2024.date": "Ago 2024",
+    "course.c2025a.date": "Ago 2025",
     "course1.date": "Set 2025",
     "course1.meta": "Carga horária: 24h.",
     "course2.date": "Abr 2026",
@@ -392,6 +398,12 @@ const translations = {
     "exp1.b4": "Acted as the point of contact between the risk team and internal client areas to align regulatory information.",
     "certs.title": "Courses & certifications.",
     "certs.view": "View certificate",
+    "course.c2017.date": "Feb 2017",
+    "course.c2019.date": "Apr 2019",
+    "course.c2023a.date": "Oct 2023",
+    "course.c2023b.date": "Oct 2023",
+    "course.c2024.date": "Aug 2024",
+    "course.c2025a.date": "Aug 2025",
     "course1.date": "Sep 2025",
     "course1.meta": "Workload: 24h.",
     "course2.date": "Apr 2026",
@@ -629,7 +641,7 @@ function setupCarousel() {
   const slides = Array.from(track.children);
   const prev = root.querySelector('.carousel-arrow[data-dir="-1"]');
   const next = root.querySelector('.carousel-arrow[data-dir="1"]');
-  let index = 0;
+  let index = Infinity; // começa nos mais recentes; setas voltam para os mais antigos
 
   const perView = () => (window.matchMedia("(max-width: 860px)").matches ? 1 : 2);
 
