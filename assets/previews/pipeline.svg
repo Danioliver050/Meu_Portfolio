@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400">
+  <rect width="640" height="400" fill="#101418"/>
+  <rect width="640" height="34" fill="#1a1f25"/>
+  <circle cx="20" cy="17" r="5" fill="#3a424c"/><circle cx="38" cy="17" r="5" fill="#3a424c"/><circle cx="56" cy="17" r="5" fill="#3a424c"/>
+  <text x="320" y="22" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="12" fill="#6b7682">pipeline.py</text>
+  <g font-family="Menlo, Consolas, monospace" font-size="14">
+    <text x="28" y="72" fill="#6b7682">$ python pipeline.py</text>
+    <text x="28" y="102" fill="#c9d1d9">lendo transacoes.csv ......... 100.000 linhas</text>
+    <text x="28" y="128" fill="#c9d1d9">validando CPF, datas, valores</text>
+    <text x="28" y="154" fill="#e0a85a">rejeitados .................... 6.937</text>
+    <text x="28" y="180" fill="#c9d1d9">gravando transacoes.parquet</text>
+    <text x="28" y="206" fill="#7fbf8e">ok · 8 testes passaram</text>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="13" fill="#8b949e">
+    <text x="28" y="262">Tamanho em disco</text>
+    <text x="28" y="292">CSV</text><rect x="100" y="280" width="480" height="16" fill="#3a424c"/>
+    <text x="28" y="322">Parquet</text><rect x="100" y="310" width="178" height="16" fill="#2ec4a0"/>
+    <text x="288" y="323" fill="#2ec4a0" font-weight="700">−63%</text>
+    <text x="28" y="370">Consulta</text><text x="100" y="370" fill="#2ec4a0" font-weight="700" font-size="18">9,4× mais rápida</text>
+  </g>
+</svg>

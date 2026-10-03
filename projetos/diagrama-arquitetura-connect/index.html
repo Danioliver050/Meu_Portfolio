@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diagrama de Arquitetura — Amazon Connect — Daniel M.</title>
+<meta name="description" content="Arquitetura de dados em tempo real para contact center bancário usando AWS, com latência abaixo de 60 segundos do evento ao KPI.">
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://portfolio-danielm.vercel.app/projetos/diagrama-arquitetura-connect/">
+<meta property="og:title" content="Diagrama de Arquitetura — Amazon Connect — Daniel M.">
+<meta property="og:description" content="Arquitetura de dados em tempo real para contact center bancário usando AWS, com latência abaixo de 60 segundos.">
+<meta property="og:image" content="https://portfolio-danielm.vercel.app/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://portfolio-danielm.vercel.app/projetos/diagrama-arquitetura-connect/">
+
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="../../" class="logo">Daniel M.</a>
+
+    <nav class="nav" id="mainNav">
+      <a href="../../#projetos" class="nav-link" data-i18n="nav.projects">Projetos</a>
+    </nav>
+
+    <div class="header-actions">
+
+      <div class="lang-switch" role="group" aria-label="Selecionar idioma / Select language">
+        <button type="button" class="lang-btn is-active" data-lang="pt" aria-pressed="true" aria-label="Português">
+          <svg viewBox="0 0 24 16" class="flag-icon" aria-hidden="true">
+            <rect width="24" height="16" fill="#0b8a3b"/>
+            <polygon points="12,2 22,8 12,14 2,8" fill="#f6c400"/>
+            <circle cx="12" cy="8" r="4.2" fill="#1b3d8f"/>
+            <path d="M 8 8.6 A 4.4 4.4 0 0 1 16 8.6" stroke="#f2f2f2" stroke-width="0.9" fill="none"/>
+          </svg>
+        </button>
+        <button type="button" class="lang-btn" data-lang="en" aria-pressed="false" aria-label="English">
+          <svg viewBox="0 0 24 16" class="flag-icon" aria-hidden="true">
+            <rect width="24" height="16" fill="#0a1f5c"/>
+            <path d="M0,0 L24,16 M24,0 L0,16" stroke="#fff" stroke-width="3"/>
+            <path d="M0,0 L24,16 M24,0 L0,16" stroke="#c8102e" stroke-width="1.2"/>
+            <path d="M12,0 L12,16 M0,8 L24,8" stroke="#fff" stroke-width="5"/>
+            <path d="M12,0 L12,16 M0,8 L24,8" stroke="#c8102e" stroke-width="2.2"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="article-page-main">
+  <div class="container article-container">
+    <a href="../../#projetos" class="back-link" data-i18n="project.back">← Voltar aos projetos</a>
+
+    <p class="eyebrow" data-i18n="projects.eyebrow">Portfólio</p>
+
+    <h1 class="article-title" data-i18n="proj2.title">Diagrama de Arquitetura — Amazon Connect</h1>
+
+    <div class="article-byline">
+      <span class="project-tag-inline" data-i18n="proj2.tag">AWS · Streaming</span>
+      <span class="byline-dot">•</span>
+      <a href="https://github.com/Danioliver050/diagrama_arquitetura" target="_blank" rel="noopener" class="byline-link" data-i18n="project.link_code">Código no GitHub ↗</a>
+    </div>
+
+    <!-- Diagrama foto ampliável -->
+    <div class="project-detail-visual project-detail-photo">
+      <button type="button" class="project-thumb-photo project-detail-img-btn" data-lightbox-target="proj2Lightbox" aria-label="Ampliar diagrama de arquitetura Amazon Connect">
+        <img src="../../assets/diagrama-arquitetura.jpg" alt="Diagrama de arquitetura de streaming de dados: Amazon Connect para área de negócios">
+        <span class="zoom-hint" data-i18n="projpage.zoom_hint">Clique para ampliar</span>
+      </button>
+    </div>
+
+    <div class="article-body">
+      <h2 data-i18n="projpage.overview">Visão geral</h2>
+      <p data-i18n="proj2.detail.p1">Arquitetura de dados em tempo real projetada para um contact center bancário usando serviços AWS. O fluxo captura eventos do Amazon Connect, processa via Kinesis Data Streams e Lambda, persiste em S3 e expõe via Athena para consumo em dashboards operacionais.</p>
+
+      <h2 data-i18n="projpage.results">Resultados</h2>
+      <ul class="project-results-list">
+        <li data-i18n="proj2.detail.r1">Latência end-to-end abaixo de 60 segundos — do evento ao KPI no dashboard</li>
+        <li data-i18n="proj2.detail.r2">Custo estimado de US$ 24/mês para o volume projetado de chamadas</li>
+        <li data-i18n="proj2.detail.r3">Fluxo completo documentado: ingestão → processamento → storage → visualização</li>
+        <li data-i18n="proj2.detail.r4">Justificativas técnicas registradas para cada escolha de serviço AWS</li>
+      </ul>
+
+      <h2 data-i18n="projpage.stack">Stack utilizada</h2>
+      <ul class="project-results-list">
+        <li>Amazon Connect · Kinesis Data Streams</li>
+        <li>AWS Lambda · S3 · Athena</li>
+        <li>draw.io (diagramação)</li>
+      </ul>
+
+      <div class="project-detail-cta">
+        <a href="https://github.com/Danioliver050/diagrama_arquitetura" target="_blank" rel="noopener" class="btn btn-primary" data-i18n="project.link_code">Código no GitHub ↗</a>
+      </div>
+    </div>
+
+    <div class="article-footer-nav">
+      <a href="../../#projetos" class="btn btn-ghost" data-i18n="project.back">← Voltar aos projetos</a>
+    </div>
+  </div>
+</main>
+
+
+<!-- Lightbox do diagrama -->
+<div class="lightbox" id="proj2Lightbox" role="dialog" aria-modal="true" aria-label="Diagrama de arquitetura em tamanho ampliado" hidden>
+  <button type="button" class="lightbox-close" aria-label="Fechar">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+  <img src="../../assets/diagrama-arquitetura.jpg" alt="Diagrama de arquitetura de streaming de dados: Amazon Connect para área de negócios, em tamanho ampliado" class="lightbox-img">
+  <span class="lightbox-hint" data-i18n="lightbox.hint">Ctrl + scroll para ampliar</span>
+</div>
+
+<script src="../../js/script.js"></script>
+</body>
+</html>

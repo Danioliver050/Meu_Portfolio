@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Lake com Arquitetura Medalhão — Daniel M.</title>
+<meta name="description" content="Pipeline Bronze→Prata→Gold em Python que processa 50.000 propostas simuladas com star schema consultável via DuckDB e 9 testes automatizados.">
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://portfolio-danielm.vercel.app/projetos/data-lake-medalhao/">
+<meta property="og:title" content="Data Lake com Arquitetura Medalhão — Daniel M.">
+<meta property="og:description" content="Pipeline Bronze→Prata→Gold em Python com star schema consultável via DuckDB e 9 testes automatizados.">
+<meta property="og:image" content="https://portfolio-danielm.vercel.app/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://portfolio-danielm.vercel.app/projetos/data-lake-medalhao/">
+
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="../../" class="logo">Daniel M.</a>
+
+    <nav class="nav" id="mainNav">
+      <a href="../../#projetos" class="nav-link" data-i18n="nav.projects">Projetos</a>
+    </nav>
+
+    <div class="header-actions">
+
+      <div class="lang-switch" role="group" aria-label="Selecionar idioma / Select language">
+        <button type="button" class="lang-btn is-active" data-lang="pt" aria-pressed="true" aria-label="Português">
+          <svg viewBox="0 0 24 16" class="flag-icon" aria-hidden="true">
+            <rect width="24" height="16" fill="#0b8a3b"/>
+            <polygon points="12,2 22,8 12,14 2,8" fill="#f6c400"/>
+            <circle cx="12" cy="8" r="4.2" fill="#1b3d8f"/>
+            <path d="M 8 8.6 A 4.4 4.4 0 0 1 16 8.6" stroke="#f2f2f2" stroke-width="0.9" fill="none"/>
+          </svg>
+        </button>
+        <button type="button" class="lang-btn" data-lang="en" aria-pressed="false" aria-label="English">
+          <svg viewBox="0 0 24 16" class="flag-icon" aria-hidden="true">
+            <rect width="24" height="16" fill="#0a1f5c"/>
+            <path d="M0,0 L24,16 M24,0 L0,16" stroke="#fff" stroke-width="3"/>
+            <path d="M0,0 L24,16 M24,0 L0,16" stroke="#c8102e" stroke-width="1.2"/>
+            <path d="M12,0 L12,16 M0,8 L24,8" stroke="#fff" stroke-width="5"/>
+            <path d="M12,0 L12,16 M0,8 L24,8" stroke="#c8102e" stroke-width="2.2"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="article-page-main">
+  <div class="container article-container">
+    <a href="../../#projetos" class="back-link" data-i18n="project.back">← Voltar aos projetos</a>
+
+    <p class="eyebrow" data-i18n="projects.eyebrow">Portfólio</p>
+
+    <h1 class="article-title" data-i18n="proj3.title">Data Lake com Arquitetura Medalhão</h1>
+
+    <div class="article-byline">
+      <span class="project-tag-inline" data-i18n="proj3.tag">Python · DuckDB</span>
+      <span class="byline-dot">•</span>
+      <a href="https://github.com/Danioliver050/dataWarehouse" target="_blank" rel="noopener" class="byline-link" data-i18n="project.link_code">Código no GitHub ↗</a>
+    </div>
+
+    <!-- SVG visual do medallion -->
+    <div class="project-detail-visual">
+      <svg viewBox="0 0 560 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect width="560" height="220" fill="var(--bg-alt)" rx="8"/>
+
+        <!-- Bronze -->
+        <rect x="30" y="110" width="130" height="70" rx="6" fill="none" stroke="#cd7f32" stroke-width="2"/>
+        <text x="95" y="142" text-anchor="middle" fill="#cd7f32" font-size="15" font-family="monospace" font-weight="700">Bronze</text>
+        <text x="95" y="163" text-anchor="middle" fill="var(--text-faint)" font-size="10" font-family="monospace">dados brutos</text>
+        <text x="95" y="176" text-anchor="middle" fill="var(--text-faint)" font-size="10" font-family="monospace">50k propostas</text>
+
+        <!-- arrow 1 -->
+        <path d="M160 145h55" stroke="var(--text-faint)" stroke-width="1.5" fill="none"/>
+        <path d="M205 138l10 7-10 7" fill="none" stroke="var(--text-faint)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+        <!-- Prata -->
+        <rect x="215" y="75" width="130" height="70" rx="6" fill="none" stroke="#a0a0b0" stroke-width="2"/>
+        <text x="280" y="107" text-anchor="middle" fill="#a0a0b0" font-size="15" font-family="monospace" font-weight="700">Prata</text>
+        <text x="280" y="128" text-anchor="middle" fill="var(--text-faint)" font-size="10" font-family="monospace">limpeza · validação</text>
+        <text x="280" y="141" text-anchor="middle" fill="var(--text-faint)" font-size="10" font-family="monospace">enriquecimento</text>
+
+        <!-- arrow 2 -->
+        <path d="M345 110h55" stroke="var(--text-faint)" stroke-width="1.5" fill="none"/>
+        <path d="M390 103l10 7-10 7" fill="none" stroke="var(--text-faint)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+        <!-- Gold -->
+        <rect x="400" y="40" width="130" height="70" rx="6" fill="rgba(201,162,39,0.14)" stroke="#b8961a" stroke-width="2"/>
+        <text x="465" y="72" text-anchor="middle" fill="#9a7d12" font-size="15" font-family="monospace" font-weight="700">Gold</text>
+        <text x="465" y="93" text-anchor="middle" fill="var(--text-muted)" font-size="10" font-family="monospace">star schema</text>
+        <text x="465" y="106" text-anchor="middle" fill="var(--text-muted)" font-size="10" font-family="monospace">fato + 4 dims</text>
+
+        <!-- DuckDB label -->
+        <rect x="380" y="130" width="170" height="32" rx="4" fill="none" stroke="var(--accent)" stroke-width="1.2" stroke-dasharray="4 3"/>
+        <text x="465" y="151" text-anchor="middle" fill="var(--accent)" font-size="11" font-family="monospace">DuckDB · SQL</text>
+
+        <!-- Faker / testes label -->
+        <text x="95" y="200" text-anchor="middle" fill="var(--text-faint)" font-size="9" font-family="monospace">Faker · dados sintéticos</text>
+        <text x="280" y="170" text-anchor="middle" fill="var(--text-faint)" font-size="9" font-family="monospace">Pytest · 9 testes</text>
+      </svg>
+    </div>
+
+    <div class="article-body">
+      <h2 data-i18n="projpage.overview">Visão geral</h2>
+      <p data-i18n="proj3.detail.p1">Pipeline de Engenharia de Dados em Python que implementa a arquitetura Medalhão (Bronze → Prata → Gold). Processa 50.000 propostas de crédito simuladas, aplicando limpeza, validação e enriquecimento em cada camada e entregando um star schema consultável via DuckDB, com documentação de decisões técnicas e estimativas de custo para migração futura para cloud.</p>
+
+      <h2 data-i18n="projpage.results">Resultados</h2>
+      <ul class="project-results-list">
+        <li data-i18n="proj3.detail.r1">Star schema com tabela fato_propostas + 4 dimensões consultável via SQL</li>
+        <li data-i18n="proj3.detail.r2">9 testes automatizados com Pytest cobrindo cada camada do pipeline</li>
+        <li data-i18n="proj3.detail.r3">Dados sintéticos gerados com Faker para simulação realista</li>
+        <li data-i18n="proj3.detail.r4">Documentação de decisões técnicas e estimativas de custo para cloud</li>
+      </ul>
+
+      <h2 data-i18n="projpage.stack">Stack utilizada</h2>
+      <ul class="project-results-list">
+        <li>Python · Pandas · DuckDB</li>
+        <li>Pytest · Faker</li>
+        <li>Arquitetura Medalhão (Bronze / Prata / Gold)</li>
+      </ul>
+
+      <div class="project-detail-cta">
+        <a href="https://github.com/Danioliver050/dataWarehouse" target="_blank" rel="noopener" class="btn btn-primary" data-i18n="project.link_code">Código no GitHub ↗</a>
+      </div>
+    </div>
+
+    <div class="article-footer-nav">
+      <a href="../../#projetos" class="btn btn-ghost" data-i18n="project.back">← Voltar aos projetos</a>
+    </div>
+  </div>
+</main>
+
+
+<script src="../../js/script.js"></script>
+</body>
+</html>

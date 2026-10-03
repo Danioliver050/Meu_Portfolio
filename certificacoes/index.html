@@ -17,7 +17,7 @@
 <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -32,15 +32,6 @@
     </nav>
 
     <div class="header-actions">
-      <button type="button" class="theme-toggle" id="themeToggle" aria-label="Alternar tema claro/escuro" aria-pressed="false">
-        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-sun" aria-hidden="true">
-          <circle cx="12" cy="12" r="4"/>
-          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
-        </svg>
-        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-moon" aria-hidden="true">
-          <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
-        </svg>
-      </button>
 
       <div class="lang-switch" role="group" aria-label="Selecionar idioma / Select language">
         <button type="button" class="lang-btn is-active" data-lang="pt" aria-pressed="true" aria-label="Português">
@@ -69,7 +60,7 @@
   <div class="container cert-page-container">
     <a href="../#certificacoes" class="back-link" data-i18n="certpage.back">← Voltar ao portfólio</a>
 
-    <p class="eyebrow" data-i18n="certifications.eyebrow">certificações</p>
+    <p class="eyebrow" data-i18n="certifications.eyebrow">Certificações</p>
     <h1 class="article-title" data-i18n="certpage.title">Cursos, certificações e idiomas</h1>
     <p class="cert-page-intro" data-i18n="certpage.intro">Aqui reúno os cursos e certificações que venho concluindo ou cursando durante a transição para a área de dados, além dos idiomas que falo.</p>
 
@@ -146,11 +137,6 @@
   </div>
 </main>
 
-<footer class="footer">
-  <div class="container footer-bottom">
-    <p>&copy; 2026 Daniel. <span data-i18n="footer.rights">Todos os direitos reservados.</span></p>
-  </div>
-</footer>
 
 <!-- ===================== CERTIFICATE LIGHTBOX ===================== -->
 <div class="lightbox" id="certLightbox" role="dialog" aria-modal="true" aria-label="Certificado EF SET em tamanho ampliado" hidden>
@@ -158,7 +144,7 @@
     <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
   </button>
   <img src="../assets/ef-set-certificate.jpg" alt="Certificado EF SET de proficiência em inglês de Daniel Oliveira Machado, nível C2 Proficient, pontuação 77/100" class="lightbox-img">
-  <span class="lightbox-hint">Ctrl + scroll para ampliar</span>
+  <span class="lightbox-hint" data-i18n="lightbox.hint">Ctrl + scroll para ampliar</span>
 </div>
 
 <div class="lightbox" id="courseLightbox1" role="dialog" aria-modal="true" aria-label="Certificado Universia - Fundamentos de IA Generativa em tamanho ampliado" hidden>
@@ -166,7 +152,7 @@
     <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
   </button>
   <img src="../assets/dio-fundamentos-ia-generativa.jpg" alt="Certificado Universia - Fundamentos de IA Generativa, emitido pela DIO para Daniel Machado, concluído em 30 de setembro de 2025, carga horária de 24 horas" class="lightbox-img">
-  <span class="lightbox-hint">Ctrl + scroll para ampliar</span>
+  <span class="lightbox-hint" data-i18n="lightbox.hint">Ctrl + scroll para ampliar</span>
 </div>
 
 <script src="../js/script.js"></script>

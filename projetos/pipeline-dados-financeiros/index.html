@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pipeline de Dados Financeiros — Daniel M.</title>
+<meta name="description" content="Pipeline ETL em Python que converte dados bancários de CSV para Parquet, com 63% de compressão e queries 9,4x mais rápidas.">
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://portfolio-danielm.vercel.app/projetos/pipeline-dados-financeiros/">
+<meta property="og:title" content="Pipeline de Dados Financeiros — Daniel M.">
+<meta property="og:description" content="Pipeline ETL em Python que converte dados bancários de CSV para Parquet, com 63% de compressão e queries 9,4x mais rápidas.">
+<meta property="og:image" content="https://portfolio-danielm.vercel.app/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://portfolio-danielm.vercel.app/projetos/pipeline-dados-financeiros/">
+
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="../../" class="logo">Daniel M.</a>
+
+    <nav class="nav" id="mainNav">
+      <a href="../../#projetos" class="nav-link" data-i18n="nav.projects">Projetos</a>
+    </nav>
+
+    <div class="header-actions">
+
+      <div class="lang-switch" role="group" aria-label="Selecionar idioma / Select language">
+        <button type="button" class="lang-btn is-active" data-lang="pt" aria-pressed="true" aria-label="Português">
+          <svg viewBox="0 0 24 16" class="flag-icon" aria-hidden="true">
+            <rect width="24" height="16" fill="#0b8a3b"/>
+            <polygon points="12,2 22,8 12,14 2,8" fill="#f6c400"/>
+            <circle cx="12" cy="8" r="4.2" fill="#1b3d8f"/>
+            <path d="M 8 8.6 A 4.4 4.4 0 0 1 16 8.6" stroke="#f2f2f2" stroke-width="0.9" fill="none"/>
+          </svg>
+        </button>
+        <button type="button" class="lang-btn" data-lang="en" aria-pressed="false" aria-label="English">
+          <svg viewBox="0 0 24 16" class="flag-icon" aria-hidden="true">
+            <rect width="24" height="16" fill="#0a1f5c"/>
+            <path d="M0,0 L24,16 M24,0 L0,16" stroke="#fff" stroke-width="3"/>
+            <path d="M0,0 L24,16 M24,0 L0,16" stroke="#c8102e" stroke-width="1.2"/>
+            <path d="M12,0 L12,16 M0,8 L24,8" stroke="#fff" stroke-width="5"/>
+            <path d="M12,0 L12,16 M0,8 L24,8" stroke="#c8102e" stroke-width="2.2"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="article-page-main">
+  <div class="container article-container">
+    <a href="../../#projetos" class="back-link" data-i18n="project.back">← Voltar aos projetos</a>
+
+    <p class="eyebrow" data-i18n="projects.eyebrow">Portfólio</p>
+
+    <h1 class="article-title" data-i18n="proj1.title">Pipeline de Dados Financeiros</h1>
+
+    <div class="article-byline">
+      <span class="project-tag-inline" data-i18n="proj1.tag">Python · ETL</span>
+      <span class="byline-dot">•</span>
+      <a href="https://github.com/Danioliver050/conversor-de-dados" target="_blank" rel="noopener" class="byline-link" data-i18n="project.link_code">Código no GitHub ↗</a>
+    </div>
+
+    <!-- SVG visual do projeto -->
+    <div class="project-detail-visual">
+      <svg viewBox="0 0 560 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect width="560" height="200" fill="var(--bg-alt)" rx="8"/>
+        <!-- CSV box -->
+        <rect x="32" y="60" width="110" height="80" rx="6" fill="none" stroke="var(--border)" stroke-width="2"/>
+        <text x="87" y="95" text-anchor="middle" fill="var(--text-muted)" font-size="14" font-family="monospace" font-weight="600">CSV</text>
+        <text x="87" y="115" text-anchor="middle" fill="var(--text-faint)" font-size="10" font-family="monospace">100k linhas</text>
+        <!-- arrow 1 -->
+        <path d="M142 100h60" stroke="var(--accent)" stroke-width="2.5" fill="none"/>
+        <path d="M192 92l10 8-10 8" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <!-- ETL box -->
+        <rect x="202" y="50" width="160" height="100" rx="6" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
+        <text x="282" y="88" text-anchor="middle" fill="var(--accent)" font-size="13" font-family="monospace" font-weight="700">ETL Python</text>
+        <text x="282" y="108" text-anchor="middle" fill="var(--text-muted)" font-size="10" font-family="monospace">limpeza · validação</text>
+        <text x="282" y="124" text-anchor="middle" fill="var(--text-muted)" font-size="10" font-family="monospace">CPF · datas · valores</text>
+        <!-- arrow 2 -->
+        <path d="M362 100h60" stroke="var(--accent)" stroke-width="2.5" fill="none"/>
+        <path d="M412 92l10 8-10 8" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <!-- Parquet box -->
+        <rect x="422" y="60" width="110" height="80" rx="6" fill="none" stroke="var(--accent)" stroke-width="2"/>
+        <text x="477" y="95" text-anchor="middle" fill="var(--accent)" font-size="13" font-family="monospace" font-weight="600">.parquet</text>
+        <text x="477" y="115" text-anchor="middle" fill="var(--text-faint)" font-size="10" font-family="monospace">37k linhas</text>
+        <!-- labels abaixo -->
+        <text x="87" y="165" text-anchor="middle" fill="var(--text-faint)" font-size="9" font-family="monospace">entrada bruta</text>
+        <text x="282" y="170" text-anchor="middle" fill="var(--text-faint)" font-size="9" font-family="monospace">8 testes Pytest</text>
+        <text x="477" y="165" text-anchor="middle" fill="var(--text-faint)" font-size="9" font-family="monospace">63% menor · 9,4× mais rápido</text>
+      </svg>
+    </div>
+
+    <div class="article-body">
+      <h2 data-i18n="projpage.overview">Visão geral</h2>
+      <p data-i18n="proj1.detail.p1">Pipeline ETL em Python que processa 100.000 transações bancárias simuladas: valida e padroniza CPFs, datas e valores monetários, rejeita registros inválidos com motivo registrado em log e converte o resultado de CSV para Parquet.</p>
+
+      <h2 data-i18n="projpage.results">Resultados</h2>
+      <ul class="project-results-list">
+        <li data-i18n="proj1.detail.r1">63% de compressão — arquivo Parquet 63% menor que o CSV original</li>
+        <li data-i18n="proj1.detail.r2">9,4× mais rápido — queries sobre o Parquet são 9,4x mais rápidas</li>
+        <li data-i18n="proj1.detail.r3">6.937 registros inválidos rejeitados com motivo registrado no log</li>
+        <li data-i18n="proj1.detail.r4">8 testes automatizados com Pytest cobrindo validação e conversão</li>
+      </ul>
+
+      <h2 data-i18n="projpage.stack">Stack utilizada</h2>
+      <ul class="project-results-list">
+        <li>Python · Pandas · PyArrow</li>
+        <li>Pytest (testes automatizados)</li>
+        <li>Parquet (formato colunar)</li>
+      </ul>
+
+      <div class="project-detail-cta">
+        <a href="https://github.com/Danioliver050/conversor-de-dados" target="_blank" rel="noopener" class="btn btn-primary" data-i18n="project.link_code">Código no GitHub ↗</a>
+      </div>
+    </div>
+
+    <div class="article-footer-nav">
+      <a href="../../#projetos" class="btn btn-ghost" data-i18n="project.back">← Voltar aos projetos</a>
+    </div>
+  </div>
+</main>
+
+
+<script src="../../js/script.js"></script>
+</body>
+</html>

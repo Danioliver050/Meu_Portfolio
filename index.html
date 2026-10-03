@@ -3,64 +3,46 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Daniel — Portfólio Profissional</title>
-<meta name="description" content="Portfólio de Daniel — em transição de desenvolvimento de software para engenharia e análise de dados, com foco no mercado financeiro brasileiro.">
+<title>Daniel O. Machado — Portfólio</title>
+<meta name="description" content="Portfólio de Daniel O. Machado — engenharia e análise de dados, com foco no mercado financeiro brasileiro.">
 
-<!-- Open Graph / Facebook, LinkedIn, WhatsApp -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://portfolio-danielm.vercel.app/">
-<meta property="og:title" content="Daniel — Portfólio Profissional">
-<meta property="og:description" content="Em transição de desenvolvimento de software para engenharia e análise de dados, com foco no mercado financeiro brasileiro.">
+<meta property="og:title" content="Daniel O. Machado — Portfólio">
+<meta property="og:description" content="Engenharia e análise de dados, com foco no mercado financeiro brasileiro.">
 <meta property="og:image" content="https://portfolio-danielm.vercel.app/assets/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="pt_BR">
 <link rel="canonical" href="https://portfolio-danielm.vercel.app/">
-
-<!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Daniel — Portfólio Profissional">
-<meta name="twitter:description" content="Em transição de desenvolvimento de software para engenharia e análise de dados, com foco no mercado financeiro brasileiro.">
+<meta name="twitter:title" content="Daniel O. Machado — Portfólio">
+<meta name="twitter:description" content="Engenharia e análise de dados, com foco no mercado financeiro brasileiro.">
 <meta name="twitter:image" content="https://portfolio-danielm.vercel.app/assets/og-image.png">
 
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="home">
 <div class="scroll-progress" id="scrollProgress"></div>
 
-<!-- ===================== HEADER ===================== -->
-<header class="site-header" id="top">
-  <div class="container header-inner">
-    <a href="#top" class="logo">
-      Daniel M.
-    </a>
+<!-- ===================== MENU ===================== -->
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="#top" class="logo">Daniel M.</a>
 
-    <nav class="nav" id="mainNav">
+    <nav class="nav" id="mainNav" aria-label="Seções">
       <a href="#top" class="nav-link" data-i18n="nav.home">Início</a>
       <a href="#sobre" class="nav-link" data-i18n="nav.about">Sobre</a>
-      <a href="#projetos" class="nav-link" data-i18n="nav.projects">Projetos</a>
-      <a href="#certificacoes" class="nav-link" data-i18n="nav.certifications">Certificações</a>
-      <a href="#anotacoes" class="nav-link" data-i18n="nav.articles">Anotações</a>
+      <a href="#projetos" class="nav-link" data-i18n="nav.portfolio">Portfólio</a>
+      <a href="#anotacoes" class="nav-link" data-i18n="nav.blog">Artigos</a>
       <a href="#contato" class="nav-link" data-i18n="nav.contact">Contato</a>
     </nav>
 
     <div class="header-actions">
-      <!-- Theme switcher: dark / light -->
-      <button type="button" class="theme-toggle" id="themeToggle" aria-label="Alternar tema claro/escuro" aria-pressed="false">
-        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-sun" aria-hidden="true">
-          <circle cx="12" cy="12" r="4"/>
-          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
-        </svg>
-        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-moon" aria-hidden="true">
-          <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
-        </svg>
-      </button>
-
-      <!-- Language switcher: BR / UK flags -->
       <div class="lang-switch" role="group" aria-label="Selecionar idioma / Select language">
         <button type="button" class="lang-btn is-active" data-lang="pt" aria-pressed="true" aria-label="Português">
           <svg viewBox="0 0 24 16" class="flag-icon" aria-hidden="true">
@@ -81,246 +63,292 @@
         </button>
       </div>
 
-      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mainNav">
         <span></span><span></span><span></span>
       </button>
     </div>
   </div>
 </header>
 
-<!-- ===================== HERO ===================== -->
-<section class="hero">
-  <div class="container hero-inner">
-    <div class="hero-visual">
-      <div class="avatar-frame">
-        <img src="assets/daniel-photo.jpg" alt="Foto de Daniel" class="avatar-photo">
-      </div>
-    </div>
+<!-- ===================== APRESENTAÇÃO ===================== -->
+<section class="hero" id="top">
 
+  <div class="hero-content">
     <div class="hero-text">
-      <h1 class="hero-title">
-        <span data-i18n="hero.greeting">Olá, eu sou</span> <span class="accent-text">Daniel</span>
-      </h1>
-
-      <p class="hero-subtitle" data-i18n="hero.subtitle">
-        Transformando experiência em desenvolvimento de software em soluções orientadas a dados.
-      </p>
-
-      <div class="hero-actions">
-        <a href="#projetos" class="btn btn-primary" data-i18n="hero.cta_projects">Ver projetos</a>
-        <a href="#contato" class="btn btn-ghost" data-i18n="hero.cta_contact">Fale comigo</a>
-        <a href="assets/cv-daniel.pdf" class="btn btn-ghost btn-icon" id="cvDownloadBtn" data-cv-pt="assets/cv-daniel.pdf" data-cv-en="assets/cv-daniel-en.pdf" data-cv-pt-filename="cv-daniel.pdf" data-cv-en-filename="cv-daniel-en.pdf" download="cv-daniel.pdf">
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>
-          <span data-i18n="hero.cta_cv">Baixar CV</span>
-        </a>
-      </div>
-
-      <div class="social-row" aria-label="Redes sociais">
-        <a href="https://www.linkedin.com/in/daniel-o-machado/" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 8.98h4v12H3v-12zm7.2 0h3.84v1.64h.05c.53-.99 1.83-2.03 3.77-2.03 4.03 0 4.78 2.58 4.78 5.94v6.45h-4v-5.72c0-1.36-.02-3.11-1.9-3.11-1.9 0-2.19 1.48-2.19 3.01v5.82h-4v-12z"/></svg>
-        </a>
-        <a href="https://github.com/Danioliver050/" class="social-link" aria-label="GitHub" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-1.04-.01-1.89-2.78.62-3.37-1.22-3.37-1.22-.46-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.72 0 0 .84-.28 2.75 1.05a9.32 9.32 0 015 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.46.1 2.72.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.26 10.26 0 0022 12.25C22 6.58 17.52 2 12 2z"/></svg>
-        </a>
-      </div>
+      <p class="hero-welcome" data-i18n="hero.welcome">Sejam bem-vindos ao meu portfólio!</p>
+      <h1 class="hero-name">Daniel O. Machado.</h1>
+      <p class="hero-role" data-i18n="hero.role">Engenharia de Dados | Análise de Dados | Desenvolvimento de Software</p>
+      <p class="hero-place">São Paulo/SP, Brasil</p>
     </div>
+
   </div>
+
+
+  <ul class="hero-social" aria-label="Redes sociais">
+    <li><a href="https://www.linkedin.com/in/daniel-o-machado/" target="_blank" rel="noopener" aria-label="LinkedIn">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 8.98h4v12H3v-12zm7.2 0h3.84v1.64h.05c.53-.99 1.83-2.03 3.77-2.03 4.03 0 4.78 2.58 4.78 5.94v6.45h-4v-5.72c0-1.36-.02-3.11-1.9-3.11-1.9 0-2.19 1.48-2.19 3.01v5.82h-4v-12z"/></svg>
+    </a></li>
+    <li><a href="https://github.com/Danioliver050/" target="_blank" rel="noopener" aria-label="GitHub">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-1.04-.01-1.89-2.78.62-3.37-1.22-3.37-1.22-.46-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.72 0 0 .84-.28 2.75 1.05a9.32 9.32 0 015 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.46.1 2.72.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.26 10.26 0 0022 12.25C22 6.58 17.52 2 12 2z"/></svg>
+    </a></li>
+    <li><a href="mailto:danioliver050@outlook.com" aria-label="E-mail">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 7l9 6 9-6"/></svg>
+    </a></li>
+  </ul>
 </section>
 
-<!-- ===================== ABOUT ===================== -->
-<section class="section" id="sobre">
-  <div class="container about-grid">
-    <div class="about-text">
-      <p class="eyebrow" data-i18n="about.eyebrow">sobre</p>
-      <h2 class="section-title" data-i18n="about.title">Da lógica de sistemas à lógica dos dados</h2>
-      <p data-i18n="about.p1">
-        Comecei minha jornada com total certeza de que queria atuar como desenvolvedor back-end, trabalhando
-        no desenvolvimento e na manutenção de softwares. Nesse processo, tive a oportunidade de atuar em uma
-        área voltada a dados, o que despertou meu interesse pela possibilidade de ampliar minha área de atuação.
-      </p>
-      <p data-i18n="about.p2">
-        A partir desse ponto, passei a buscar, de forma simultânea, o desenvolvimento de software e o trabalho
-        com dados nas aplicações, aproveitando ao máximo minhas habilidades e buscando sempre extrair os
-        melhores resultados.
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== PROJECTS ===================== -->
-<section class="section" id="projetos">
+<!-- ===================== SOBRE ===================== -->
+<section class="section section-white" id="sobre">
   <div class="container">
-    <p class="eyebrow" data-i18n="projects.eyebrow">projetos</p>
-    <h2 class="section-title" data-i18n="projects.title">Meus projetos</h2>
+    <header class="section-head">
+      <p class="section-kicker" data-i18n="about.kicker">Sobre</p>
+      <h2 class="section-title" data-i18n="about.title">Um pouco sobre mim.</h2>
+      <p class="section-lead" data-i18n="about.lead">Um resumo de onde venho e para onde estou indo.</p>
+    </header>
 
-    <div class="project-grid">
-      <article class="project-card">
-        <div class="project-thumb" aria-hidden="true">
-          <svg viewBox="0 0 240 160">
-            <rect width="240" height="160" fill="var(--bg-alt)"/>
-            <rect x="24" y="30" width="70" height="100" rx="4" fill="none" stroke="var(--border)" stroke-width="2"/>
-            <text x="59" y="85" text-anchor="middle" fill="var(--text-faint)" font-size="13" font-family="monospace">CSV</text>
-            <path d="M104 80h32" stroke="var(--accent)" stroke-width="2.5"/>
-            <path d="M126 72l10 8-10 8" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <rect x="146" y="46" width="70" height="68" rx="4" fill="none" stroke="var(--accent)" stroke-width="2"/>
-            <text x="181" y="85" text-anchor="middle" fill="var(--accent)" font-size="13" font-family="monospace">.parquet</text>
-          </svg>
-        </div>
-        <div class="project-body">
-          <span class="project-tag" data-i18n="proj1.tag">Python · ETL</span>
-          <h3 data-i18n="proj1.title">Pipeline de Dados Financeiros</h3>
-          <p data-i18n="proj1.desc">Pipeline de ETL que limpa e padroniza dados bancários (CPF, datas, valores) e converte CSV para Parquet — 63% menor e consultas 9,4x mais rápidas.</p>
-          <div class="project-links">
-            <a href="https://github.com/Danioliver050/pipeline-dados-financeiros" target="_blank" rel="noopener" data-i18n="project.link_code">Código</a>
-          </div>
-        </div>
-      </article>
+    <div class="two-col">
+      <div class="about-text">
+        <h3 class="col-title" data-i18n="about.hello">Olá!</h3>
+        <p data-i18n="about.p1">Comecei minha jornada com total certeza de que queria atuar como desenvolvedor back-end, trabalhando no desenvolvimento e na manutenção de softwares. Nesse processo, tive a oportunidade de atuar em uma área voltada a dados, o que despertou meu interesse pela possibilidade de ampliar minha área de atuação.</p>
+        <p data-i18n="about.p2">A partir desse ponto, passei a buscar, de forma simultânea, o desenvolvimento de software e o trabalho com dados nas aplicações, aproveitando ao máximo minhas habilidades e buscando sempre extrair os melhores resultados.</p>
+        <p data-i18n="about.p3">Hoje meu foco é engenharia e análise de dados no mercado financeiro: pipelines, modelagem e relatórios que ajudam a tomar decisões.</p>
+      </div>
 
-      <article class="project-card">
-        <button type="button" class="project-thumb project-thumb-photo" data-lightbox-target="diagramLightbox" aria-label="Ampliar diagrama de arquitetura Amazon Connect">
-          <img src="assets/diagrama-arquitetura.jpg" alt="Diagrama de arquitetura de streaming de dados: Amazon Connect para área de negócios">
+      <div class="skills">
+        <h3 class="col-title" data-i18n="about.skills_title">Minhas principais habilidades.</h3>
+        <!--
+          PARA AJUSTAR UMA HABILIDADE:
+          - style="--level: 85%" controla o tamanho da barra
+          - o texto do balão vem das chaves "level.*" no js/script.js
+        -->
+        <ul class="skill-list">
+          <li class="skill" style="--level: 85%">
+            <span class="skill-name">SQL</span>
+            <span class="skill-badge" data-i18n="level.advanced">Avançado</span>
+            <span class="skill-bar"><span class="skill-fill"></span></span>
+          </li>
+          <li class="skill" style="--level: 85%">
+            <span class="skill-name">Excel</span>
+            <span class="skill-badge" data-i18n="level.advanced">Avançado</span>
+            <span class="skill-bar"><span class="skill-fill"></span></span>
+          </li>
+          <li class="skill" style="--level: 70%">
+            <span class="skill-name">Python</span>
+            <span class="skill-badge" data-i18n="level.intermediate">Intermediário</span>
+            <span class="skill-bar"><span class="skill-fill"></span></span>
+          </li>
+          <li class="skill" style="--level: 70%">
+            <span class="skill-name">Power BI</span>
+            <span class="skill-badge" data-i18n="level.intermediate">Intermediário</span>
+            <span class="skill-bar"><span class="skill-fill"></span></span>
+          </li>
+          <li class="skill" style="--level: 65%">
+            <span class="skill-name">Java · Spring Boot</span>
+            <span class="skill-badge" data-i18n="level.intermediate">Intermediário</span>
+            <span class="skill-bar"><span class="skill-fill"></span></span>
+          </li>
+        </ul>
+
+        <a href="assets/cv-daniel.pdf" class="btn btn-solid-dark" id="cvDownloadBtn" data-cv-pt="assets/cv-daniel.pdf" data-cv-en="assets/cv-daniel-en.pdf" data-cv-pt-filename="cv-daniel.pdf" data-cv-en-filename="cv-daniel-en.pdf" download="cv-daniel.pdf" data-i18n="about.cv">Baixar currículo</a>
+      </div>
+    </div>
+
+    <!-- ===== Formação e experiência ===== -->
+    <div class="two-col resume">
+      <div>
+        <h3 class="col-title" data-i18n="resume.education">Formação acadêmica.</h3>
+        <ol class="timeline">
+          <li class="timeline-item">
+            <p class="timeline-date" data-i18n="edu1.date">Fev 2026 – Em andamento</p>
+            <h4 class="timeline-title" data-i18n="edu1.title">Engenharia de Software</h4>
+            <p class="timeline-org">FIAP</p>
+            <p data-i18n="edu1.type">Bacharelado.</p>
+          </li>
+          <li class="timeline-item">
+            <p class="timeline-date" data-i18n="edu2.date">Fev 2023 – Dez 2025</p>
+            <h4 class="timeline-title" data-i18n="edu2.title">Análise e Desenvolvimento de Sistemas</h4>
+            <p class="timeline-org">UNICID</p>
+            <p data-i18n="edu2.type">Tecnólogo.</p>
+          </li>
+        </ol>
+      </div>
+
+      <div>
+        <h3 class="col-title" data-i18n="resume.experience">Experiência profissional.</h3>
+        <ol class="timeline">
+          <li class="timeline-item">
+            <p class="timeline-date" data-i18n="exp1.date">Jun 2023 – Out 2024</p>
+            <h4 class="timeline-title">Banco Carrefour</h4>
+            <p class="timeline-org" data-i18n="exp1.role">Analista de Riscos e Crédito — Estágio</p>
+            <ul class="timeline-bullets">
+              <li data-i18n="exp1.b1">Elaborei relatórios regulatórios mensais (DRL, DLI, DDR e DRM) com SQL, SAS e Excel, dentro dos prazos exigidos pelo Banco Central.</li>
+              <li data-i18n="exp1.b2">Extraí e tratei dados de bases relacionais via SQL para análises de risco de crédito, liquidez e risco reputacional, reduzindo o tempo de preparação dos relatórios.</li>
+              <li data-i18n="exp1.b3">Desenvolvi e mantive dashboards no MicroStrategy, centralizando indicadores de risco para as áreas de negócio e gestão.</li>
+              <li data-i18n="exp1.b4">Fui ponto de contato entre a área de riscos e as áreas clientes internas no alinhamento de informações regulatórias.</li>
+            </ul>
+            <p class="timeline-tools"><span data-i18n="resume.tools">Ferramentas:</span> SQL, SAS, Excel, MicroStrategy</p>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CURSOS E CERTIFICAÇÕES ===================== -->
+<section class="section section-black" id="certificacoes">
+  <div class="container">
+    <div class="carousel" id="certCarousel">
+      <div class="carousel-head">
+        <button type="button" class="carousel-arrow" data-dir="-1" aria-label="Cursos anteriores">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
         </button>
-        <div class="project-body">
-          <span class="project-tag" data-i18n="proj2.tag">AWS · Streaming</span>
-          <h3 data-i18n="proj2.title">Diagrama de Arquitetura — Amazon Connect</h3>
-          <p data-i18n="proj2.desc">Arquitetura de dados em tempo real que transforma eventos de um contact center bancário em KPIs operacionais, com latência abaixo de 60 segundos.</p>
-          <div class="project-links">
-            <a href="https://github.com/Danioliver050/diagrama_arquitetura" target="_blank" rel="noopener" data-i18n="project.link_code">Código</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="project-card">
-        <div class="project-thumb" aria-hidden="true">
-          <svg viewBox="0 0 240 160" xmlns="http://www.w3.org/2000/svg">
-            <rect width="240" height="160" fill="var(--bg-alt)"/>
-            <rect x="16" y="108" width="62" height="36" rx="3" fill="none" stroke="#cd7f32" stroke-width="2"/>
-            <text x="47" y="131" text-anchor="middle" fill="#cd7f32" font-size="10" font-family="monospace">Bronze</text>
-            <rect x="89" y="78" width="62" height="36" rx="3" fill="none" stroke="#a0a0b0" stroke-width="2"/>
-            <text x="120" y="101" text-anchor="middle" fill="#a0a0b0" font-size="10" font-family="monospace">Prata</text>
-            <rect x="162" y="48" width="62" height="36" rx="3" fill="none" stroke="var(--accent)" stroke-width="2"/>
-            <text x="193" y="71" text-anchor="middle" fill="var(--accent)" font-size="10" font-family="monospace">Gold</text>
-            <path d="M78 120h5l6-20h5" stroke="var(--text-faint)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-            <path d="M151 90h5l6-20h5" stroke="var(--text-faint)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-            <text x="120" y="22" text-anchor="middle" fill="var(--text-faint)" font-size="9" font-family="monospace">star schema · DuckDB</text>
-          </svg>
-        </div>
-        <div class="project-body">
-          <span class="project-tag" data-i18n="proj3.tag">Python · DuckDB</span>
-          <h3 data-i18n="proj3.title">Data Lake com Arquitetura Medalhão</h3>
-          <p data-i18n="proj3.desc">Pipeline Bronze→Prata→Gold que processa 50.000 propostas simuladas, aplica limpeza e validação em cada camada e entrega star schema consultável via DuckDB, com 9 testes automatizados.</p>
-          <div class="project-links">
-            <a href="https://github.com/Danioliver050/dataWarehouse" target="_blank" rel="noopener" data-i18n="project.link_code">Código</a>
-          </div>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== STACK ===================== -->
-<section class="section section-alt" id="stack">
-  <div class="container">
-    <p class="eyebrow" data-i18n="stack.eyebrow">stack</p>
-    <h2 class="section-title" data-i18n="stack.title">Ferramentas e tecnologias</h2>
-
-    <div class="skills-grid">
-      <div class="skill-group">
-        <h3 data-i18n="stack.group1">Dados & Análise</h3>
-        <ul class="tag-list">
-          <li>Python</li>
-          <li>SQL</li>
-          <li>Power BI</li>
-          <li>AWS</li>
-        </ul>
+        <h2 class="section-title" data-i18n="certs.title">Cursos e certificações.</h2>
+        <button type="button" class="carousel-arrow" data-dir="1" aria-label="Próximos cursos">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
       </div>
-      <div class="skill-group">
-        <h3 data-i18n="stack.group2">Desenvolvimento</h3>
-        <ul class="tag-list">
-          <li>Java</li>
-          <li>Spring Boot</li>
-        </ul>
+
+      <!--
+        PARA ADICIONAR UM CURSO:
+        Copie um <li class="cert-slide"> e cole no FINAL da lista
+        (a ordem é do mais antigo, à esquerda, para o mais recente, à direita).
+      -->
+      <div class="carousel-viewport">
+        <ol class="carousel-track">
+          <li class="cert-slide">
+            <svg class="cert-icon" viewBox="0 0 64 64" aria-hidden="true"><rect x="6" y="8" width="44" height="34" rx="2"/><path d="M14 18h28M14 25h20M14 32h12"/><circle cx="44" cy="40" r="8"/><path d="M40 47l-2 11 6-4 6 4-2-11"/></svg>
+            <div class="cert-info">
+              <p class="cert-date" data-i18n="course1.date">Set 2025</p>
+              <h3 class="cert-title">Universia — Fundamentos de IA Generativa</h3>
+              <p class="cert-org">DIO</p>
+            </div>
+          </li>
+          <li class="cert-slide">
+            <svg class="cert-icon" viewBox="0 0 64 64" aria-hidden="true"><rect x="6" y="8" width="44" height="34" rx="2"/><path d="M14 18h28M14 25h20M14 32h12"/><circle cx="44" cy="40" r="8"/><path d="M40 47l-2 11 6-4 6 4-2-11"/></svg>
+            <div class="cert-info">
+              <p class="cert-date" data-i18n="course2.date">Abr 2026</p>
+              <h3 class="cert-title" data-i18n="course2.title">EF SET — Certificado de Inglês</h3>
+              <p class="cert-org">EF SET</p>
+            </div>
+          </li>
+        </ol>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===================== CERTIFICATIONS (shortcut) ===================== -->
-<section class="section" id="certificacoes">
+<!-- ===================== PORTFÓLIO ===================== -->
+<section class="section section-mist" id="projetos">
   <div class="container">
-    <p class="eyebrow" data-i18n="certifications.eyebrow">certificações</p>
-    <h2 class="section-title" data-i18n="certifications.title">Cursos e certificações</h2>
+    <header class="section-head">
+      <p class="section-kicker" data-i18n="projects.kicker">Portfólio</p>
+      <h2 class="section-title" data-i18n="projects.title">Projetos recentes.</h2>
+      <p class="section-lead"><span data-i18n="projects.lead">Clique em um projeto para ver os detalhes. Os códigos estão no meu</span> <a href="https://github.com/Danioliver050/" target="_blank" rel="noopener">GitHub</a>.</p>
+    </header>
+  </div>
 
-    <div class="empty-state">
-      <svg viewBox="0 0 64 64" class="empty-state-icon" aria-hidden="true">
-        <circle cx="32" cy="24" r="15" fill="none" stroke="var(--border)" stroke-width="2"/>
-        <path d="M24 23l6 6 11-12" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M22 37l-5 19 15-8 15 8-5-19" fill="none" stroke="var(--border)" stroke-width="2" stroke-linejoin="round"/>
-      </svg>
-      <p data-i18n="certifications.empty_desc">Reuni cursos, certificações e idiomas em um só lugar.</p>
-      <a href="certificacoes/" class="btn btn-ghost" data-i18n="certifications.empty_cta">Ver certificações</a>
+  <div class="project-grid">
+    <a class="project-tile" href="projetos/data-lake-medalhao/">
+      <span class="device" aria-hidden="true">
+        <span class="device-screen"><img src="assets/previews/medalhao.svg" alt=""></span>
+        <span class="device-base"></span>
+      </span>
+      <span class="project-caption">
+        <span class="project-name" data-i18n="proj3.title">Data Lake com Arquitetura Medalhão</span>
+        <span class="project-cat" data-i18n="cat.engineering">Engenharia de Dados</span>
+      </span>
+    </a>
+
+    <a class="project-tile" href="projetos/diagrama-arquitetura-connect/">
+      <span class="device" aria-hidden="true">
+        <span class="device-screen device-screen-light"><img src="assets/diagrama-arquitetura.jpg" alt=""></span>
+        <span class="device-base"></span>
+      </span>
+      <span class="project-caption">
+        <span class="project-name" data-i18n="proj2.title">Diagrama de Arquitetura — Amazon Connect</span>
+        <span class="project-cat" data-i18n="cat.architecture">Arquitetura de Dados</span>
+      </span>
+    </a>
+
+    <a class="project-tile" href="projetos/pipeline-dados-financeiros/">
+      <span class="device" aria-hidden="true">
+        <span class="device-screen"><img src="assets/previews/pipeline.svg" alt=""></span>
+        <span class="device-base"></span>
+      </span>
+      <span class="project-caption">
+        <span class="project-name" data-i18n="proj1.title">Pipeline de Dados Financeiros</span>
+        <span class="project-cat" data-i18n="cat.etl">Engenharia de Dados</span>
+      </span>
+    </a>
+  </div>
+</section>
+
+<!-- ===================== BLOG ===================== -->
+<section class="section section-white" id="anotacoes">
+  <div class="container">
+    <header class="section-head">
+      <p class="section-kicker" data-i18n="blog.kicker">Artigos</p>
+      <h2 class="section-title" data-i18n="blog.title">Posts recentes.</h2>
+      <p class="section-lead" data-i18n="blog.lead">Textos sobre a minha transição para dados: o que estou aprendendo, construindo e enfrentando no caminho.</p>
+    </header>
+
+    <!--
+      PARA ADICIONAR UM POST: copie um <article class="post"> e cole no INÍCIO da lista
+      (mais recente primeiro). Crie as chaves de tradução artN.* no js/script.js.
+    -->
+    <div class="post-grid">
+      <article class="post">
+        <p class="post-date" data-i18n="art3.short_date">21 de setembro de 2026</p>
+        <h3 class="post-title"><a href="41-dias-30-candidaturas/" data-i18n="art3.title">41 dias, 30 candidaturas, testes e alguns outros insights.</a></h3>
+        <p class="post-excerpt" data-i18n="art3.desc">41 dias de hiato, altos e baixos, candidaturas, testes técnicos e a primeira entrevista — e o que tirar de tudo isso.</p>
+        <p class="post-cat" data-i18n="cat.career">Carreira</p>
+      </article>
+      <article class="post">
+        <p class="post-date" data-i18n="art2.short_date">11 de agosto de 2026</p>
+        <h3 class="post-title"><a href="o-excel-que-eu-nao-sabia-que-precisaria/" data-i18n="art2.title">O Excel que eu não sabia que precisaria</a></h3>
+        <p class="post-excerpt" data-i18n="art2.desc">Como um curso que eu não queria fazer se tornou uma ferramenta essencial na minha jornada com dados.</p>
+        <p class="post-cat" data-i18n="cat.tools">Ferramentas</p>
+      </article>
+      <article class="post">
+        <p class="post-date" data-i18n="art1.short_date">4 de agosto de 2026</p>
+        <h3 class="post-title"><a href="artigo-desenvolvendo-softwares-aos-dados/" data-i18n="art1.title">Desenvolvendo Softwares aos Dados</a></h3>
+        <p class="post-excerpt" data-i18n="art1.desc">A construção de uma união de dois caminhos com um mesmo destino.</p>
+        <p class="post-cat" data-i18n="cat.career">Carreira</p>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- ===================== ARTICLES ===================== -->
-<section class="section section-alt" id="anotacoes">
+<!-- ===================== CONTATO ===================== -->
+<section class="section section-contact" id="contato">
   <div class="container">
-    <p class="eyebrow" data-i18n="articles.eyebrow">anotações</p>
-    <h2 class="section-title" data-i18n="articles.title">Artigos</h2>
+    <header class="section-head">
+      <p class="section-kicker" data-i18n="contact.kicker">Contato</p>
+      <h2 class="section-title" data-i18n="contact.title">Fale comigo.</h2>
+      <p class="section-lead" data-i18n="contact.lead">Estou aberto a oportunidades de estágio e vagas júnior em engenharia e análise de dados. Me chame no LinkedIn ou por e-mail.</p>
+    </header>
 
-    <div class="article-grid">
-      <article class="article-card">
-        <span class="article-date">21 set 2026</span>
-        <h3 data-i18n="art3.title">41 dias, 30 candidaturas, testes e alguns outros insights.</h3>
-        <p data-i18n="art3.desc">Uma reflexão honesta sobre os primeiros 41 dias de busca ativa por emprego na área de dados.</p>
-        <a href="41-dias-30-candidaturas/" class="article-link" data-i18n="articles.read_more">Ler mais →</a>
-      </article>
-      <article class="article-card">
-        <span class="article-date">11 ago 2026</span>
-        <h3 data-i18n="art2.title">O Excel que eu não sabia que precisaria</h3>
-        <p data-i18n="art2.desc">Como um curso que eu não queria fazer se tornou uma ferramenta essencial na minha jornada com dados.</p>
-        <a href="o-excel-que-eu-nao-sabia-que-precisaria/" class="article-link" data-i18n="articles.read_more">Ler mais →</a>
-      </article>
-      <article class="article-card">
-        <span class="article-date">4 ago 2026</span>
-        <h3 data-i18n="art1.title">Desenvolvendo Softwares aos Dados</h3>
-        <p data-i18n="art1.desc">A construção de uma união de dois caminhos com um mesmo destino.</p>
-        <a href="artigo-desenvolvendo-softwares-aos-dados/" class="article-link" data-i18n="articles.read_more">Ler mais →</a>
-      </article>
-    </div>
+    <ul class="contact-social">
+      <li><a href="https://www.linkedin.com/in/daniel-o-machado/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 8.98h4v12H3v-12zm7.2 0h3.84v1.64h.05c.53-.99 1.83-2.03 3.77-2.03 4.03 0 4.78 2.58 4.78 5.94v6.45h-4v-5.72c0-1.36-.02-3.11-1.9-3.11-1.9 0-2.19 1.48-2.19 3.01v5.82h-4v-12z"/></svg>
+        <span>LinkedIn</span>
+      </a></li>
+      <li><a href="https://github.com/Danioliver050/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-1.04-.01-1.89-2.78.62-3.37-1.22-3.37-1.22-.46-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.72 0 0 .84-.28 2.75 1.05a9.32 9.32 0 015 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.46.1 2.72.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.26 10.26 0 0022 12.25C22 6.58 17.52 2 12 2z"/></svg>
+        <span>GitHub</span>
+      </a></li>
+      <li><a href="mailto:danioliver050@outlook.com" class="contact-email">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 7l9 6 9-6"/></svg>
+        <span>danioliver050@outlook.com</span>
+      </a></li>
+    </ul>
   </div>
 </section>
 
-<!-- ===================== CONTACT / FOOTER ===================== -->
-<footer class="footer" id="contato">
-  <div class="container footer-inner">
-    <div class="footer-main">
-      <p class="eyebrow" data-i18n="contact.eyebrow">contato</p>
-      <p data-i18n="contact.desc">Aberto a oportunidades de estágio e posições júnior em engenharia e análise de dados.</p>
-      <div class="email-copy-wrap">
-        <a href="mailto:danioliver050@outlook.com" class="btn btn-primary" id="emailBtn">danioliver050@outlook.com</a>
-        <span class="copy-feedback" id="copyFeedback" data-i18n="contact.copied">Copiado!</span>
-      </div>
-    </div>
-    <div class="footer-social">
-      <a href="https://www.linkedin.com/in/daniel-o-machado/" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://github.com/Danioliver050/" target="_blank" rel="noopener">GitHub</a>
-    </div>
-  </div>
-  <div class="container footer-bottom">
-    <p>&copy; 2026 Daniel. <span data-i18n="footer.rights">Todos os direitos reservados.</span></p>
-  </div>
-</footer>
 
-<!-- ===================== DIAGRAM LIGHTBOX ===================== -->
-<div class="lightbox" id="diagramLightbox" role="dialog" aria-modal="true" aria-label="Diagrama de arquitetura em tamanho ampliado" hidden>
-  <button type="button" class="lightbox-close" aria-label="Fechar">
-    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
-  </button>
-  <img src="assets/diagrama-arquitetura.jpg" alt="Diagrama de arquitetura de streaming de dados: Amazon Connect para área de negócios, em tamanho ampliado" class="lightbox-img">
-  <span class="lightbox-hint">Ctrl + scroll para ampliar</span>
-</div>
+<a href="#top" class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
+  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+</a>
 
 <script src="js/script.js"></script>
 </body>

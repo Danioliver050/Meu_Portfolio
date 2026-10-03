@@ -14,18 +14,39 @@ const translations = {
 
     "hero.greeting": "Olá, eu sou",
     "hero.subtitle": "Transformando experiência em desenvolvimento de software em soluções orientadas a dados.",
-    "hero.cta_projects": "Ver projetos",
+    "hero.cta_projects": "Últimos projetos",
     "hero.cta_contact": "Fale comigo",
     "hero.cta_cv": "Baixar CV",
 
     "about.eyebrow": "sobre",
-    "about.title": "Da lógica de sistemas à lógica dos dados",
+    "about.title": "Um pouco sobre mim.",
     "about.p1": "Comecei minha jornada com total certeza de que queria atuar como desenvolvedor back-end, trabalhando no desenvolvimento e na manutenção de softwares. Nesse processo, tive a oportunidade de atuar em uma área voltada a dados, o que despertou meu interesse pela possibilidade de ampliar minha área de atuação.",
     "about.p2": "A partir desse ponto, passei a buscar, de forma simultânea, o desenvolvimento de software e o trabalho com dados nas aplicações, aproveitando ao máximo minhas habilidades e buscando sempre extrair os melhores resultados.",
 
-    "projects.eyebrow": "projetos",
-    "projects.title": "Meus projetos",
+    "projects.eyebrow": "Portfólio",
+    "projects.title": "Projetos recentes.",
     "project.link_code": "Código",
+    "project.link_detail": "Ver detalhes →",
+    "project.back": "← Voltar aos projetos",
+    "projpage.overview": "Visão geral",
+    "projpage.results": "Resultados",
+    "projpage.stack": "Stack utilizada",
+    "projpage.zoom_hint": "Clique para ampliar",
+    "proj1.detail.p1": "Pipeline ETL em Python que processa 100.000 transações bancárias simuladas: valida e padroniza CPFs, datas e valores monetários, rejeita registros inválidos com motivo registrado em log e converte o resultado de CSV para Parquet.",
+    "proj1.detail.r1": "63% de compressão — arquivo Parquet 63% menor que o CSV original",
+    "proj1.detail.r2": "9,4× mais rápido — queries sobre o Parquet são 9,4x mais rápidas",
+    "proj1.detail.r3": "6.937 registros inválidos rejeitados com motivo registrado no log",
+    "proj1.detail.r4": "8 testes automatizados com Pytest cobrindo validação e conversão",
+    "proj2.detail.p1": "Arquitetura de dados em tempo real projetada para um contact center bancário usando serviços AWS. O fluxo captura eventos do Amazon Connect, processa via Kinesis Data Streams e Lambda, persiste em S3 e expõe via Athena para consumo em dashboards operacionais.",
+    "proj2.detail.r1": "Latência end-to-end abaixo de 60 segundos — do evento ao KPI no dashboard",
+    "proj2.detail.r2": "Custo estimado de US$ 24/mês para o volume projetado de chamadas",
+    "proj2.detail.r3": "Fluxo completo documentado: ingestão → processamento → storage → visualização",
+    "proj2.detail.r4": "Justificativas técnicas registradas para cada escolha de serviço AWS",
+    "proj3.detail.p1": "Pipeline de Engenharia de Dados em Python que implementa a arquitetura Medalhão (Bronze → Prata → Gold). Processa 50.000 propostas de crédito simuladas, aplicando limpeza, validação e enriquecimento em cada camada e entregando um star schema consultável via DuckDB, com documentação de decisões técnicas e estimativas de custo para migração futura para cloud.",
+    "proj3.detail.r1": "Star schema com tabela fato_propostas + 4 dimensões consultável via SQL",
+    "proj3.detail.r2": "9 testes automatizados com Pytest cobrindo cada camada do pipeline",
+    "proj3.detail.r3": "Dados sintéticos gerados com Faker para simulação realista",
+    "proj3.detail.r4": "Documentação de decisões técnicas e estimativas de custo para cloud",
     "proj1.tag": "Python · ETL",
     "proj1.title": "Pipeline de Dados Financeiros",
     "proj1.desc": "Pipeline de ETL que limpa e padroniza dados bancários (CPF, datas, valores) e converte CSV para Parquet — 63% menor e consultas 9,4x mais rápidas.",
@@ -41,12 +62,12 @@ const translations = {
     "stack.group1": "Dados & Análise",
     "stack.group2": "Desenvolvimento",
 
-    "certifications.eyebrow": "certificações",
+    "certifications.eyebrow": "Certificações",
     "certifications.title": "Cursos e certificações",
     "certifications.empty_desc": "Reuni cursos, certificações e idiomas em um só lugar.",
     "certifications.empty_cta": "Ver certificações",
 
-    "articles.eyebrow": "anotações",
+    "articles.eyebrow": "Artigos",
     "articles.title": "Artigos",
     "articles.read_more": "Ler mais →",
     "art1.title": "Desenvolvendo Softwares aos Dados",
@@ -59,7 +80,7 @@ const translations = {
     "contact.copied": "Copiado!",
     "footer.rights": "Todos os direitos reservados.",
 
-    "article.back": "← Voltar às anotações",
+    "article.back": "← Voltar aos artigos",
 
     "art1.full_title": "Desenvolvendo Softwares aos Dados: a construção de uma união de dois caminhos com um mesmo destino",
     "art1.date": "4 de agosto de 2026, às 11h59 (horário de Brasília — UTC−3)",
@@ -115,7 +136,71 @@ const translations = {
     "lang.es_name": "Espanhol",
     "lang.pt_level": "C2 · Nativo",
     "lang.en_level": "C2 · Fluente",
-    "lang.es_level": "B1 · Intermediário"
+    "lang.es_level": "B1 · Intermediário",
+    "nav.portfolio": "Portfólio",
+    "nav.blog": "Artigos",
+    "hero.welcome": "Sejam bem-vindos ao meu portfólio!",
+    "hero.role": "Engenharia de Dados | Análise de Dados | Desenvolvimento de Software",
+    "hero.cta_about": "Sobre mim",
+    "hero.scroll": "Rolar para baixo",
+    "about.kicker": "Sobre",
+    "about.lead": "Um resumo de onde venho e para onde estou indo.",
+    "about.hello": "Olá!",
+    "about.p3": "Hoje meu foco é engenharia e análise de dados no mercado financeiro: pipelines, modelagem e relatórios que ajudam a tomar decisões.",
+    "about.skills_title": "Minhas principais habilidades.",
+    "about.cv": "Baixar currículo",
+    "level.advanced": "Avançado",
+    "level.intermediate": "Intermediário",
+    "level.basic": "Básico",
+    "resume.education": "Formação acadêmica.",
+    "resume.experience": "Experiência profissional.",
+    "resume.tools": "Ferramentas:",
+    "edu1.date": "Fev 2026 – Em andamento",
+    "edu1.title": "Engenharia de Software",
+    "edu1.type": "Bacharelado.",
+    "edu2.date": "Fev 2023 – Dez 2025",
+    "edu2.title": "Análise e Desenvolvimento de Sistemas",
+    "edu2.type": "Tecnólogo.",
+    "exp1.date": "Jun 2023 – Out 2024",
+    "exp1.role": "Analista de Riscos e Crédito — Estágio",
+    "exp1.b1": "Elaborei relatórios regulatórios mensais (DRL, DLI, DDR e DRM) com SQL, SAS e Excel, dentro dos prazos exigidos pelo Banco Central.",
+    "exp1.b2": "Extraí e tratei dados de bases relacionais via SQL para análises de risco de crédito, liquidez e risco reputacional, reduzindo o tempo de preparação dos relatórios.",
+    "exp1.b3": "Desenvolvi e mantive dashboards no MicroStrategy, centralizando indicadores de risco para as áreas de negócio e gestão.",
+    "exp1.b4": "Fui ponto de contato entre a área de riscos e as áreas clientes internas no alinhamento de informações regulatórias.",
+    "certs.title": "Cursos e certificações.",
+    "certs.view": "Ver certificado",
+    "course1.date": "Set 2025",
+    "course1.meta": "Carga horária: 24h.",
+    "course2.date": "Abr 2026",
+    "course2.title": "EF SET — Certificado de Inglês",
+    "course2.meta": "Nível C2 (proficiente), nota 77/100.",
+    "projects.kicker": "Portfólio",
+    "projects.lead": "Clique em um projeto para ver os detalhes. Os códigos estão no meu",
+    "cat.engineering": "Engenharia de Dados",
+    "cat.architecture": "Arquitetura de Dados",
+    "cat.etl": "Engenharia de Dados",
+    "cat.career": "Carreira",
+    "cat.tools": "Ferramentas",
+    "blog.kicker": "Artigos",
+    "blog.title": "Posts recentes.",
+    "blog.lead": "Textos sobre a minha transição para dados: o que estou aprendendo, construindo e enfrentando no caminho.",
+    "art1.short_date": "4 de agosto de 2026",
+    "art2.short_date": "11 de agosto de 2026",
+    "art3.short_date": "21 de setembro de 2026",
+    "contact.kicker": "Contato",
+    "contact.title": "Fale comigo.",
+    "contact.lead": "Estou aberto a oportunidades de estágio e vagas júnior em engenharia e análise de dados. Me chame no LinkedIn ou por e-mail.",
+    "contact.location_label": "Localização",
+    "form.name": "Nome",
+    "form.email": "E-mail",
+    "form.subject": "Assunto",
+    "form.message": "Mensagem",
+    "form.send": "Enviar",
+    "form.sent": "Seu aplicativo de e-mail foi aberto com a mensagem pronta. É só enviar por lá.",
+    "form.missing": "Preencha nome, e-mail e mensagem para enviar.",
+    "form.invalid_email": "Confira o e-mail: ele precisa ter o formato nome@exemplo.com.",
+    "form.default_subject": "Contato pelo portfólio",
+    "lightbox.hint": "Ctrl + scroll para ampliar"
   },
 
   en: {
@@ -128,18 +213,39 @@ const translations = {
 
     "hero.greeting": "Hi, I'm",
     "hero.subtitle": "Turning software development experience into data-driven solutions.",
-    "hero.cta_projects": "View projects",
+    "hero.cta_projects": "Latest projects",
     "hero.cta_contact": "Get in touch",
     "hero.cta_cv": "Download CV",
 
     "about.eyebrow": "about",
-    "about.title": "From system logic to data logic",
+    "about.title": "A little about me.",
     "about.p1": "I started my journey completely certain that I wanted to work as a back-end developer, building and maintaining software. Along the way, I had the opportunity to work in a data-focused area, which sparked my interest in expanding my scope of work.",
     "about.p2": "From that point on, I began simultaneously pursuing software development and working with data within applications, making the most of my skills and always aiming to extract the best results.",
 
-    "projects.eyebrow": "projects",
-    "projects.title": "My projects",
+    "projects.eyebrow": "Portfolio",
+    "projects.title": "Recent projects.",
     "project.link_code": "Code",
+    "project.link_detail": "View details →",
+    "project.back": "← Back to projects",
+    "projpage.overview": "Overview",
+    "projpage.results": "Results",
+    "projpage.stack": "Stack",
+    "projpage.zoom_hint": "Click to zoom",
+    "proj1.detail.p1": "ETL pipeline in Python that processes 100,000 simulated banking transactions: validates and standardises CPFs, dates and monetary values, rejects invalid records with the reason logged, and converts the result from CSV to Parquet.",
+    "proj1.detail.r1": "63% compression — Parquet file is 63% smaller than the original CSV",
+    "proj1.detail.r2": "9.4× faster — queries on the Parquet are 9.4x faster",
+    "proj1.detail.r3": "6,937 invalid records rejected with the reason logged",
+    "proj1.detail.r4": "8 automated tests with Pytest covering validation and conversion",
+    "proj2.detail.p1": "Real-time data architecture designed for a banking contact centre using AWS services. The flow captures events from Amazon Connect, processes them via Kinesis Data Streams and Lambda, persists in S3, and exposes them via Athena for consumption in operational dashboards.",
+    "proj2.detail.r1": "End-to-end latency under 60 seconds — from event to KPI on the dashboard",
+    "proj2.detail.r2": "Estimated cost of US$ 24/month for the projected call volume",
+    "proj2.detail.r3": "Full flow documented: ingestion → processing → storage → visualisation",
+    "proj2.detail.r4": "Technical justifications recorded for each AWS service choice",
+    "proj3.detail.p1": "Data Engineering pipeline in Python implementing the Medallion Architecture (Bronze → Silver → Gold). Processes 50,000 simulated credit proposals, applying cleaning, validation and enrichment at each layer and delivering a star schema queryable via DuckDB, with technical decision documentation and cost estimates for future cloud migration.",
+    "proj3.detail.r1": "Star schema with fato_propostas table + 4 dimensions queryable via SQL",
+    "proj3.detail.r2": "9 automated tests with Pytest covering each pipeline layer",
+    "proj3.detail.r3": "Synthetic data generated with Faker for realistic simulation",
+    "proj3.detail.r4": "Technical decision documentation and cost estimates for cloud migration",
     "proj1.tag": "Python · ETL",
     "proj1.title": "Financial Data Pipeline",
     "proj1.desc": "ETL pipeline that cleans and standardizes banking data (CPF, dates, amounts) and converts CSV to Parquet — 63% smaller and 9.4x faster queries.",
@@ -155,12 +261,12 @@ const translations = {
     "stack.group1": "Data & Analytics",
     "stack.group2": "Development",
 
-    "certifications.eyebrow": "certifications",
+    "certifications.eyebrow": "Certifications",
     "certifications.title": "Courses & certifications",
     "certifications.empty_desc": "I've gathered courses, certifications and languages in one place.",
     "certifications.empty_cta": "View certifications",
 
-    "articles.eyebrow": "notes",
+    "articles.eyebrow": "Articles",
     "articles.title": "Articles",
     "articles.read_more": "Read more →",
     "art1.title": "From Software Development to Data",
@@ -229,391 +335,450 @@ const translations = {
     "lang.es_name": "Spanish",
     "lang.pt_level": "C2 · Native",
     "lang.en_level": "C2 · Fluent",
-    "lang.es_level": "B1 · Intermediate"
+    "lang.es_level": "B1 · Intermediate",
+    "nav.portfolio": "Portfolio",
+    "nav.blog": "Articles",
+    "hero.welcome": "Welcome to my portfolio!",
+    "hero.role": "Data Engineering | Data Analysis | Software Development",
+    "hero.cta_about": "About me",
+    "hero.scroll": "Scroll down",
+    "about.kicker": "About",
+    "about.lead": "A short summary of where I come from and where I'm heading.",
+    "about.hello": "Hello!",
+    "about.p3": "Today my focus is data engineering and analysis in the financial market: pipelines, modeling and reports that support decisions.",
+    "about.skills_title": "My main skills.",
+    "about.cv": "Download résumé",
+    "level.advanced": "Advanced",
+    "level.intermediate": "Intermediate",
+    "level.basic": "Basic",
+    "resume.education": "Education.",
+    "resume.experience": "Work experience.",
+    "resume.tools": "Tools:",
+    "edu1.date": "Feb 2026 – Present",
+    "edu1.title": "Software Engineering",
+    "edu1.type": "Bachelor's degree.",
+    "edu2.date": "Feb 2023 – Dec 2025",
+    "edu2.title": "Systems Analysis and Development",
+    "edu2.type": "Associate degree (Technologist).",
+    "exp1.date": "Jun 2023 – Oct 2024",
+    "exp1.role": "Risk and Credit Analyst — Intern",
+    "exp1.b1": "Prepared monthly regulatory reports (DRL, DLI, DDR and DRM) using SQL, SAS and Excel, within the deadlines set by Brazil's Central Bank.",
+    "exp1.b2": "Extracted and processed data from relational databases via SQL for credit, liquidity and reputational risk analysis, cutting report preparation time.",
+    "exp1.b3": "Built and maintained MicroStrategy dashboards, centralizing risk indicators for business and management teams.",
+    "exp1.b4": "Acted as the point of contact between the risk team and internal client areas to align regulatory information.",
+    "certs.title": "Courses & certifications.",
+    "certs.view": "View certificate",
+    "course1.date": "Sep 2025",
+    "course1.meta": "Workload: 24h.",
+    "course2.date": "Apr 2026",
+    "course2.title": "EF SET — English Certificate",
+    "course2.meta": "Level C2 (proficient), score 77/100.",
+    "projects.kicker": "Portfolio",
+    "projects.lead": "Click a project to see the details. The code is on my",
+    "cat.engineering": "Data Engineering",
+    "cat.architecture": "Data Architecture",
+    "cat.etl": "Data Engineering",
+    "cat.career": "Career",
+    "cat.tools": "Tools",
+    "blog.kicker": "Articles",
+    "blog.title": "Recent posts.",
+    "blog.lead": "Writing about my move into data: what I'm learning, building and facing along the way.",
+    "art1.short_date": "August 4, 2026",
+    "art2.short_date": "August 11, 2026",
+    "art3.short_date": "September 21, 2026",
+    "contact.kicker": "Contact",
+    "contact.title": "Get in touch.",
+    "contact.lead": "I'm open to internships and junior roles in data engineering and analysis. Reach me on LinkedIn or by email.",
+    "contact.location_label": "Location",
+    "form.name": "Name",
+    "form.email": "Email",
+    "form.subject": "Subject",
+    "form.message": "Message",
+    "form.send": "Send",
+    "form.sent": "Your email app opened with the message ready. Just send it from there.",
+    "form.missing": "Fill in name, email and message to send.",
+    "form.invalid_email": "Check the email: it needs to look like name@example.com.",
+    "form.default_subject": "Contact from portfolio",
+    "lightbox.hint": "Ctrl + scroll to zoom"
   }
 };
 
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 let currentLang = "pt";
 
+function t(key) {
+  return (translations[currentLang] && translations[currentLang][key]) || translations.pt[key] || "";
+}
+
+function safeStorageGet(key) {
+  try { return window.localStorage.getItem(key); } catch (e) { return null; }
+}
+function safeStorageSet(key, value) {
+  try { window.localStorage.setItem(key, value); } catch (e) { /* sem persistência */ }
+}
+
 /* =========================================================
-   IDIOMA
+   IDIOMA (lembrado entre páginas)
    ========================================================= */
 function applyLanguage(lang) {
-  currentLang = lang;
-  document.documentElement.lang = lang === "pt" ? "pt-BR" : "en";
+  currentLang = translations[lang] ? lang : "pt";
+  document.documentElement.lang = currentLang === "pt" ? "pt-BR" : "en";
 
   document.querySelectorAll("[data-i18n]").forEach((el) => {
-    const key = el.getAttribute("data-i18n");
-    const value = translations[lang][key];
+    const value = translations[currentLang][el.getAttribute("data-i18n")];
     if (value !== undefined) el.textContent = value;
+  });
+  document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
+    const value = translations[currentLang][el.getAttribute("data-i18n-placeholder")];
+    if (value !== undefined) el.setAttribute("placeholder", value);
   });
 
   document.querySelectorAll(".lang-btn").forEach((btn) => {
-    const isActive = btn.getAttribute("data-lang") === lang;
+    const isActive = btn.getAttribute("data-lang") === currentLang;
     btn.classList.toggle("is-active", isActive);
     btn.setAttribute("aria-pressed", String(isActive));
   });
 
   const cvBtn = document.getElementById("cvDownloadBtn");
   if (cvBtn) {
-    const cvHref = lang === "en" ? cvBtn.getAttribute("data-cv-en") : cvBtn.getAttribute("data-cv-pt");
-    const cvFilename = lang === "en" ? cvBtn.getAttribute("data-cv-en-filename") : cvBtn.getAttribute("data-cv-pt-filename");
-    if (cvHref) cvBtn.setAttribute("href", cvHref);
-    if (cvFilename) cvBtn.setAttribute("download", cvFilename);
+    const en = currentLang === "en";
+    cvBtn.setAttribute("href", cvBtn.getAttribute(en ? "data-cv-en" : "data-cv-pt"));
+    cvBtn.setAttribute("download", cvBtn.getAttribute(en ? "data-cv-en-filename" : "data-cv-pt-filename"));
   }
+
+  const status = document.getElementById("formStatus");
+  if (status) { status.textContent = ""; status.classList.remove("is-error"); }
 }
 
 document.querySelectorAll(".lang-btn").forEach((btn) => {
   btn.addEventListener("click", () => {
     const lang = btn.getAttribute("data-lang");
-    if (lang !== currentLang) applyLanguage(lang);
+    if (lang === currentLang) return;
+    applyLanguage(lang);
+    safeStorageSet("lang", lang);
   });
 });
 
 /* =========================================================
-   SCROLLSPY (nav ativo conforme a seção visível)
+   MENU: fica preto depois que a apresentação sai da tela,
+   marca a seção atual e mostra o botão "voltar ao topo"
    ========================================================= */
-function setupScrollspy() {
-  const sections = document.querySelectorAll("section[id], footer[id]");
-  const navLinks = document.querySelectorAll(".nav-link");
+function setupHeader() {
+  const header = document.getElementById("siteHeader") || document.querySelector(".site-header");
+  const backToTop = document.getElementById("backToTop");
+  const isHome = document.body.classList.contains("home");
 
-  if (!sections.length || !navLinks.length || !("IntersectionObserver" in window)) return;
-
-  const setCurrent = (id) => {
-    navLinks.forEach((link) => {
-      const isCurrent = link.getAttribute("href") === `#${id}`;
-      link.classList.toggle("is-current", isCurrent);
-    });
+  const update = () => {
+    const y = window.scrollY;
+    if (header && isHome) header.classList.toggle("is-solid", y > 80);
+    if (backToTop) backToTop.classList.toggle("is-visible", y > window.innerHeight * 0.8);
   };
-
-  const spyObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) setCurrent(entry.target.id);
-      });
-    },
-    { rootMargin: "-45% 0px -50% 0px", threshold: 0 }
-  );
-
-  sections.forEach((section) => spyObserver.observe(section));
+  window.addEventListener("scroll", update, { passive: true });
+  update();
 }
 
-/* =========================================================
-   BARRA DE PROGRESSO DE SCROLL
-   ========================================================= */
+function setupScrollspy() {
+  const sections = document.querySelectorAll("section[id]");
+  const navLinks = document.querySelectorAll(".nav-link[href^='#']");
+  if (!sections.length || !navLinks.length || !("IntersectionObserver" in window)) return;
+
+  const linkFor = { certificacoes: "sobre" }; // cursos ficam dentro de "Sobre" no menu
+  const spy = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      const id = linkFor[entry.target.id] || entry.target.id;
+      navLinks.forEach((link) => link.classList.toggle("is-current", link.getAttribute("href") === `#${id}`));
+    });
+  }, { rootMargin: "-45% 0px -50% 0px" });
+  sections.forEach((s) => spy.observe(s));
+}
+
 function setupScrollProgress() {
   const bar = document.getElementById("scrollProgress");
   if (!bar) return;
-
-  const updateProgress = () => {
-    const scrollTop = window.scrollY;
-    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-    bar.style.width = `${pct}%`;
+  const update = () => {
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = `${max > 0 ? (window.scrollY / max) * 100 : 0}%`;
   };
+  window.addEventListener("scroll", update, { passive: true });
+  window.addEventListener("resize", update);
+  update();
+}
 
-  window.addEventListener("scroll", updateProgress, { passive: true });
-  window.addEventListener("resize", updateProgress);
-  updateProgress();
+function setupMobileMenu() {
+  const toggle = document.getElementById("menuToggle");
+  const nav = document.getElementById("mainNav");
+  if (!toggle || !nav) return;
+  toggle.addEventListener("click", () => {
+    const open = nav.classList.toggle("is-open");
+    toggle.setAttribute("aria-expanded", String(open));
+    document.getElementById("siteHeader")?.classList.add("is-solid");
+  });
+  nav.querySelectorAll(".nav-link").forEach((link) => link.addEventListener("click", () => {
+    nav.classList.remove("is-open");
+    toggle.setAttribute("aria-expanded", "false");
+  }));
 }
 
 /* =========================================================
-   TILT INTERATIVO NO AVATAR
+   APRESENTAÇÃO: rede de pontos ligados (dados conectados)
    ========================================================= */
-function setupAvatarTilt() {
-  const wrap = document.querySelector(".hero-visual");
-  const frame = document.querySelector(".avatar-frame");
-  if (!wrap || !frame || prefersReducedMotion) return;
-
-  wrap.addEventListener("mousemove", (e) => {
-    const rect = wrap.getBoundingClientRect();
-    const x = (e.clientX - rect.left) / rect.width - 0.5;
-    const y = (e.clientY - rect.top) / rect.height - 0.5;
-    frame.style.transform = `rotateY(${x * 16}deg) rotateX(${-y * 16}deg)`;
-  });
-
-  wrap.addEventListener("mouseleave", () => {
-    frame.style.transform = "rotateY(0deg) rotateX(0deg)";
-  });
+function setupNetworks() {
+  document.querySelectorAll("canvas.hero-network").forEach(setupNetwork);
 }
 
-/* =========================================================
-   LIGHTBOX (abrir/ver imagens em tela cheia — foto, certificados etc.)
-   Qualquer elemento com [data-lightbox-target="ID"] abre o
-   <div class="lightbox" id="ID">, que precisa ter um
-   ".lightbox-close" dentro dele.
-   Zoom: segure Ctrl e role o mouse sobre a imagem aberta.
-   Com zoom ativo, clique e arraste para navegar pela imagem.
-   Duplo clique reseta o zoom.
-   ========================================================= */
-function setupLightboxes() {
-  const triggers = document.querySelectorAll("[data-lightbox-target]");
-  if (!triggers.length) return;
+function setupNetwork(canvas) {
+  if (!canvas.getContext) return;
+  const ctx = canvas.getContext("2d");
+  const LINK_DIST = 150;
+  let points = [];
+  let width = 0, height = 0, dpr = 1, running = false, rafId = null;
 
-  const MIN_ZOOM = 1;
-  const MAX_ZOOM = 4;
-  const ZOOM_STEP = 0.15;
+  function resize() {
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    width = canvas.clientWidth;
+    height = canvas.clientHeight;
+    canvas.width = width * dpr;
+    canvas.height = height * dpr;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    const count = Math.round(Math.min(110, (width * height) / 14000));
+    points = Array.from({ length: count }, () => ({
+      x: Math.random() * width,
+      y: Math.random() * height,
+      vx: (Math.random() - 0.5) * 0.35,
+      vy: (Math.random() - 0.5) * 0.35,
+    }));
+  }
 
-  triggers.forEach((trigger) => {
-    const lightbox = document.getElementById(trigger.getAttribute("data-lightbox-target"));
-    const closeBtn = lightbox ? lightbox.querySelector(".lightbox-close") : null;
-    const img = lightbox ? lightbox.querySelector(".lightbox-img") : null;
-    if (!lightbox || !closeBtn) return;
-
-    let lastFocused = null;
-    let scale = 1;
-    let posX = 0;
-    let posY = 0;
-    let isDragging = false;
-    let justDragged = false;
-    let dragStartX = 0;
-    let dragStartY = 0;
-
-    function applyTransform() {
-      if (img) img.style.transform = `translate(${posX}px, ${posY}px) scale(${scale})`;
-    }
-
-    function resetZoom() {
-      scale = 1;
-      posX = 0;
-      posY = 0;
-      if (img) {
-        img.classList.remove("is-zoomed");
-        img.style.transform = "";
+  function draw() {
+    ctx.clearRect(0, 0, width, height);
+    for (let i = 0; i < points.length; i++) {
+      const a = points[i];
+      for (let j = i + 1; j < points.length; j++) {
+        const b = points[j];
+        const dx = a.x - b.x, dy = a.y - b.y;
+        const d2 = dx * dx + dy * dy;
+        if (d2 < LINK_DIST * LINK_DIST) {
+          ctx.strokeStyle = `rgba(255,255,255,${0.22 * (1 - Math.sqrt(d2) / LINK_DIST)})`;
+          ctx.lineWidth = 0.7;
+          ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
+        }
       }
     }
+    ctx.fillStyle = "rgba(255,255,255,0.5)";
+    points.forEach((p) => { ctx.beginPath(); ctx.arc(p.x, p.y, 1.4, 0, Math.PI * 2); ctx.fill(); });
+  }
 
-    function openLightbox() {
+  function step() {
+    points.forEach((p) => {
+      p.x += p.vx; p.y += p.vy;
+      if (p.x < 0 || p.x > width) p.vx *= -1;
+      if (p.y < 0 || p.y > height) p.vy *= -1;
+    });
+    draw();
+    if (running) rafId = requestAnimationFrame(step);
+  }
+
+  function start() { if (!running && !prefersReducedMotion) { running = true; rafId = requestAnimationFrame(step); } }
+  function stop() { running = false; if (rafId) cancelAnimationFrame(rafId); }
+
+  resize();
+  draw();
+  let resizeTimer;
+  window.addEventListener("resize", () => { clearTimeout(resizeTimer); resizeTimer = setTimeout(() => { resize(); draw(); }, 150); });
+
+  // só anima enquanto a apresentação está visível
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(([entry]) => (entry.isIntersecting ? start() : stop())).observe(canvas);
+  } else {
+    start();
+  }
+}
+
+/* =========================================================
+   CARROSSEL DE CURSOS (mais antigo à esquerda, mais recente à direita)
+   ========================================================= */
+function setupCarousel() {
+  const root = document.getElementById("certCarousel");
+  if (!root) return;
+  const track = root.querySelector(".carousel-track");
+  const slides = Array.from(track.children);
+  const prev = root.querySelector('.carousel-arrow[data-dir="-1"]');
+  const next = root.querySelector('.carousel-arrow[data-dir="1"]');
+  let index = 0;
+
+  const perView = () => (window.matchMedia("(max-width: 860px)").matches ? 1 : 2);
+
+  function render() {
+    const maxIndex = Math.max(0, slides.length - perView());
+    index = Math.min(Math.max(index, 0), maxIndex);
+    track.style.transform = `translateX(-${(index * 100) / perView()}%)`;
+    prev.disabled = index === 0;
+    next.disabled = index === maxIndex;
+    slides.forEach((slide, i) => {
+      const visible = i >= index && i < index + perView();
+      slide.setAttribute("aria-hidden", String(!visible));
+      slide.querySelectorAll("button, a").forEach((el) => (el.tabIndex = visible ? 0 : -1));
+    });
+  }
+
+  prev.addEventListener("click", () => { index -= 1; render(); });
+  next.addEventListener("click", () => { index += 1; render(); });
+  window.addEventListener("resize", render);
+
+  // arrastar com o dedo no celular
+  let startX = null;
+  track.addEventListener("touchstart", (e) => { startX = e.touches[0].clientX; }, { passive: true });
+  track.addEventListener("touchend", (e) => {
+    if (startX === null) return;
+    const dx = e.changedTouches[0].clientX - startX;
+    if (Math.abs(dx) > 40) { index += dx < 0 ? 1 : -1; render(); }
+    startX = null;
+  });
+
+  render();
+}
+
+/* =========================================================
+   CERTIFICADO AMPLIADO (lightbox com zoom)
+   Ctrl + scroll amplia; arraste para navegar; duplo clique volta ao normal.
+   ========================================================= */
+function setupLightboxes() {
+  const MIN_ZOOM = 1, MAX_ZOOM = 4, ZOOM_STEP = 0.15;
+
+  document.querySelectorAll(".lightbox").forEach((lightbox) => {
+    const closeBtn = lightbox.querySelector(".lightbox-close");
+    const img = lightbox.querySelector(".lightbox-img");
+    const triggers = document.querySelectorAll(`[data-lightbox-target="${lightbox.id}"]`);
+    if (!closeBtn || !triggers.length) return;
+
+    let lastFocused = null, scale = 1, posX = 0, posY = 0;
+    let isDragging = false, justDragged = false, dragStartX = 0, dragStartY = 0;
+
+    const applyTransform = () => { if (img) img.style.transform = `translate(${posX}px, ${posY}px) scale(${scale})`; };
+    const resetZoom = () => {
+      scale = 1; posX = 0; posY = 0;
+      if (img) { img.classList.remove("is-zoomed"); img.style.transform = ""; }
+    };
+    const open = () => {
       lastFocused = document.activeElement;
       resetZoom();
       lightbox.hidden = false;
       document.body.style.overflow = "hidden";
       closeBtn.focus();
-    }
-
-    function closeLightbox() {
+    };
+    const close = () => {
       lightbox.hidden = true;
       document.body.style.overflow = "";
       resetZoom();
       if (lastFocused) lastFocused.focus();
-    }
+    };
 
-    trigger.addEventListener("click", openLightbox);
-    closeBtn.addEventListener("click", closeLightbox);
-
+    triggers.forEach((trigger) => trigger.addEventListener("click", (e) => { e.preventDefault(); open(); }));
+    closeBtn.addEventListener("click", close);
     lightbox.addEventListener("click", (e) => {
-      if (justDragged) {
-        justDragged = false;
-        return;
-      }
-      if (e.target === lightbox) closeLightbox();
+      if (justDragged) { justDragged = false; return; }
+      if (e.target === lightbox) close();
     });
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !lightbox.hidden) close(); });
 
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape" && !lightbox.hidden) closeLightbox();
+    if (!img) return;
+    lightbox.addEventListener("wheel", (e) => {
+      if (lightbox.hidden || !e.ctrlKey) return;
+      e.preventDefault();
+      scale = Math.min(MAX_ZOOM, Math.max(MIN_ZOOM, scale + (e.deltaY < 0 ? 1 : -1) * ZOOM_STEP));
+      if (scale === MIN_ZOOM) { posX = 0; posY = 0; }
+      img.classList.toggle("is-zoomed", scale > MIN_ZOOM);
+      applyTransform();
+    }, { passive: false });
+    img.addEventListener("dblclick", resetZoom);
+    img.addEventListener("mousedown", (e) => {
+      if (scale <= MIN_ZOOM) return;
+      isDragging = true;
+      img.classList.add("is-dragging");
+      dragStartX = e.clientX - posX; dragStartY = e.clientY - posY;
+      e.preventDefault();
     });
-
-    if (img) {
-      // Zoom: Ctrl + scroll do mouse
-      lightbox.addEventListener(
-        "wheel",
-        (e) => {
-          if (lightbox.hidden || !e.ctrlKey) return;
-          e.preventDefault();
-          const direction = e.deltaY < 0 ? 1 : -1;
-          scale = Math.min(MAX_ZOOM, Math.max(MIN_ZOOM, scale + direction * ZOOM_STEP));
-          if (scale === MIN_ZOOM) {
-            posX = 0;
-            posY = 0;
-          }
-          img.classList.toggle("is-zoomed", scale > MIN_ZOOM);
-          applyTransform();
-        },
-        { passive: false }
-      );
-
-      // Duplo clique reseta o zoom
-      img.addEventListener("dblclick", resetZoom);
-
-      // Arrastar (pan) quando ampliado
-      img.addEventListener("mousedown", (e) => {
-        if (scale <= MIN_ZOOM) return;
-        isDragging = true;
-        img.classList.add("is-dragging");
-        dragStartX = e.clientX - posX;
-        dragStartY = e.clientY - posY;
-        e.preventDefault();
-      });
-
-      window.addEventListener("mousemove", (e) => {
-        if (!isDragging) return;
-        posX = e.clientX - dragStartX;
-        posY = e.clientY - dragStartY;
-        applyTransform();
-      });
-
-      window.addEventListener("mouseup", () => {
-        if (!isDragging) return;
-        isDragging = false;
-        justDragged = true;
-        img.classList.remove("is-dragging");
-      });
-    }
+    window.addEventListener("mousemove", (e) => {
+      if (!isDragging) return;
+      posX = e.clientX - dragStartX; posY = e.clientY - dragStartY;
+      applyTransform();
+    });
+    window.addEventListener("mouseup", () => {
+      if (!isDragging) return;
+      isDragging = false; justDragged = true;
+      img.classList.remove("is-dragging");
+    });
   });
 }
 
 /* =========================================================
-   ABAS INTERNAS (Cursos / Certificações / Idiomas)
+   ABAS DA PÁGINA DE CERTIFICAÇÕES
    ========================================================= */
 function setupCertTabs() {
-  const tabButtons = document.querySelectorAll(".cert-tabs .tab-btn");
+  const buttons = document.querySelectorAll(".cert-tabs .tab-btn");
   const panels = document.querySelectorAll(".cert-panel");
-  if (!tabButtons.length || !panels.length) return;
+  buttons.forEach((btn) => btn.addEventListener("click", () => {
+    const target = btn.getAttribute("data-tab");
+    buttons.forEach((b) => b.classList.toggle("is-active", b === btn));
+    panels.forEach((p) => p.classList.toggle("is-active", p.getAttribute("data-panel") === target));
+  }));
+}
 
-  tabButtons.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const target = btn.getAttribute("data-tab");
+/* =========================================================
+   ROLAGEM SUAVE
+   Ao clicar num item do menu (ou em qualquer link #secao),
+   a página desliza até a seção em vez de pular direto.
+   ========================================================= */
+function setupSmoothScroll() {
+  const easeInOutCubic = (x) => (x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2);
+  let animId = null;
 
-      tabButtons.forEach((b) => b.classList.remove("is-active"));
-      btn.classList.add("is-active");
+  function scrollToY(targetY) {
+    const startY = window.scrollY;
+    const distance = targetY - startY;
+    if (Math.abs(distance) < 2) return;
+    const duration = Math.min(1400, Math.max(600, Math.abs(distance) * 0.35));
+    const startTime = performance.now();
+    if (animId) cancelAnimationFrame(animId);
 
-      panels.forEach((panel) => {
-        panel.classList.toggle("is-active", panel.getAttribute("data-panel") === target);
-      });
+    const tick = (now) => {
+      const progress = Math.min(1, (now - startTime) / duration);
+      window.scrollTo(0, startY + distance * easeInOutCubic(progress));
+      if (progress < 1) animId = requestAnimationFrame(tick);
+    };
+    animId = requestAnimationFrame(tick);
+  }
+
+  document.querySelectorAll('a[href^="#"]').forEach((link) => {
+    link.addEventListener("click", (e) => {
+      const id = link.getAttribute("href").slice(1);
+      const target = id === "top" ? document.body : document.getElementById(id);
+      if (!target) return;
+      e.preventDefault();
+      const headerH = id === "top" ? 0 : 72;
+      const y = id === "top" ? 0 : target.getBoundingClientRect().top + window.scrollY - headerH;
+      scrollToY(Math.max(0, y));
+      history.replaceState(null, "", `#${id}`);
     });
   });
+
+  // parar a animação se a pessoa rolar com o mouse no meio do caminho
+  window.addEventListener("wheel", () => { if (animId) cancelAnimationFrame(animId); }, { passive: true });
 }
 
 /* =========================================================
-   COPIAR E-MAIL PARA A ÁREA DE TRANSFERÊNCIA
-   ========================================================= */
-function setupEmailCopy() {
-  const emailBtn = document.getElementById("emailBtn");
-  const feedback = document.getElementById("copyFeedback");
-  if (!emailBtn || !feedback) return;
-
-  let hideTimeout = null;
-
-  emailBtn.addEventListener("click", (e) => {
-    if (!navigator.clipboard) return; // deixa o mailto normal acontecer
-    e.preventDefault();
-    const email = emailBtn.textContent.trim();
-
-    navigator.clipboard.writeText(email).then(() => {
-      feedback.classList.add("is-visible");
-      clearTimeout(hideTimeout);
-      hideTimeout = setTimeout(() => feedback.classList.remove("is-visible"), 1800);
-    });
-  });
-}
-
-/* =========================================================
-   MENU MOBILE
-   ========================================================= */
-const menuToggle = document.getElementById("menuToggle");
-const mainNav = document.getElementById("mainNav");
-
-if (menuToggle && mainNav) {
-  menuToggle.addEventListener("click", () => {
-    const isOpen = mainNav.classList.toggle("is-open");
-    menuToggle.setAttribute("aria-expanded", String(isOpen));
-  });
-
-  mainNav.querySelectorAll(".nav-link").forEach((link) => {
-    link.addEventListener("click", () => {
-      mainNav.classList.remove("is-open");
-      menuToggle.setAttribute("aria-expanded", "false");
-    });
-  });
-}
-
-/* =========================================================
-   SCROLL REVEAL
-   ========================================================= */
-function setupScrollReveal() {
-  const targets = document.querySelectorAll(
-    ".section .about-text, .project-card, .empty-state, .skill-group, .cert-card, .article-card, .footer-main"
-  );
-  targets.forEach((el) => el.classList.add("reveal"));
-
-  if (prefersReducedMotion || !("IntersectionObserver" in window)) {
-    targets.forEach((el) => el.classList.add("is-visible"));
-    return;
-  }
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.15 }
-  );
-
-  targets.forEach((el) => observer.observe(el));
-}
-
-/* =========================================================
-   TEMA CLARO / ESCURO
-   ========================================================= */
-function safeStorageGet(key) {
-  try {
-    return window.localStorage.getItem(key);
-  } catch (e) {
-    return null;
-  }
-}
-
-function safeStorageSet(key, value) {
-  try {
-    window.localStorage.setItem(key, value);
-  } catch (e) {
-    /* localStorage indisponível (ex: preview em sandbox) — segue sem persistir */
-  }
-}
-
-function setupThemeToggle() {
-  const toggle = document.getElementById("themeToggle");
-  if (!toggle) return;
-
-  const saved = safeStorageGet("theme");
-  const initialTheme = saved === "light" ? "light" : "dark";
-
-  applyTheme(initialTheme);
-
-  toggle.addEventListener("click", () => {
-    const current = document.documentElement.getAttribute("data-theme") === "light" ? "light" : "dark";
-    const next = current === "light" ? "dark" : "light";
-    applyTheme(next);
-    safeStorageSet("theme", next);
-  });
-}
-
-function applyTheme(theme) {
-  if (theme === "light") {
-    document.documentElement.setAttribute("data-theme", "light");
-  } else {
-    document.documentElement.removeAttribute("data-theme");
-  }
-  const toggle = document.getElementById("themeToggle");
-  if (toggle) toggle.setAttribute("aria-pressed", String(theme === "light"));
-}
-
-/* =========================================================
-   INIT
+   INÍCIO
    ========================================================= */
 document.addEventListener("DOMContentLoaded", () => {
-  applyLanguage("pt");
-  setupScrollReveal();
+  applyLanguage(safeStorageGet("lang") || "pt");
+  setupHeader();
   setupScrollspy();
   setupScrollProgress();
-  setupAvatarTilt();
+  setupMobileMenu();
+  setupNetworks();
+  setupSmoothScroll();
+  setupCarousel();
   setupLightboxes();
   setupCertTabs();
-  setupEmailCopy();
-  setupThemeToggle();
 });
